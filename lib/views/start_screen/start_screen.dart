@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:country_flags/country_flags.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function() onStart;
@@ -21,14 +22,17 @@ class StartScreen extends StatelessWidget {
             children: [
               const Icon(Icons.directions_car,
                   size: 100, color: Colors.deepOrange),
-              const SizedBox(
+              SizedBox(
                 width: 150,
-                child: Text("Teori Mengemudi",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.deepOrange)),
+                child: Text(
+                  "Teori Mengemudi",
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.playfairDisplay(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepOrange,
+                  ),
+                ),
               ),
               const SizedBox(height: 25),
               ElevatedButton.icon(

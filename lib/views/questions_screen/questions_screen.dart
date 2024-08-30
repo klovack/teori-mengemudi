@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:teori_mengemudi/components/answer_button/answer_button.dart';
 import 'package:teori_mengemudi/components/question_nav_button/question_nav_buttons.dart';
 import 'package:teori_mengemudi/data/questions_data.dart';
@@ -41,8 +42,8 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         children: [
           Text(
             curQuestion.question,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
+            style: GoogleFonts.playfairDisplay(
+              fontWeight: FontWeight.bold,  
             ),
             // textAlign: TextAlign.center,
           ),
