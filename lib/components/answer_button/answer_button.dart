@@ -15,14 +15,15 @@ class AnswerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color color = Colors.deepOrange.shade700;
+    final Color color = Colors.deepOrange.shade900;
+    final Color bgColor = Colors.deepOrange.shade900;
     return OutlinedButton(
       onPressed: onTap,
       style: OutlinedButton.styleFrom(
-        backgroundColor: isChecked ? color : Colors.transparent,
+        backgroundColor: isChecked ? bgColor : Colors.transparent,
         foregroundColor: isChecked ? Colors.white : color,
         side: BorderSide(
-          color: color,
+          color: bgColor,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         shape: RoundedRectangleBorder(

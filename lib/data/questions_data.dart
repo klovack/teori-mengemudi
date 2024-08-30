@@ -9,6 +9,7 @@ var questions = [
       "menyebabkan sensasi tinggi yang berlangsung beberapa jam"
     ],
     correctOption: [0, 1],
+    score: 4,
   ),
   QuizQuestions(
     question: "Apa saja yang bisa mengurangi kemampuan mengemudi?",
@@ -18,6 +19,7 @@ var questions = [
       "Melalui kelelahan yang berlebihan"
     ],
     correctOption: [0, 1, 2],
+    score: 4,
   ),
   QuizQuestions(
     question:
@@ -29,6 +31,7 @@ var questions = [
     correctOption: [
       0,
     ],
+    score: 5,
   ),
   QuizQuestions(
     question:
@@ -39,6 +42,7 @@ var questions = [
       "Ban bisa rusak di pintu keluar dan masuk yang sempit",
     ],
     correctOption: [0, 1, 2],
+    score: 5,
   ),
   QuizQuestions(
     question: "Dimanakah anda dilarang menyalip?",
@@ -48,6 +52,7 @@ var questions = [
       "Di penyeberangan pejalan kaki",
     ],
     correctOption: [2],
+    score: 4,
   ),
   QuizQuestions(
     question:
@@ -58,6 +63,7 @@ var questions = [
       "Tunggu di depan perlintasan kereta api sampai lampu merah mati dan palang terbuka",
     ],
     correctOption: [2],
+    score: 5,
   ),
   QuizQuestions(
     question:
@@ -67,5 +73,6 @@ var questions = [
       "Belok kanan di depan satu sama lain",
     ],
     correctOption: [1],
+    score: 2,
   ),
 ];

@@ -18,6 +18,7 @@ class QuizQuestions {
   final QuizQuestionsResource? resource;
   final List<String> options;
   final List<int> correctOption;
+  final int score;
 
   List<int>? _shuffledCorrectOption;
   List<String>? _shuffledOptions;
@@ -26,11 +27,13 @@ class QuizQuestions {
     required this.question,
     required this.options,
     required this.correctOption,
+    required this.score,
     this.resource,
   });
 
   bool isCorrect(List<int> selectedOptions) {
-    return correctOption.every((element) => selectedOptions.contains(element));
+    return selectedOptions.isNotEmpty &&
+        selectedOptions.every((element) => correctOption.contains(element));
   }
 
   List<String> getShuffledOptions() {

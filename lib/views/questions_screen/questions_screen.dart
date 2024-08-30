@@ -5,12 +5,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:teori_mengemudi/components/answer_button/answer_button.dart';
 import 'package:teori_mengemudi/components/question_nav_button/question_nav_buttons.dart';
 import 'package:teori_mengemudi/data/questions_data.dart';
+import 'package:teori_mengemudi/models/quiz_questions.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  final shuffledQuestions = List.from(questions);
+  final List<QuizQuestions> shuffledQuestions = List.from(questions);
+  final void Function(
+      List<QuizQuestions> questions, List<List<int>> selectedAnswers) onSubmit;
 
-  QuestionsScreen({super.key}) {
+  QuestionsScreen({super.key, required this.onSubmit}) {
     shuffledQuestions.shuffle();
+    for (var element in shuffledQuestions) {
+      element.reset();
+    }
   }
 
   @override
@@ -47,7 +53,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           Text(
             curQuestion.question,
             style: GoogleFonts.playfairDisplay(
-              fontWeight: FontWeight.bold,  
+              fontWeight: FontWeight.bold,
             ),
             // textAlign: TextAlign.center,
           ),
@@ -82,12 +88,17 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
           // Navigation Buttons
           SizedBox(
-              width: 300,
-              child: QuestionNavButtons(
-                  hasPrevious: activeQuestion > 0,
-                  hasNext: activeQuestion < questions.length - 1,
-                  onTapPrevious: onTapPrevious,
-                  onTapNext: onTapNext)),
+            width: 300,
+            child: QuestionNavButtons(
+              hasPrevious: activeQuestion > 0,
+              hasNext: activeQuestion < questions.length - 1,
+              onTapPrevious: onTapPrevious,
+              onTapNext: onTapNext,
+              onTapSubmit: () {
+                widget.onSubmit(widget.shuffledQuestions, selectedAnswers);
+              },
+            ),
+          ),
         ],
       ),
     );

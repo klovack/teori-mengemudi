@@ -5,6 +5,7 @@ class QuestionNavButtons extends StatelessWidget {
   final bool hasNext;
   final void Function() onTapPrevious;
   final void Function() onTapNext;
+  final void Function() onTapSubmit;
 
   const QuestionNavButtons({
     super.key,
@@ -12,6 +13,7 @@ class QuestionNavButtons extends StatelessWidget {
     required this.hasNext,
     required this.onTapPrevious,
     required this.onTapNext,
+    required this.onTapSubmit,
   });
 
   List<Widget> _navButtons() {
@@ -59,7 +61,7 @@ class QuestionNavButtons extends StatelessWidget {
     } else {
       navButtonResult.add(
         ElevatedButton(
-          onPressed: () {},
+          onPressed: onTapSubmit,
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(5),
