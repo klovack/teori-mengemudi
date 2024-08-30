@@ -7,7 +7,11 @@ import 'package:teori_mengemudi/components/question_nav_button/question_nav_butt
 import 'package:teori_mengemudi/data/questions_data.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({super.key});
+  final shuffledQuestions = List.from(questions);
+
+  QuestionsScreen({super.key}) {
+    shuffledQuestions.shuffle();
+  }
 
   @override
   State<QuestionsScreen> createState() => _QuestionsScreenState();
@@ -31,7 +35,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final curQuestion = questions[activeQuestion];
+    final curQuestion = widget.shuffledQuestions[activeQuestion];
 
     return Container(
       padding: const EdgeInsets.all(50),

@@ -43,7 +43,7 @@ class _QuizState extends State<Quiz> {
           ),
           child: activeScreen == QuizScreenType.start
               ? StartScreen(onStart: switchScreen)
-              : const QuestionsScreen(),
+              : QuestionsScreen(),
         ),
       ),
     );
