@@ -1,16 +1,18 @@
-# teori_mengemudi
+# Teori Mengemudi
 
-A new Flutter project.
+A flutter application to teach Driving Theory in Indonesia.
 
-## Getting Started
+This project is ongoing, so expect many bugs when using it.
 
-This project is a starting point for a Flutter application.
+## Development
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repo
+2. Install dependencies by doing
+  ```
+  flutter pub get
+  ```
+3. Open iOS Simulator or android Emulator (optional)
+4. Run the application by doing
+  ```
+  flutter run
+  ```
