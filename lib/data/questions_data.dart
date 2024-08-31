@@ -23,7 +23,7 @@ var questions = [
   ),
   QuizQuestions(
     question:
-        "Mengapa menyalip bisa berbahaya meski di jalan lurus dan bersih? Karena kecepatan lalu lintas yang datang sering kali",
+        "Mengapa menyalip bisa berbahaya meski di jalan lurus dan terlihat kosong? Karena kecepatan lalu lintas yang datang sering kali",
     options: [
       "diperkirakan terlalu rendah",
       "diperkirakan terlalu tinggi",
