@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:teori_mengemudi/components/answer_button/answer_button.dart';
+import 'package:teori_mengemudi/components/question_resource/question_resource.dart';
 import 'package:teori_mengemudi/models/quiz_questions.dart';
 
 class Question extends StatelessWidget {
@@ -20,6 +21,7 @@ class Question extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
+        QuestionResource(questionsResource: question.resource),
         Text(
           question.question,
           textAlign: TextAlign.center,

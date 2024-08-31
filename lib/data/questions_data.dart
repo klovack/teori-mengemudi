@@ -69,7 +69,7 @@ var questions = [
     question:
         "Dua kendaraan dari arah yang berlawanan saling mendekat dan keduanya ingin belok kanan. Bagaimana seharusnya mereka berperilaku secara normal?",
     options: [
-      "Belok kanan melebar dan memutar ke belakang kendaraan yang berlawanan",
+      "Belok kanan dengan memutar ke belakang kendaraan yang berlawanan",
       "Belok kanan di depan satu sama lain",
     ],
     correctOption: [1],
@@ -86,7 +86,7 @@ var questions = [
     score: 2,
     resource: QuizQuestionsResource(
       type: QuizQuestionsResourceType.image,
-      url: 'assets/images/rambu_jalan_buntu.jpg',
+      url: 'assets/images/signs/jalan_buntu.png',
     ),
   )
 ];

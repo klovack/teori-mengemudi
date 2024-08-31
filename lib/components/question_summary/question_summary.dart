@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:teori_mengemudi/components/question_resource/question_resource.dart';
 import 'package:teori_mengemudi/models/quiz_questions.dart';
 
 class QuestionSummary extends StatelessWidget {
@@ -33,7 +34,9 @@ class QuestionSummary extends StatelessWidget {
             ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          QuestionResource(questionsResource: question.resource),
           Text(
             '${index + 1}. ${question.question}',
             style: GoogleFonts.dmSerifDisplay(
