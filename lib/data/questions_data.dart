@@ -75,4 +75,18 @@ var questions = [
     correctOption: [1],
     score: 2,
   ),
+  QuizQuestions(
+    question: "Rambu lalu lintas ini menunjukkan bahwa ada",
+    options: [
+      "jalan bawah tanah",
+      "jalan yang tertutup untuk lalu lintas kendaraan",
+      "jalan buntu",
+    ],
+    correctOption: [2],
+    score: 2,
+    resource: QuizQuestionsResource(
+      type: QuizQuestionsResourceType.image,
+      url: 'assets/images/rambu_jalan_buntu.jpg',
+    ),
+  )
 ];
