@@ -36,7 +36,7 @@ class QuestionSummary extends StatelessWidget {
         children: [
           Text(
             '${index + 1}. ${question.question}',
-            style: GoogleFonts.playfairDisplay(
+            style: GoogleFonts.dmSerifDisplay(
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -79,7 +79,11 @@ class QuestionSummary extends StatelessWidget {
                         : Colors.deepOrange,
                   ),
                   const SizedBox(width: 10),
-                  Expanded(child: Text(option)),
+                  Expanded(
+                      child: Text(
+                    option,
+                    style: GoogleFonts.dmSans(),
+                  )),
                 ],
               ),
             );

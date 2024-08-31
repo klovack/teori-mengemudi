@@ -27,7 +27,7 @@ class StartScreen extends StatelessWidget {
                 child: Text(
                   "Teori Mengemudi",
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.playfairDisplay(
+                  style: GoogleFonts.dmSerifDisplay(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.deepOrange,

@@ -23,8 +23,9 @@ class Question extends StatelessWidget {
         Text(
           question.question,
           textAlign: TextAlign.center,
-          style: GoogleFonts.playfairDisplay(
+          style: GoogleFonts.dmSerifDisplay(
             fontWeight: FontWeight.bold,
+            fontSize: 18,
           ),
         ),
         const SizedBox(
