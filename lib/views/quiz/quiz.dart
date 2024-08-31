@@ -44,7 +44,7 @@ class _QuizState extends State<Quiz> {
         return ResultScreen(
           onReset: () {
             setState(() {
-              activeScreen = QuizScreenType.questions;
+              activeScreen = QuizScreenType.start;
             });
           },
           questions: questions,

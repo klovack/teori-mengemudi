@@ -69,7 +69,7 @@ class ResultScreen extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           ElevatedButton.icon(
-            label: const Text("Reset"),
+            label: const Text("Kembali ke Awal"),
             icon: const Icon(Icons.restart_alt_rounded),
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(

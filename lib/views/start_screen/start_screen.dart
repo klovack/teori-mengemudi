@@ -20,8 +20,7 @@ class StartScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Icon(Icons.directions_car,
-                  size: 100, color: Colors.deepOrange),
+              Image.asset('assets/images/logo.png', width: 150),
               SizedBox(
                 width: 150,
                 child: Text(
@@ -30,7 +29,7 @@ class StartScreen extends StatelessWidget {
                   style: GoogleFonts.dmSerifDisplay(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
+                    color: Colors.black.withOpacity(0.8),
                   ),
                 ),
               ),
@@ -55,7 +54,7 @@ class StartScreen extends StatelessWidget {
           ),
           Positioned(
             right: 15,
-            top: 65,
+            top: 110,
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
@@ -77,12 +76,6 @@ class StartScreen extends StatelessWidget {
                 shape: const Circle(),
               ),
             ),
-          ),
-          const Positioned(
-            left: 15,
-            top: 0,
-            child:
-                Icon(Icons.question_answer, size: 30, color: Colors.deepOrange),
           ),
         ],
       ),
