@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:teori_mengemudi/components/answer_button/answer_button.dart';
 import 'package:teori_mengemudi/components/question_resource/question_resource.dart';
 import 'package:teori_mengemudi/models/quiz_questions.dart';
+import 'package:teori_mengemudi/theme/fonts.dart';
 
 class Question extends StatelessWidget {
   final QuizQuestions question;
@@ -25,9 +25,11 @@ class Question extends StatelessWidget {
         Text(
           question.question,
           textAlign: TextAlign.center,
-          style: GoogleFonts.dmSerifDisplay(
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
+          style: Fonts.getPrimary(
+            ts: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
           ),
         ),
         const SizedBox(

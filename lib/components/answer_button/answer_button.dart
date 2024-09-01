@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:teori_mengemudi/theme/fonts.dart';
 
 class AnswerButton extends StatelessWidget {
   final String text;
@@ -33,7 +33,7 @@ class AnswerButton extends StatelessWidget {
       child: Text(
         text,
         textAlign: TextAlign.center,
-        style: GoogleFonts.dmSans(),
+        style: Fonts.getSecondary(),
       ),
     );
   }

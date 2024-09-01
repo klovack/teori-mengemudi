@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:teori_mengemudi/components/question_resource/question_resource.dart';
 import 'package:teori_mengemudi/models/quiz_questions.dart';
+import 'package:teori_mengemudi/theme/fonts.dart';
 
 class QuestionSummary extends StatelessWidget {
   final QuizQuestions question;
@@ -42,8 +42,10 @@ class QuestionSummary extends StatelessWidget {
           ),
           Text(
             '${index + 1}. ${question.question}',
-            style: GoogleFonts.dmSerifDisplay(
-              fontWeight: FontWeight.bold,
+            style: Fonts.getPrimary(
+              ts: const TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           const SizedBox(height: 10),
@@ -88,7 +90,7 @@ class QuestionSummary extends StatelessWidget {
                   Expanded(
                       child: Text(
                     option,
-                    style: GoogleFonts.dmSans(),
+                    style: Fonts.getSecondary(),
                   )),
                 ],
               ),

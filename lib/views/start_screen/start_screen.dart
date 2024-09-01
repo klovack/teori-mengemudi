@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:country_flags/country_flags.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:teori_mengemudi/theme/fonts.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function() onStart;
@@ -26,10 +26,12 @@ class StartScreen extends StatelessWidget {
                 child: Text(
                   "Teori Mengemudi",
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.dmSerifDisplay(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black.withOpacity(0.8),
+                  style: Fonts.getPrimary(
+                    ts: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black.withOpacity(0.8),
+                    ),
                   ),
                 ),
               ),
