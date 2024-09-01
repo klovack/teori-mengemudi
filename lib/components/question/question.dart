@@ -32,6 +32,18 @@ class Question extends StatelessWidget {
             ),
           ),
         ),
+        if (question.subQuestion != null)
+          Text(
+            question.subQuestion!,
+            textAlign: TextAlign.center,
+            style: Fonts.getSecondary(
+              ts: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w200,
+                color: Colors.black.withOpacity(0.8),
+              ),
+            ),
+          ),
         const SizedBox(
           height: 20,
         ),

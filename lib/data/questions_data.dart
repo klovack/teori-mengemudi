@@ -1,10 +1,12 @@
 import 'package:teori_mengemudi/data/questions/basic_theory.dart';
+import 'package:teori_mengemudi/data/questions/behavior_towards_pedestrians.dart';
 import 'package:teori_mengemudi/models/quiz_questions.dart';
 
 var questions = [
   QuizQuestions(
     question:
-        "Mengapa mengkonsumsi narkoba satu kali saja (seperti ganja, heroin, kokain) berbahaya? Karena",
+        "Mengapa mengkonsumsi narkoba satu kali saja (seperti ganja, heroin, kokain) berbahaya?",
+    subQuestion: "Karena",
     options: [
       "menyebabkan ketidakmampuan mengemudi",
       "menyebabkan sensasi tinggi yang berlangsung beberapa jam"
@@ -24,7 +26,8 @@ var questions = [
   ),
   QuizQuestions(
     question:
-        "Mengapa menyalip bisa berbahaya meski di jalan lurus dan terlihat kosong? Karena kecepatan lalu lintas yang datang sering kali",
+        "Mengapa menyalip bisa berbahaya meski di jalan lurus dan terlihat kosong?",
+    subQuestion: "Karena kecepatan lalu lintas yang datang sering kali",
     options: [
       "diperkirakan terlalu rendah",
       "diperkirakan terlalu tinggi",
@@ -91,4 +94,5 @@ var questions = [
     ),
   ),
   ...basicTheoryQuestions,
+  ...behaviorTowardsPedestriansQuestions,
 ];

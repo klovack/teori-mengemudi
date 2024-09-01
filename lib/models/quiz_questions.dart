@@ -15,6 +15,7 @@ class QuizQuestionsResource {
 
 class QuizQuestions {
   final String question;
+  final String? subQuestion;
   final QuizQuestionsResource? resource;
   final List<String> options;
   final List<int> correctOption;
@@ -28,6 +29,7 @@ class QuizQuestions {
     required this.options,
     required this.correctOption,
     required this.score,
+    this.subQuestion,
     this.resource,
   });
 
