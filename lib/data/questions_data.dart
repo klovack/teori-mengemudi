@@ -1,3 +1,4 @@
+import 'package:teori_mengemudi/data/questions/basic_theory.dart';
 import 'package:teori_mengemudi/models/quiz_questions.dart';
 
 var questions = [
@@ -88,5 +89,6 @@ var questions = [
       type: QuizQuestionsResourceType.image,
       url: 'assets/images/signs/jalan_buntu.png',
     ),
-  )
+  ),
+  ...basicTheoryQuestions,
 ];

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:teori_mengemudi/components/resource_video/resource_video.dart';
 import 'package:teori_mengemudi/models/quiz_questions.dart';
+import 'package:video_player/video_player.dart';
 
 class QuestionResource extends StatelessWidget {
   final QuizQuestionsResource? questionsResource;
@@ -12,7 +14,12 @@ class QuestionResource extends StatelessWidget {
     }
 
     if (questionsResource!.type == QuizQuestionsResourceType.video) {
-      throw UnimplementedError('Video resource is not implemented yet');
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: ResourceVideo(questionsResource!.url),
+        ),
+      );
     }
 
     return Center(
