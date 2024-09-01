@@ -36,7 +36,10 @@ class QuestionSummary extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          QuestionResource(questionsResource: question.resource),
+          QuestionResource(
+            questionsResource: question.resource,
+            limitVideoPlay: false,
+          ),
           Text(
             '${index + 1}. ${question.question}',
             style: GoogleFonts.dmSerifDisplay(

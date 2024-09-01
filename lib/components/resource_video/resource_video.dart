@@ -4,10 +4,11 @@ import 'package:video_player/video_player.dart';
 
 class ResourceVideo extends StatefulWidget {
   final String assetUrl;
+  final bool limitVideoPlay;
   final VideoPlayCounterService videoPlayCounterService =
       VideoPlayCounterService();
 
-  ResourceVideo(this.assetUrl, {super.key});
+  ResourceVideo(this.assetUrl, {super.key, this.limitVideoPlay = true});
 
   @override
   State<ResourceVideo> createState() => _ResourceVideoState();
@@ -59,7 +60,8 @@ class _ResourceVideoState extends State<ResourceVideo> {
             children: [
               GestureDetector(
                 onTap: () {
-                  if (!_controller.value.isPlaying && _playCount > 0) {
+                  if (!_controller.value.isPlaying &&
+                      (_playCount > 0 || !widget.limitVideoPlay)) {
                     setState(() {
                       _controller.play();
                       _isPlaying = true;
@@ -94,7 +96,7 @@ class _ResourceVideoState extends State<ResourceVideo> {
                 ),
               ),
               const SizedBox(height: 10),
-              Text(videoTextHint)
+              if (widget.limitVideoPlay) Text(videoTextHint)
             ],
           )
         : Container();
