@@ -9,7 +9,7 @@ var behaviorTowardsPedestriansQuestions = [
       "Anak-anak berbalik arah di zebra cross tanpa alasan yang jelas dan berlari kembali ke tempat semula",
       "Anak-anak selalu memperkirakan kecepatan dan jarak kendaraan yang mendekat dengan benar dan menunggu di sisi jalan",
     ],
-    correctOption: [0, 1],
+    correctOptions: [0, 1],
     score: 5,
   ),
   QuizQuestions(
@@ -21,7 +21,7 @@ var behaviorTowardsPedestriansQuestions = [
       "mulai berlari bahkan ketika lampu penyebrangan masih berwarna merah karena mereka tidak sabar menunggu",
       "saling mendorong satu sama lain di jalur lalu lintas",
     ],
-    correctOption: [0, 1, 2],
+    correctOptions: [0, 1, 2],
     score: 4,
   ),
   QuizQuestions(
@@ -33,7 +33,7 @@ var behaviorTowardsPedestriansQuestions = [
       "masuk terlalu tengah ke dalam jalur lalu lintas",
       "turun dan menunggu sampai semuanya lalu lintas kosong",
     ],
-    correctOption: [0, 1],
+    correctOptions: [0, 1],
     score: 4,
   ),
   QuizQuestions(
@@ -44,7 +44,7 @@ var behaviorTowardsPedestriansQuestions = [
       "Jika tidak ada yang menghalangi atau membahayakan, Anda boleh melintas di sebelah kiri lebih cepat dari kecepatan pejalan kaki",
       "Penumpang harus memberi jalan kepada lalu lintas yang sedang bergerak sebelum naik ke dalam bus",
     ],
-    correctOption: [0],
+    correctOptions: [0],
     score: 4,
     resource: QuizQuestionsResource(
       type: QuizQuestionsResourceType.image,
@@ -59,7 +59,7 @@ var behaviorTowardsPedestriansQuestions = [
       "Ia berbalik di tengah jalan",
       "Ia menyebrang jalan secara perlahan",
     ],
-    correctOption: [0, 1, 2],
+    correctOptions: [0, 1, 2],
     score: 4,
   ),
 ];

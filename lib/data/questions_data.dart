@@ -11,7 +11,7 @@ var questions = [
       "menyebabkan ketidakmampuan mengemudi",
       "menyebabkan sensasi tinggi yang berlangsung beberapa jam"
     ],
-    correctOption: [0, 1],
+    correctOptions: [0, 1],
     score: 4,
   ),
   QuizQuestions(
@@ -21,7 +21,7 @@ var questions = [
       "Melalui alkohol dan zat memabukkan lainnya",
       "Melalui kelelahan yang berlebihan"
     ],
-    correctOption: [0, 1, 2],
+    correctOptions: [0, 1, 2],
     score: 4,
   ),
   QuizQuestions(
@@ -32,7 +32,7 @@ var questions = [
       "diperkirakan terlalu rendah",
       "diperkirakan terlalu tinggi",
     ],
-    correctOption: [
+    correctOptions: [
       0,
     ],
     score: 5,
@@ -45,7 +45,7 @@ var questions = [
       "Mata harus terbiasa dengan kondisi pencahayaan yang berubah terlebih dahulu",
       "Ban bisa rusak di pintu keluar dan masuk yang sempit",
     ],
-    correctOption: [0, 1, 2],
+    correctOptions: [0, 1, 2],
     score: 5,
   ),
   QuizQuestions(
@@ -55,7 +55,7 @@ var questions = [
       "Di jalan-jalan yang membingungkan",
       "Di penyeberangan pejalan kaki",
     ],
-    correctOption: [2],
+    correctOptions: [2],
     score: 4,
   ),
   QuizQuestions(
@@ -66,7 +66,7 @@ var questions = [
       "Seberangi perlintasan kereta api bila tidak ada kereta yang terlihat",
       "Tunggu di depan perlintasan kereta api sampai lampu merah mati dan palang terbuka",
     ],
-    correctOption: [2],
+    correctOptions: [2],
     score: 5,
   ),
   QuizQuestions(
@@ -76,7 +76,7 @@ var questions = [
       "Belok kanan dengan memutar ke belakang kendaraan yang berlawanan",
       "Belok kanan di depan satu sama lain",
     ],
-    correctOption: [1],
+    correctOptions: [1],
     score: 2,
   ),
   QuizQuestions(
@@ -86,7 +86,7 @@ var questions = [
       "jalan yang tertutup untuk lalu lintas kendaraan",
       "jalan buntu",
     ],
-    correctOption: [2],
+    correctOptions: [2],
     score: 2,
     resource: QuizQuestionsResource(
       type: QuizQuestionsResourceType.image,

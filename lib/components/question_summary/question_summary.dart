@@ -17,7 +17,7 @@ class QuestionSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final correctAnswers = question.correctOption;
+    final correctAnswers = question.correctOptions;
     final isCorrect = question.isCorrect(selectedAnswer);
 
     return Container(

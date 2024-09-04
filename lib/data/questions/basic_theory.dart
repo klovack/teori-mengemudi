@@ -8,7 +8,7 @@ var basicTheoryQuestions = [
       "Terlambat atau tidak menyalakan lampu saat gelap",
       "Menjaga jarak dengan mobil di depan",
     ],
-    correctOption: [0, 1],
+    correctOptions: [0, 1],
     score: 4,
   ),
   QuizQuestions(
@@ -19,7 +19,7 @@ var basicTheoryQuestions = [
       "Berkendara di tengah hujan deras",
       "Berkendara dengan kecepatan tinggi di jalan yang berlubang",
     ],
-    correctOption: [0, 1, 2],
+    correctOptions: [0, 1, 2],
     score: 4,
   ),
   QuizQuestions(
@@ -29,7 +29,7 @@ var basicTheoryQuestions = [
       "mempercepat agar orang yang menyalip kembali ke belakang",
       "menjaga kecepatan karena jarak masih cukup aman",
     ],
-    correctOption: [0],
+    correctOptions: [0],
     score: 4,
     resource: QuizQuestionsResource(
       type: QuizQuestionsResourceType.video,
@@ -44,7 +44,7 @@ var basicTheoryQuestions = [
       "Perhatian pengemudi menjadi terganggu",
       "Hal ini memudahkan penyandang tunanetra untuk mengetahui arah jalan",
     ],
-    correctOption: [0, 1],
+    correctOptions: [0, 1],
     score: 4,
   ),
   QuizQuestions(
@@ -54,7 +54,7 @@ var basicTheoryQuestions = [
       "Pengemudi belok terlalu cepat",
       "Lampu depan yang tidak berfungsi dengan baik",
     ],
-    correctOption: [0, 1, 2],
+    correctOptions: [0, 1, 2],
     score: 4,
   ),
   QuizQuestions(
@@ -65,7 +65,7 @@ var basicTheoryQuestions = [
       "Tekanan ban yang tidak sesuai",
       "Muatan terlalu rendah",
     ],
-    correctOption: [0, 1, 2],
+    correctOptions: [0, 1, 2],
     score: 4,
   ),
 ];
