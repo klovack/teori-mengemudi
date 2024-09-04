@@ -1,0 +1,317 @@
+[
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang bisa Anda harapkan di sini?",
+    "options": [
+      "Dengan perubahan lajur kendaraan di depan",
+      "Dengan peningkatan lalu lintas di belakang kereta bawah tanah",
+      "Dengan berakhirnya lajur kanan"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-005-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda harus bersikap di sini?",
+    "options": [
+      "Periksa kecepatan lagi, perlambat jika perlu",
+      "Hanya mengerem di tikungan agar tidak menghalangi lalu lintas di belakang"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-006-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kemacetan lalu lintas sedang terjadi di sini. Apa perilaku yang benar?",
+    "options": [
+      "Jika memungkinkan, nyalakan lampu peringatan bahaya untuk memperingatkan kendaraan di belakang",
+      "Berkendara sejauh mungkin ke kanan untuk memberi ruang bagi lajur di sebelah kiri",
+      "Berkendara sejauh mungkin ke kiri untuk memberi ruang bagi lajur di sebelah kanan"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-008-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang harus Anda harapkan di tanjakan jalan raya?",
+    "options": [
+      "Dengan truk yang bergerak lambat di lajur kanan",
+      "Dengan manuver menyalip secara tiba-tiba oleh pengguna jalan lain",
+      "Dengan perbedaan kecepatan yang besar di antara kendaraan"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 4,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda harus bersikap?",
+    "options": [
+      "Memperlambat dan memelihara jalur",
+      "Pindah ke lajur kiri",
+      "Mempertahankan kecepatan dan lajur"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-011.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang perlu Anda ingat saat memasuki jalan tol?",
+    "options": [
+      "Saya diperbolehkan mengemudi lebih cepat di jalur penggabungan daripada di jalur lalu lintas menerus",
+      "Lalu lintas di jalur lalu lintas berkelanjutan memiliki hak jalan",
+      "Lalu lintas di lajur kanan terus menerus harus dapat memasuki lajur tersebut"
+    ],
+    "correct_options": [0, 1],
+    "score": 5,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda mengemudi dengan kecepatan yang disarankan di jalan tol dan ingin keluar di pintu keluar berikutnya. Bagaimana seharusnya Anda bersikap?",
+    "options": [
+      "Saya mengakhiri manuver menyalip pada waktu yang tepat",
+      "Saya mengurangi kecepatan secara signifikan di jalur penggabungan",
+      "Saya sudah mengurangi kecepatan secara signifikan di lajur kanan jalan tol"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Setelah berkendara jauh dengan kecepatan sekitar 120 km/jam, Anda ingin meninggalkan jalan tol. Apa yang harus Anda ingat?",
+    "options": [
+      "Saya memberi isyarat pada waktu yang tepat dan kemudian memperlambat laju kendaraan di jalur penggabungan agar tidak menghalangi lalu lintas di belakang saya",
+      "Saya memperhatikan tampilan speedometer agar tidak meremehkan kecepatan",
+      "Saya menjaga kecepatan saya di jalur penggabungan agar tidak menghalangi lalu lintas di belakang saya"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang harus Anda lakukan sekarang?",
+    "options": [
+      "Saya mengerem kendaraan saya",
+      "Saya menyalakan lampu peringatan bahaya",
+      "Saya mengemudi di jalur bebas hambatan"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-016.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang harus Anda harapkan dalam perjalanan ini?",
+    "options": [
+      "Dengan rintangan di area tikungan",
+      "Bahwa kurva menyempit seiring dengan perkembangannya",
+      "Dengan lalu lintas yang mendekat di jalur saya"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-017.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang harus dilakukan dalam situasi ini?",
+    "options": [
+      "Saya harus mengurangi kecepatan saya",
+      "Truk memiliki hak jalan",
+      "Truk harus menunggu"
+    ],
+    "correct_options": [0, 1],
+    "score": 5,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-018.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Mengapa Anda harus menunda sekarang?",
+    "options": [
+      "Tentang truk",
+      "Karena batas kecepatan",
+      "Karena mobilnya berwarna putih"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Mengapa Anda harus mengurangi kecepatan Anda sekarang?",
+    "options": [
+      "Karena mobil biru",
+      "Karena batas kecepatan",
+      "Karena van merah"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-020.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda mengemudi setidaknya 20 km/jam lebih cepat dari truk hijau. Bagaimana seharusnya Anda bersikap?",
+    "options": [
+      "Saya berkendara ke jalan tol di depan truk hijau",
+      "Saya mengerem dan melaju ke jalan tol di belakang truk hijau",
+      "Saya berhenti di ujung jalur penggabungan dan berkendara ke jalan tol setelah truk biru"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-021.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda sedang mendekati kendaraan-kendaraan ini. Bagaimana Anda harus bersikap dalam situasi ini?",
+    "options": [
+      "Saya tetap berada di lajur tengah, tetapi tanpa menyalip mobil putih",
+      "Saya tetap berada di lajur tengah dan dengan hati-hati menyalip mobil putih",
+      "Saya berpindah ke lajur kiri dan menggunakan flasher lampu depan hingga mobil di depan mengosongkan lajur"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-022.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda sedang mengemudikan truk. Apa perilaku yang benar sekarang?",
+    "options": [
+      "Saya menambah jarak dengan kendaraan di depan",
+      "Saya mempertahankan kecepatan saya",
+      "Saya menyalip truk di depan saya"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-023.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang harus Anda lakukan sekarang?",
+    "options": [
+      "- jangan berpindah jalur karena [mobil merah] sudah berpindah jalur",
+      "- ke lajur tengah, saat manuver menyalip saya selesai",
+      "- jalur sehingga saya tidak menghalangi [mobil kuning]"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-024-M.mp4",
+      "type": "video"
+    },
+    "sub_question": "Aku ganti baju."
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang harus Anda persiapkan sekarang?",
+    "options": [
+      "[Mobil kuning] meninggalkan jalan tol",
+      "Sepeda motor meninggalkan jalan tol",
+      "Bus [biru] di depan saya mengerem karena macet"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-026-M.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda ingin meninggalkan jalan tol. Apa yang membuat situasi ini berbahaya?",
+    "options": [
+      "Melalui sepeda motor",
+      "Melalui [truk kuning]",
+      "Melalui [kendaraan ramah lingkungan]"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-027-M.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda ingin bergabung dengan jalan tol. Jalur mana yang harus Anda ikuti?",
+    "options": [],
+    "correct_options": [],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-025.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  }
+]
