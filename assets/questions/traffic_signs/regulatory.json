@@ -1,0 +1,1374 @@
+[
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Dalam hal apa Anda harus menunggu di depan rambu lalu lintas ini?",
+    "options": [
+      "Saat pegawai kereta api mengibarkan bendera putih-merah-putih",
+      "Jika Anda tidak dapat menyeberangi penyeberangan tanpa harus berhenti di atasnya",
+      "Saat kendaraan kereta api mendekat"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-001.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda bersikap dengan rambu lalu lintas ini?",
+    "options": [
+      "Anda harus menunjukkan perubahan arah ke kanan",
+      "Anda hanya boleh mengemudi di sebelah kanan",
+      "Anda tidak diizinkan untuk berbelok ke kanan"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-004.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda bersikap dengan rambu lalu lintas ini?",
+    "options": [
+      "Anda harus menunjukkan perubahan arah ke kiri",
+      "Anda hanya boleh mengemudi di lajur kiri",
+      "Anda tidak diizinkan untuk mengemudi di sebelah kiri"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-005.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Ke arah mana saja Anda boleh mengemudi?",
+    "options": ["Lurus ke depan", "Ke kanan", "Ke kiri"],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-006.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana seharusnya Anda bersikap di rambu lalu lintas ini?",
+    "options": [
+      "Anda harus berkendara melewati pulau lalu lintas di sebelah kanan",
+      "Anda wajib berbelok ke kanan",
+      "Anda tidak diperbolehkan berbelok ke kiri sebelum rambu ini"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-007.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda mendekati halte bus yang diberi label seperti itu. Apa yang harus Anda lakukan jika Anda melihat anak-anak di sana?",
+    "options": [
+      "Kurangi kecepatan dan tetap siap untuk mengerem",
+      "Pengurangan kecepatan hanya diperlukan jika bus sekolah berhenti di sana",
+      "Kecepatan tidak harus dikurangi ketika bus berhenti di tempat pemberhentian"
+    ],
+    "correct_options": [0],
+    "score": 5,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-008.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang perlu Anda ketahui tentang rambu lalu lintas ini?",
+    "options": [
+      "Anda tidak diperbolehkan mengendarai kendaraan bermotor di zona pejalan kaki ini",
+      "Anda diperbolehkan mengemudikan kendaraan bermotor dengan kecepatan berjalan kaki di zona pejalan kaki ini",
+      "Sebagai penduduk sekitar, Anda diperbolehkan mengendarai kendaraan bermotor di zona pejalan kaki ini"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-010.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa saja yang tidak boleh dikendarai di sini?",
+    "options": ["Dengan moped", "Dengan moped", "Dengan sepeda motor ringan"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-012.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang perlu Anda ketahui tentang rambu lalu lintas ini?",
+    "options": [
+      "Kendaraan bisa datang dari jalan ini",
+      "Anda tidak diizinkan untuk mengemudi di jalan ini",
+      "Anda diizinkan untuk mengemudi di jalan ini"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-013.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang harus Anda ingat dengan rambu lalu lintas ini?",
+    "options": [
+      "Anda tidak diizinkan untuk berhenti",
+      "Anda diizinkan untuk berhenti untuk bongkar muat barang",
+      "Anda diperbolehkan berhenti untuk memberi kesempatan kepada penumpang untuk turun"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-014.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa saja yang diizinkan dengan rambu lalu lintas ini?",
+    "options": [
+      "Berhenti untuk memuat atau menurunkan barang dan untuk naik atau turun dari kendaraan",
+      "Menahan hingga 3 menit",
+      "Memarkir saat menggunakan cakram parkir"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-015.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang diperbolehkan dengan rambu-rambu jalan ini?",
+    "options": [
+      "Penyandang disabilitas berat dengan surat izin parkir bernomor yang sesuai dapat parkir di sini",
+      "Berhenti untuk naik atau turun untuk semua orang",
+      "Dengan tiket parkir dari mesin tiket parkir, siapa pun dapat parkir di sini tanpa batas waktu"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-016.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang berlaku untuk kombinasi rambu-rambu jalan ini?",
+    "options": [
+      "- Mengamati lalu lintas sepeda di sebelah kiri dan kanan",
+      "- Mengamati lalu lintas dengan skuter listrik dari kiri dan kanan",
+      "- hanya mengamati lalu lintas di jalan prioritas dari kiri dan kanan"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-017.jpg",
+      "type": "image"
+    },
+    "sub_question": "Saya harus mengalah dan pada saat yang sama"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang diperbolehkan memasuki jalur khusus sepeda?",
+    "options": [
+      "Semua kendaraan yang dikendarai oleh penduduk setempat",
+      "Semua moped dengan kecepatan desain maksimum kurang dari 25 km/jam",
+      "Semua mobil, jika dikendarai dengan kecepatan berjalan"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-018.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang berlaku untuk marka jalur kuning?",
+    "options": [
+      "- hanya dipasang sementara (misalnya di lokasi konstruksi)",
+      "- mengganti validitas marka jalur putih",
+      "- hanya berlaku untuk kendaraan di lokasi konstruksi"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": null,
+    "sub_question": "Marka jalur kuning"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda bersikap dengan rambu lalu lintas ini?",
+    "options": [
+      "Anda harus memberi jalan kepada lalu lintas yang datang",
+      "Anda tidak diizinkan untuk mematikan",
+      "Anda memiliki prioritas untuk mengatasi lalu lintas"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-102.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Ke arah mana saja Anda boleh mengemudi?",
+    "options": ["Ke kiri", "Ke kanan", "Lurus ke depan"],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-106.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Sebuah bus sekolah berhenti di jalan raya sekitar 80 meter di depan Anda. Apakah hal ini dapat menimbulkan bahaya?",
+    "options": [
+      "Ya, karena anak-anak sering berlari menyeberang jalan untuk mengejar bus",
+      "Ya, karena anak-anak tidak selalu mengambil rute terpendek melintasi jalan raya",
+      "Tidak, karena ada penjaga penyeberangan di setiap halte bus sekolah untuk menjaga lalu lintas tetap aman"
+    ],
+    "correct_options": [0, 1],
+    "score": 5,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-109.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Siapa yang diperbolehkan mengemudikan kendaraan bermotor di jalan ini?",
+    "options": [
+      "Siapa yang harus mengantarkan barang",
+      "Siapa yang ingin membeli sesuatu",
+      "Siapa yang ingin mengunjungi seseorang"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-114.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang diizinkan untuk menggunakan jalur khusus yang ditandai dengan cara ini?",
+    "options": ["Bus", "Truk", "Mobil"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-115.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Siapa yang diperbolehkan mengemudi di jalan dengan rambu seperti ini?",
+    "options": [
+      "Penduduk",
+      "Pengunjung yang berkunjung ke penghuni",
+      "Kendaraan yang melintasi lalu lintas"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-116.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang tidak diizinkan untuk mengemudi di jalan yang diberi rambu seperti ini?",
+    "options": ["Truk", "Mobil", "Sepeda motor"],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-118.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang tidak diizinkan untuk mengemudi di jalan yang diberi rambu seperti ini?",
+    "options": ["Sepeda", "Sepeda motor", "Mobil"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-119.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang tidak diizinkan untuk mengemudi di jalan yang diberi rambu seperti ini?",
+    "options": ["Sepeda motor", "Mobil", "Truk"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-120.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu-rambu jalan ini?",
+    "options": [
+      "Larangan mengemudi dalam jarak 100 meter",
+      "Di jalan satu arah sepanjang 100 meter",
+      "Di kantor bea cukai yang berjarak 100 meter"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-121.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "- Kecepatan maksimum yang diizinkan 30 km/jam",
+      "- Kecepatan minimum yang ditentukan 30 km/jam",
+      "- Kecepatan yang disarankan 30 km/jam"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-124.jpg",
+      "type": "image"
+    },
+    "sub_question": "Di sini dimulai zona dengan"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Area lalu lintas terbatas dimulai dari sini. Bagaimana Anda harus bersikap?",
+    "options": [
+      "Berikan perhatian khusus pada lalu lintas pejalan kaki yang padat",
+      "Amati waktu parkir maksimum",
+      "Pertahankan kecepatan minimum 20 km/jam"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-125.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "- Kecepatan maksimum yang diizinkan 30 km/jam",
+      "- Kecepatan minimum yang ditentukan 30 km/jam",
+      "- Kecepatan yang disarankan 30 km/jam"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-126.jpg",
+      "type": "image"
+    },
+    "sub_question": "Di akhir zona dengan"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apakah diperbolehkan mengemudi lebih cepat dari 60 km/jam di sini?",
+    "options": ["Ya, ketika jalan kering", "Ya, saat jalan basah"],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-127.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda bersikap dengan rambu lalu lintas ini?",
+    "options": [
+      "Anda harus mengemudi setidaknya 60 km/jam, kecuali jika Anda harus mengemudi lebih lambat demi alasan keselamatan di jalan raya",
+      "Anda tidak diperbolehkan menggunakan jalan ini jika Anda tidak dapat atau tidak diizinkan untuk mengemudi setidaknya 60 km/jam",
+      "Anda tidak diperbolehkan mengemudi lebih cepat dari 60 km/jam"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-128.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang boleh menyalip di rambu lalu lintas ini?",
+    "options": [
+      "Sepeda motor tanpa sespan",
+      "Sepeda motor dengan sespan",
+      "Mobil"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-129.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu-rambu jalan ini?",
+    "options": [
+      "Pada rute tanpa menyalip sepanjang 3 km",
+      "Larangan menyalip yang dimulai dari jarak 3 kilometer",
+      "Di jalan raya dengan dua lajur untuk satu arah dengan panjang 3 km"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-130.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu-rambu jalan ini?",
+    "options": [
+      "Larangan menyalip yang dimulai dari jarak 200 meter",
+      "Pada bagian tanpa menyalip sepanjang 200 meter",
+      "Larangan menyalip yang berakhir setelah 200 meter"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-131.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "Sampai akhir batas kecepatan",
+      "Larangan mengemudi lebih cepat dari 60 km/jam",
+      "Di awal batas kecepatan"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-132.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Larangan apa saja yang dibatalkan dengan rambu lalu lintas ini?",
+    "options": ["Larangan menyalip", "Batas kecepatan", "Larangan parkir"],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-133.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu-rambu jalan ini?",
+    "options": [
+      "- yang berlaku di jalur lalu lintas dan juga di bahu jalan",
+      "- yang hanya berlaku di bahu jalan yang keras",
+      "- yang hanya berlaku untuk truk"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-134.jpg",
+      "type": "image"
+    },
+    "sub_question": "Menuju zona dilarang berhenti,"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang diperbolehkan di zona yang dimulai dari sini?",
+    "options": [
+      "Menahan hingga 3 menit",
+      "Berhenti untuk memuat atau menurunkan barang dan untuk naik atau turun dari kendaraan",
+      "Memarkir saat menggunakan cakram parkir"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-135.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang berakhir di sini?",
+    "options": [
+      "Zona dengan larangan berhenti terbatas",
+      "Zona dengan larangan berhenti mutlak",
+      "Larangan rute sebelumnya"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-136.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kapan Anda harus memberi isyarat?",
+    "options": ["Meninggalkan bundaran", "Mengemudi di bundaran"],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-140-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda mendekati kombinasi rambu-rambu jalan berikut ini. Apa yang perlu Anda ingat di sini?",
+    "options": [
+      "Kendaraan di dalam lingkaran memiliki hak jalan",
+      "Meninggalkan lingkaran harus ditandai dengan lampu yang berkedip",
+      "Anda harus memberi isyarat saat memasuki lingkaran"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-141.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang perlu saya ketahui tentang rambu-rambu jalan ini?",
+    "options": [
+      "Dilarang berhenti di jalur lalu lintas melingkar",
+      "Lampu kilat saat memasuki lingkaran",
+      "Anda hanya boleh mengemudi dengan kecepatan berjalan"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-142.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang perlu saya ketahui tentang rambu-rambu jalan ini?",
+    "options": [
+      "Memberi jalan kepada lalu lintas di jalur lalu lintas melingkar",
+      "Lampu kilat saat meninggalkan jalur melingkar",
+      "Lampu kilat saat memasuki bundaran"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-143.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda harus bersikap dengan kombinasi rambu lalu lintas ini?",
+    "options": [
+      "Meninggalkan lingkaran harus ditandai dengan berkedip ke kanan",
+      "Beri jalan saat memasuki bundaran",
+      "Mengemudi di sebelah kiri adalah wajib"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-144.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "Di jalur sepeda yang harus digunakan",
+      "Tentang larangan bagi pengendara sepeda",
+      "Pada pengendara sepeda yang menyeberang jalan raya"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-145.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh kombinasi rambu lalu lintas ini?",
+    "options": [
+      "- \"Berhenti. Beri jalan.\"",
+      "- \"Beri jalan.\"",
+      "- \"Prioritas lalu lintas yang datang\""
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-146.jpg",
+      "type": "image"
+    },
+    "sub_question": "Rambu lalu lintas mengikuti setelah 100 meter"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "Di atas trotoar",
+      "Larangan lalu lintas sepeda dan motor bebek",
+      "Di awal area yang tenang lalu lintasnya"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-147.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang diperbolehkan menggunakan jalan ini?",
+    "options": [
+      "Sepeda dan sepeda motor yang didorong",
+      "Kendaraan bermotor",
+      "Kendaraan listrik"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-148.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana seharusnya Anda berperilaku di jalan ini ketika mengemudikan kendaraan bermotor dalam lalu lintas pengiriman?",
+    "options": [
+      "Saya hanya diizinkan mengemudi dengan kecepatan berjalan",
+      "Saya harus sangat memperhatikan pejalan kaki",
+      "Jika tidak ada orang di sekitar, saya diperbolehkan mengemudi lebih cepat dari kecepatan berjalan"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-149.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana seharusnya Anda bersikap di rambu lalu lintas ini?",
+    "options": [
+      "Saya tidak diperbolehkan berbelok di sini",
+      "Saya menemui jalan buntu dan harus kembali",
+      "Saya tidak boleh belok kiri di sini"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-150.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "Saya tidak diperbolehkan mengemudi lebih cepat dari 60 km/jam",
+      "Kecepatan 60 km/jam adalah kecepatan yang aman",
+      "Kecepatan minimum yang disarankan adalah 60 km/jam"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-151.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "Saya hanya diperbolehkan mengemudi lurus ke depan",
+      "Saya memprioritaskan mengatasi lalu lintas",
+      "Saya menemukan diri saya berada di jalan satu arah"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-152.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda bersikap dengan rambu lalu lintas ini?",
+    "options": [
+      "Saya mendekat dengan kecepatan sedang, siap untuk mengerem",
+      "Saya memberi jalan untuk menyeberang jalan",
+      "Jika saya berbelok ke kanan, saya tidak wajib menunggu"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-153.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "Di atas bridleway yang harus digunakan pengendara",
+      "Di jalur khusus yang dilarang untuk dilalui pengguna jalan lain",
+      "Di jalur yang dilarang untuk dilalui pengendara"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-154.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana seharusnya Anda bersikap di rambu lalu lintas ini?",
+    "options": [
+      "- Berhenti dan memberi jalan",
+      "- Hanya berhenti ketika ada garis berhenti",
+      "- Berhenti hanya di lalu lintas yang menyeberang"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-155.jpg",
+      "type": "image"
+    },
+    "sub_question": "Saya harus"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda harus bersikap dalam situasi lalu lintas ini?",
+    "options": [
+      "- Berhenti di garis pandang dan beri jalan",
+      "- Jangan berhenti, karena tidak ada garis pemberhentian",
+      "- Berhenti hanya di lalu lintas yang menyeberang"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-156.jpg",
+      "type": "image"
+    },
+    "sub_question": "Saya harus"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda harus bersikap dalam situasi lalu lintas ini?",
+    "options": [
+      "- Berhenti di garis berhenti dan beri jalan",
+      "- hanya berhenti di tanda berhenti",
+      "- Berhenti hanya di lalu lintas yang menyeberang"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-157.jpg",
+      "type": "image"
+    },
+    "sub_question": "Saya harus"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda mengemudi di jalan prioritas. Rambu lalu lintas mana yang mengakhiri hak jalan Anda?",
+    "options": ["1", "2", "3"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-158.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang perlu Anda ketahui tentang rambu lalu lintas ini?",
+    "options": [
+      "Saya harus berbelok ke kiri",
+      "Saya hanya diperbolehkan mengemudi di sebelah kiri",
+      "Saya tidak diizinkan untuk memberi isyarat"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-159.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang berlaku untuk rambu lalu lintas ini?",
+    "options": [
+      "Saya harus melewati rintangan di sebelah kiri",
+      "Saya wajib berbelok ke kiri",
+      "Saya tidak diperbolehkan berbelok ke kanan sebelum rambu"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-160.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang berlaku di area 15 meter di depan dan di belakang rambu lalu lintas ini?",
+    "options": [
+      "- tahan",
+      "- Jangan menghalangi penumpang untuk naik atau turun dari kendaraan",
+      "- Parkir"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-161.jpg",
+      "type": "image"
+    },
+    "sub_question": "Aku bisa."
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang berlaku untuk rambu lalu lintas ini?",
+    "options": [
+      "Saya harus berbelok ke kanan",
+      "Saya hanya diperbolehkan mengemudi di sebelah kanan",
+      "Saya juga dapat mengemudi di sebelah kiri"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-162.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang berlaku untuk rambu lalu lintas ini?",
+    "options": [
+      "Saya harus memperhitungkan taksi yang datang dan pergi",
+      "Saya diizinkan untuk memegang",
+      "Saya diizinkan untuk parkir"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-163.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh kombinasi rambu lalu lintas ini?",
+    "options": [
+      "- digunakan oleh penggemar olahraga musim dingin",
+      "- tidak dapat dikendarai di musim dingin",
+      "- hanya dapat digunakan dengan rantai salju"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-164.jpg",
+      "type": "image"
+    },
+    "sub_question": "Rambu-rambu jalan yang ditandai dengan cara ini mungkin"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang perlu Anda ingat dalam situasi lalu lintas seperti ini?",
+    "options": [
+      "- Jangan mengemudi di atas",
+      "- untuk menyalip",
+      "- menyetir jika lalu lintas yang datang memungkinkan"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-165.jpg",
+      "type": "image"
+    },
+    "sub_question": "Saya diizinkan untuk menggunakan marka lajur"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang perlu saya perhatikan di jalan prioritas ini?",
+    "options": [
+      "Dilarang parkir",
+      "Marka lajur tidak boleh dilewati",
+      "Parkir diperbolehkan jika ada jalur setidaknya 3 meter antara kendaraan yang diparkir dan batas jalur"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-166.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda ingin menyalip. Apa hal yang tepat untuk dilakukan?",
+    "options": [
+      "- Menyalip",
+      "- Jangan menyalip",
+      "- hanya menyalip jika saya tetap berada di lajur kanan"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-167.jpg",
+      "type": "image"
+    },
+    "sub_question": "Aku bisa."
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda ingin memasuki jalur khusus sepeda sebagai penduduk. Apa yang harus Anda ingat?",
+    "options": [
+      "Kendaraan tidak boleh melaju lebih cepat dari 30 km/jam",
+      "Sepeda dapat dikendarai secara berdampingan",
+      "Lalu lintas bersepeda tidak boleh dihalangi"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-168.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Siapa yang diperbolehkan mengemudi di jalan yang ditandai dengan cara ini?",
+    "options": [
+      "Semua pengendara sepeda",
+      "Semua pengunjung dari penduduk setempat",
+      "Semua pengemudi sepeda motor bebek"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-169.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang benar dari rambu lalu lintas ini dan seterusnya?",
+    "options": [
+      "Saya diizinkan untuk mengendarai sepeda motor bebek saya",
+      "Saya diizinkan untuk terus mengendarai motor bebek secara perlahan",
+      "Saya diizinkan untuk terus mengendarai motor bebek dengan mesin dimatikan"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-001.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Truk Anda memiliki panjang 10 m dan muatan menjorok 60 cm di luar bagian belakang kendaraan. Apa yang berlaku untuk Anda dengan rambu lalu lintas ini?",
+    "options": [
+      "- Jangan mengemudi karena kendaraan dan muatannya lebih dari 10 meter",
+      "- mengemudi ketika muatan diberi label khusus",
+      "- karena beban tidak harus diperhitungkan"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-003.jpg",
+      "type": "image"
+    },
+    "sub_question": "Saya diizinkan mengemudi di jalan dengan rambu-rambu seperti ini"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda sedang berkendara di jalan raya ini. Bagaimana Anda berperilaku dengan benar?",
+    "options": [
+      "Saya berpindah ke lajur kanan",
+      "Saya hanya menggunakan lajur kiri jika terjadi kerusakan",
+      "Saya tetap berada di jalur saya saat ini"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-004-M.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang perlu Anda ketahui tentang rambu lalu lintas ini?",
+    "options": [
+      "Menggunakan rantai salju",
+      "Kecepatan maksimum yang diizinkan 50 km/jam",
+      "Kendaraan yang dilacak memiliki hak jalan"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-101.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang dilarang mengemudi di jalan dengan rambu-rambu seperti itu?",
+    "options": [
+      "- beban gandar aktual melebihi 2 ton",
+      "- beban gandar yang diizinkan melebihi 2 ton",
+      "- massa total yang diizinkan tidak melebihi 2 ton"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-104.jpg",
+      "type": "image"
+    },
+    "sub_question": "Untuk kendaraan yang"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "Larangan bagi kendaraan yang lebarnya termasuk muatannya melebihi 2 meter",
+      "Di jalur selebar 2 meter",
+      "Jaga jarak samping minimal 2 meter dari kendaraan lain"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-105.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang dapat menyebabkan kecelakaan serius jika rambu lalu lintas ini diabaikan?",
+    "options": [
+      "Panjang 8 m, lebar 2,5 m, tinggi 4 m",
+      "Panjang 10 m, lebar 3,9 m, tinggi 3 m",
+      "Panjang 4 m, lebar 2,5 m, tinggi 2,5 m"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-106.jpg",
+      "type": "image"
+    },
+    "sub_question": "Dengan kendaraan dengan dimensi berikut termasuk muatan:"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang tidak diizinkan untuk mengemudi di jalan yang ditandai dengan cara ini?",
+    "options": [
+      "Mobil dengan karavan, panjang total kereta 11 m",
+      "Traktor dengan trailer, panjang total kereta 12 m",
+      "Truk dengan panjang 9 meter termasuk muatan"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-107.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang tidak diizinkan untuk mengemudi di jalan yang ditandai dengan cara ini?",
+    "options": [
+      "Truk dengan massa maksimum yang diizinkan lebih dari 3,5 ton",
+      "Traktor",
+      "Mobil dengan trailer"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-201.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang harus menjaga jarak minimum 70 meter?",
+    "options": [
+      "Truk dengan massa maksimum yang diizinkan lebih dari 3,5 ton",
+      "Traktor",
+      "Mobil"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-202.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang tidak diperbolehkan menyalip di sini?",
+    "options": [
+      "Truk dan kereta tempelan dengan jumlah berat yang diperbolehkan lebih dari 3,5 ton",
+      "Traktor",
+      "Mobil"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-203.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang ditunjukkan oleh rambu lalu lintas ini?",
+    "options": [
+      "Larangan kendaraan bermotor dengan barang berbahaya yang memerlukan pelabelan",
+      "Larangan bagi kendaraan yang beban gandarnya melebihi 3,5 ton",
+      "Larangan untuk semua truk dan kereta api"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-204.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda ingin mengemudi di jalan yang ditandai dengan rambu seperti ini. Apa yang dimaksud dengan indikasi \"12 ton\"?",
+    "options": [
+      "- Massa kendaraan yang sebenarnya",
+      "- Massa maksimum kendaraan yang diizinkan",
+      "- Massa kendaraan yang tidak bermuatan"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-205.jpg",
+      "type": "image"
+    },
+    "sub_question": "Di"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang dimaksud dengan indikasi \"12 ton\" pada rambu lalu lintas ini?",
+    "options": [
+      "- Massa kendaraan yang sebenarnya",
+      "- Massa maksimum kendaraan yang diizinkan",
+      "- Massa beban yang sebenarnya"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-206.jpg",
+      "type": "image"
+    },
+    "sub_question": "Di"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Rambu jalan mana yang mengacu pada massa maksimum yang diizinkan?",
+    "options": [],
+    "correct_options": [],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-102.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Rambu lalu lintas mana yang mengacu pada massa yang sebenarnya?",
+    "options": [],
+    "correct_options": [],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-103.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  }
+]

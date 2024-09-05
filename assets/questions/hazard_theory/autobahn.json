@@ -11,7 +11,7 @@
     "score": 3,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-005-B.jpg",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-005-B.jpg",
       "type": "image"
     },
     "sub_question": null
@@ -27,7 +27,7 @@
     "score": 3,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-006-B.jpg",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-006-B.jpg",
       "type": "image"
     },
     "sub_question": null
@@ -44,7 +44,7 @@
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-008-B.jpg",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-008-B.jpg",
       "type": "image"
     },
     "sub_question": null
@@ -74,7 +74,7 @@
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-011.mp4",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-011.mp4",
       "type": "video"
     },
     "sub_question": null
@@ -130,7 +130,7 @@
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-016.mp4",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-016.mp4",
       "type": "video"
     },
     "sub_question": null
@@ -147,7 +147,7 @@
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-017.jpg",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-017.jpg",
       "type": "image"
     },
     "sub_question": null
@@ -164,7 +164,7 @@
     "score": 5,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-018.jpg",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-018.jpg",
       "type": "image"
     },
     "sub_question": null
@@ -194,7 +194,7 @@
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-020.mp4",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-020.mp4",
       "type": "video"
     },
     "sub_question": null
@@ -211,7 +211,7 @@
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-021.jpg",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-021.jpg",
       "type": "image"
     },
     "sub_question": null
@@ -228,7 +228,7 @@
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-022.jpg",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-022.jpg",
       "type": "image"
     },
     "sub_question": null
@@ -245,7 +245,7 @@
     "score": 3,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-023.mp4",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-023.mp4",
       "type": "video"
     },
     "sub_question": null
@@ -262,7 +262,7 @@
     "score": 3,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-024-M.mp4",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-024-M.mp4",
       "type": "video"
     },
     "sub_question": "Aku ganti baju."
@@ -279,7 +279,7 @@
     "score": 3,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-026-M.mp4",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-026-M.mp4",
       "type": "video"
     },
     "sub_question": null
@@ -296,7 +296,7 @@
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/video/2.1.08-027-M.mp4",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-027-M.mp4",
       "type": "video"
     },
     "sub_question": null
@@ -304,12 +304,12 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "Anda ingin bergabung dengan jalan tol. Jalur mana yang harus Anda ikuti?",
-    "options": [],
-    "correct_options": [],
+    "options": ["1", "2", "3"],
+    "correct_options": [2],
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
-      "url": "scraped/Gefahrenlehre/Autobahn/image/2.1.08-025.jpg",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-025.jpg",
       "type": "image"
     },
     "sub_question": null
