@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:country_flags/country_flags.dart';
-import 'package:roadcognizer/services/firebase/firebase.service.dart';
 import 'package:roadcognizer/theme/fonts.dart';
+import 'package:roadcognizer/views/sign_recognizer_screen/sign_recognizer_screen.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function() onStart;
@@ -11,17 +11,12 @@ class StartScreen extends StatelessWidget {
     required this.onStart,
   });
 
-  Future<void> checkCall() async {
-    try {
-      final result = await FirebaseService.functions
-          .httpsCallable('callReadTrafficSign')
-          .call();
-      print(result.data);
-    } catch (e) {
-      print(e);
-    }
-    // final response = result.data as String;
-    // print(response);
+  void navigateToSignRecognizer(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const SignRecognizerScreen(),
+      ),
+    );
   }
 
   @override
@@ -38,7 +33,7 @@ class StartScreen extends StatelessWidget {
               SizedBox(
                 width: 150,
                 child: Text(
-                  "Teori Mengemudi",
+                  "Roadcognizer",
                   textAlign: TextAlign.center,
                   style: Fonts.getPrimary(
                     ts: TextStyle(
@@ -49,12 +44,14 @@ class StartScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              Text("Siapkah Anda Menyetir di Eropa?",
+                  style: Fonts.getSecondary()),
               const SizedBox(height: 25),
               ElevatedButton.icon(
                 iconAlignment: IconAlignment.start,
                 icon: const Icon(Icons.chevron_right_rounded),
                 onPressed: onStart,
-                label: const Text("Mulai"),
+                label: const Text("Cari Tahu?"),
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5),
@@ -66,11 +63,33 @@ class StartScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              OutlinedButton(
-                  onPressed: () {
-                    checkCall();
-                  },
-                  child: const Text("Check Function Call")),
+              Container(
+                padding: const EdgeInsets.only(top: 10),
+                child: SizedBox(
+                  width: 220,
+                  child: TextButton.icon(
+                    onPressed: () {
+                      navigateToSignRecognizer(context);
+                    },
+                    style: TextButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      foregroundColor: Colors.deepOrange.shade900,
+                    ),
+                    icon: const Icon(
+                      Icons.camera,
+                      size: 20,
+                    ),
+                    label: Text(
+                      "Baca Rambu Lalu Lintas",
+                      style:
+                          Fonts.getSecondary(ts: const TextStyle(fontSize: 14)),
+                      textAlign: TextAlign.start,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
           Positioned(

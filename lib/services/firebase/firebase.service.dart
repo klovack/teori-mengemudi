@@ -10,7 +10,8 @@ import 'package:roadcognizer/firebase_options.dart';
 class FirebaseService {
   static final FirebaseService _instance = FirebaseService._internal();
   static UserCredential? _userCredential;
-  static String _region = "europe-west3";
+  // TODO: Make this value configurable
+  static const String _region = "europe-west3";
 
   factory FirebaseService() {
     return _instance;
@@ -43,21 +44,9 @@ class FirebaseService {
           print("Anonymous auth hasn't been enabled for this project.");
           break;
         default:
-          print("Unknown error.");
+          print("Unknown error. Check if emulators is running.");
       }
     }
-
-    // try {
-    //   final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
-    //       email: "example@mrizki.com", password: "password");
-    //   print("Signed in with email and password, $credential");
-    // } on FirebaseAuthException catch (e) {
-    //   if (e.code == 'user-not-found') {
-    //     print('No user found for that email.');
-    //   } else if (e.code == 'wrong-password') {
-    //     print('Wrong password provided for that user.');
-    //   }
-    // }
   }
 
   Future<void> _useEmulators() async {

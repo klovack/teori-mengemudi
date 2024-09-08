@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:roadcognizer/Views/start_screen/start_screen.dart';
+import 'package:roadcognizer/components/app_scaffold/app_scaffold.dart';
 import 'package:roadcognizer/models/quiz_questions.dart';
 import 'package:roadcognizer/services/video_play_counter/video_play_counter.service.dart';
 import 'package:roadcognizer/views/questions_screen/questions_screen.dart';
@@ -65,22 +66,8 @@ class _QuizState extends State<Quiz> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Teori Mengemudi',
-      home: Scaffold(
-        // backgroundColor: Colors.yellowAccent,
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.yellowAccent,
-                Colors.orange.shade600,
-              ],
-              stops: const [0.0, 1.0],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: getActiveScreen(),
-        ),
+      home: AppScaffold(
+        child: getActiveScreen(),
       ),
     );
   }

@@ -30,7 +30,7 @@ class _ResourceVideoState extends State<ResourceVideo> {
     });
 
     _controller =
-        VideoPlayerController.asset('assets/videos/basics/salip_tidak_jadi.mp4')
+        VideoPlayerController.asset(widget.assetUrl)
           ..initialize().then((_) {
             // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
             setState(() {});
