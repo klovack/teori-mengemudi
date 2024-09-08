@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:country_flags/country_flags.dart';
+import 'package:roadcognizer/services/firebase/firebase.service.dart';
 import 'package:roadcognizer/theme/fonts.dart';
 
 class StartScreen extends StatelessWidget {
@@ -9,6 +10,19 @@ class StartScreen extends StatelessWidget {
     super.key,
     required this.onStart,
   });
+
+  Future<void> checkCall() async {
+    try {
+      final result = await FirebaseService.functions
+          .httpsCallable('callReadTrafficSign')
+          .call();
+      print(result.data);
+    } catch (e) {
+      print(e);
+    }
+    // final response = result.data as String;
+    // print(response);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +66,11 @@ class StartScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              OutlinedButton(
+                  onPressed: () {
+                    checkCall();
+                  },
+                  child: const Text("Check Function Call")),
             ],
           ),
           Positioned(

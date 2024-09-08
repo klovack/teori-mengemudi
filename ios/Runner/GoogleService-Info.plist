@@ -26,5 +26,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:475412266411:ios:0b31c0c767b1ac839c26ee</string>
+	<key>DATABASE_URL</key>
+	<string>https://traffic-signs-recognizer-mrf-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
 </plist>
