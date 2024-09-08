@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:country_flags/country_flags.dart';
-import 'package:teori_mengemudi/theme/fonts.dart';
+import 'package:roadcognizer/theme/fonts.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function() onStart;

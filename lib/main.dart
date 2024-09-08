@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:teori_mengemudi/Views/app.dart';
+import 'package:roadcognizer/Views/app.dart';
 
-void main() {
+Future<void> main() async {
+
   runApp(const App());
 }

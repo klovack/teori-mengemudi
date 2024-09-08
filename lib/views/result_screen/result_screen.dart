@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:teori_mengemudi/components/question_summary/question_summary.dart';
-import 'package:teori_mengemudi/models/quiz_questions.dart';
+import 'package:roadcognizer/components/question_summary/question_summary.dart';
+import 'package:roadcognizer/models/quiz_questions.dart';
 import 'package:tuple/tuple.dart';
 
 class ResultScreen extends StatelessWidget {

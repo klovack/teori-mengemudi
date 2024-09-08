@@ -1,4 +1,4 @@
-name: teori_mengemudi
+name: roadcognizer
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -40,6 +40,9 @@ dependencies:
   video_player: ^2.9.1
   shared_preferences: ^2.3.2
   json_annotation: ^4.9.0
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  cloud_functions: ^4.6.0
 
 dev_dependencies:
   flutter_test:

@@ -92,7 +92,7 @@ BEGIN
             VALUE "CompanyName", "com.mrizki" "\0"
             VALUE "FileDescription", "teori_mengemudi" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "teori_mengemudi" "\0"
+            VALUE "InternalName", "com.mrizki.roadcognizer" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.mrizki. All rights reserved." "\0"
             VALUE "OriginalFilename", "teori_mengemudi.exe" "\0"
             VALUE "ProductName", "teori_mengemudi" "\0"

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:teori_mengemudi/components/resource_video/resource_video.dart';
-import 'package:teori_mengemudi/models/quiz_questions.dart';
+import 'package:roadcognizer/components/resource_video/resource_video.dart';
+import 'package:roadcognizer/models/quiz_questions.dart';
 
 class QuestionResource extends StatelessWidget {
   final QuizQuestionsResource? questionsResource;
@@ -31,7 +31,7 @@ class QuestionResource extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 10.0),
         child: Image.asset(
           questionsResource!.url,
-          height: 150,
+          height: 200,
           fit: BoxFit.cover,
         ),
       ),

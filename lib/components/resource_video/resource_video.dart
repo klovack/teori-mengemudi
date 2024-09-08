@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teori_mengemudi/services/video_play_counter/video_play_counter.service.dart';
+import 'package:roadcognizer/services/video_play_counter/video_play_counter.service.dart';
 import 'package:video_player/video_player.dart';
 
 class ResourceVideo extends StatefulWidget {

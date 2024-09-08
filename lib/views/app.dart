@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teori_mengemudi/views/quiz/quiz.dart';
+import 'package:roadcognizer/views/quiz/quiz.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

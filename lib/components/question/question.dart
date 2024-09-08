@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:teori_mengemudi/components/answer_button/answer_button.dart';
-import 'package:teori_mengemudi/components/question_resource/question_resource.dart';
-import 'package:teori_mengemudi/models/quiz_questions.dart';
-import 'package:teori_mengemudi/theme/fonts.dart';
+import 'package:roadcognizer/components/answer_button/answer_button.dart';
+import 'package:roadcognizer/components/question_resource/question_resource.dart';
+import 'package:roadcognizer/models/quiz_questions.dart';
+import 'package:roadcognizer/theme/fonts.dart';
 
 class Question extends StatelessWidget {
   final QuizQuestions question;

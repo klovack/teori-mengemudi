@@ -1,11 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:teori_mengemudi/components/question/question.dart';
-import 'package:teori_mengemudi/components/question_nav_button/question_nav_buttons.dart';
-import 'package:teori_mengemudi/models/quiz_questions.dart';
-import 'package:teori_mengemudi/services/questions/questions.service.dart';
-import 'package:teori_mengemudi/theme/fonts.dart';
+import 'package:roadcognizer/components/question/question.dart';
+import 'package:roadcognizer/components/question_nav_button/question_nav_buttons.dart';
+import 'package:roadcognizer/models/quiz_questions.dart';
+import 'package:roadcognizer/services/questions/questions.service.dart';
+import 'package:roadcognizer/theme/fonts.dart';
 
 class QuestionsScreen extends StatefulWidget {
   final void Function(

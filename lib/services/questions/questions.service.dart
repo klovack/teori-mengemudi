@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:teori_mengemudi/models/quiz_questions.dart';
+import 'package:roadcognizer/models/quiz_questions.dart';
 
 enum QuestionsCategory { autobahn, regulatoryTrafficSigns }
 

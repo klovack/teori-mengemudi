@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teori_mengemudi/theme/fonts.dart';
+import 'package:roadcognizer/theme/fonts.dart';
 
 class AnswerButton extends StatelessWidget {
   final String text;
