@@ -4,12 +4,16 @@ class AppScaffold extends StatelessWidget {
   final Widget child;
   final AppBar? appBar;
   final Widget? bottomNavigationBar;
+  final Widget? floatingActionButton;
+  final FloatingActionButtonLocation? floatingActionButtonLocation;
 
   const AppScaffold({
     super.key,
     required this.child,
     this.appBar,
     this.bottomNavigationBar,
+    this.floatingActionButton,
+    this.floatingActionButtonLocation,
   });
 
   @override
@@ -17,6 +21,8 @@ class AppScaffold extends StatelessWidget {
     return Scaffold(
       appBar: appBar,
       bottomNavigationBar: bottomNavigationBar,
+      floatingActionButton: floatingActionButton,
+      floatingActionButtonLocation: floatingActionButtonLocation,
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(

@@ -1,7 +1,7 @@
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:roadcognizer/components/app_scaffold/app_scaffold.dart';
-import 'package:roadcognizer/views/take_picture_screen/take_picture_screen.dart';
+import 'package:roadcognizer/views/image_display_screen/image_display_screen.dart';
 
 class SignRecognizerScreen extends StatelessWidget {
   const SignRecognizerScreen({super.key});
@@ -10,30 +10,16 @@ class SignRecognizerScreen extends StatelessWidget {
     Navigator.of(context).pop();
   }
 
-  Future<void> openCamera(BuildContext context) async {
-    final cameras = await availableCameras();
-    if (context.mounted) {
-      if (cameras.isEmpty) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            behavior: SnackBarBehavior.floating,
-            backgroundColor: Color.fromRGBO(0, 0, 0, .5),
-            elevation: 0,
-            content: Text(
-              "Tidak ada kamera di perangkat ini",
-              textAlign: TextAlign.center,
-            ),
-          ),
-        );
+  Future<void> openImage(BuildContext context, ImageSource source) async {
+    final image =
+        await ImagePicker().pickImage(source: source, imageQuality: 50);
 
-        return;
-      }
+    if (image != null) {
+      if (!context.mounted) return;
 
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => TakePictureScreen(
-            cameras: cameras,
-          ),
+          builder: (context) => ImageDisplayScreen(image.path)
         ),
       );
     }
@@ -56,17 +42,58 @@ class SignRecognizerScreen extends StatelessWidget {
               ),
             ),
           ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text("Text Recognizer Screen"),
-                ElevatedButton.icon(
-                  onPressed: () => openCamera(context),
-                  icon: const Icon(Icons.camera),
-                  label: const Text("Buka Kamera"),
-                ),
-              ],
+          SafeArea(
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text("Text Recognizer Screen"),
+                  Container(
+                    padding:
+                        const EdgeInsets.only(bottom: 20, right: 20, left: 20),
+                    width: double.infinity,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ElevatedButton.icon(
+                          icon: const Icon(Icons.image),
+                          onPressed: () =>
+                              openImage(context, ImageSource.gallery),
+                          label: const Text("Galeri"),
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            backgroundColor: Colors.deepOrange,
+                            foregroundColor: Colors.white,
+                            side: const BorderSide(
+                              color: Colors.deepOrange,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        ElevatedButton.icon(
+                          icon: const Icon(Icons.camera),
+                          onPressed: () =>
+                              openImage(context, ImageSource.camera),
+                          label: const Text("Kamera"),
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            backgroundColor: Colors.deepOrange,
+                            foregroundColor: Colors.white,
+                            side: const BorderSide(
+                              color: Colors.deepOrange,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
