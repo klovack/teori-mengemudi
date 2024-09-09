@@ -1,7 +1,8 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:country_flags/country_flags.dart';
 import 'package:roadcognizer/theme/fonts.dart';
-import 'package:roadcognizer/views/sign_recognizer_screen/sign_recognizer_screen.dart';
+import 'package:roadcognizer/views/take_picture_screen/take_picture_screen.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function() onStart;
@@ -11,10 +12,15 @@ class StartScreen extends StatelessWidget {
     required this.onStart,
   });
 
-  void navigateToSignRecognizer(BuildContext context) {
+  Future<void> navigateToSignRecognizer(BuildContext context) async {
+    final cameras = await availableCameras();
+
+    if (!context.mounted) return;
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => const SignRecognizerScreen(),
+        builder: (context) => TakePictureScreen(
+          cameras: cameras,
+        ),
       ),
     );
   }
