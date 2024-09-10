@@ -5,8 +5,10 @@ import 'package:path/path.dart';
 import 'package:roadcognizer/services/firebase/firebase.service.dart';
 import 'package:roadcognizer/util/generate_random.dart';
 
-// full path in Firebase Storage /user_uploads/:uid/:image_id
-const String _imagePrefix = 'user_uploads';
+// full path in Firebase Storage /user_uploads/images/:uid/:image_id
+// TODO: move this userUploads to somewhere else if needed
+const String _userUploadPrefix = 'userUploads';
+const String _imagePrefix = 'images';
 
 String _getContentType(String imagePath) {
   final ext = imagePath.split('.').last;
@@ -34,7 +36,7 @@ Future<String> uploadImage(String imagePath) async {
     return Future.error(Exception('User not authenticated'));
   }
 
-  final ref = storage.ref(_imagePrefix);
+  final ref = storage.ref(_userUploadPrefix).child(_imagePrefix);
   final imageRef = ref.child(uid).child(
         '${getRandomString(10)}.${basename(imagePath).split('.').last}',
       );

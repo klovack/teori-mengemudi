@@ -5,6 +5,7 @@ class AppBackButton extends StatelessWidget {
   final Color iconColor;
   final AlignmentGeometry alignment;
   final IconData icon;
+  final Color? backgroundColor;
 
   const AppBackButton({
     super.key,
@@ -12,6 +13,7 @@ class AppBackButton extends StatelessWidget {
     this.iconColor = Colors.white,
     this.alignment = Alignment.topLeft,
     this.icon = Icons.arrow_back,
+    this.backgroundColor,
   });
 
   void defaultNavigateBack(BuildContext context) {
@@ -21,19 +23,24 @@ class AppBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Align(
-        alignment: alignment,
-        child: IconButton(
-          onPressed: () => navigateBack != null
-              ? navigateBack!(context)
-              : defaultNavigateBack(context),
-          style: IconButton.styleFrom(
-            padding: const EdgeInsets.all(10),
-            elevation: 10,
-          ),
-          icon: Icon(
-            icon,
-            color: iconColor,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Align(
+          alignment: alignment,
+          child: IconButton(
+            onPressed: () => navigateBack != null
+                ? navigateBack!(context)
+                : defaultNavigateBack(context),
+            style: IconButton.styleFrom(
+              padding: const EdgeInsets.all(10),
+              elevation: 10,
+              backgroundColor: backgroundColor,
+              shape: const CircleBorder(),
+            ),
+            icon: Icon(
+              icon,
+              color: iconColor,
+            ),
           ),
         ),
       ),
