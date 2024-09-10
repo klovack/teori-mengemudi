@@ -7,6 +7,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:roadcognizer/firebase_options.dart';
+import 'package:roadcognizer/services/log/log.dart';
 
 class FirebaseService {
   static final FirebaseService _instance = FirebaseService._internal();
@@ -39,14 +40,14 @@ class FirebaseService {
 
     try {
       _userCredential = await FirebaseAuth.instance.signInAnonymously();
-      print("Signed in with temporary account");
+      log.i("Signed in with temporary account");
     } on FirebaseAuthException catch (e) {
       switch (e.code) {
         case "operation-not-allowed":
-          print("Anonymous auth hasn't been enabled for this project.");
+          log.e("Anonymous auth hasn't been enabled for this project.");
           break;
         default:
-          print("Unknown error. Check if emulators is running. \n$e");
+          log.e("Unknown error. Check if emulators is running. \n$e");
       }
     }
   }
@@ -64,7 +65,7 @@ class FirebaseService {
 
   Future<void> _useEmulators() async {
     if (kDebugMode) {
-      print("Use Emulators");
+      log.d("Use Emulators");
 
       const host =
           String.fromEnvironment("DEV_MACHINE_IP", defaultValue: "127.0.0.1");
@@ -75,7 +76,7 @@ class FirebaseService {
       FirebaseDatabase.instance.useDatabaseEmulator(host, 9000);
       FirebaseService.functions.useFunctionsEmulator(host, 5001);
 
-      print("Successfully use Emulators in $host.");
+      log.d("Successfully use Emulators in $host.");
     }
   }
 }
