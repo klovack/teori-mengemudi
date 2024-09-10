@@ -29,19 +29,18 @@ class _ResourceVideoState extends State<ResourceVideo> {
       });
     });
 
-    _controller =
-        VideoPlayerController.asset(widget.assetUrl)
-          ..initialize().then((_) {
-            // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-            setState(() {});
-            _controller.addListener(() {
-              if (_controller.value.isCompleted) {
-                setState(() {
-                  _isPlaying = false;
-                });
-              }
+    _controller = VideoPlayerController.asset(widget.assetUrl)
+      ..initialize().then((_) {
+        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+        setState(() {});
+        _controller.addListener(() {
+          if (_controller.value.isCompleted) {
+            setState(() {
+              _isPlaying = false;
             });
-          });
+          }
+        });
+      });
   }
 
   void persistPlayCount() async {
@@ -70,29 +69,28 @@ class _ResourceVideoState extends State<ResourceVideo> {
                     persistPlayCount();
                   }
                 },
-                child: Stack(
-                  children: [
-                    AspectRatio(
-                      aspectRatio: _controller.value.aspectRatio,
-                      child: VideoPlayer(_controller),
-                    ),
-                    if (!_isPlaying)
-                      Center(
-                        heightFactor: 3,
-                        child: Icon(
-                          Icons.play_arrow,
-                          color: Colors.white,
-                          size: 50,
-                          shadows: [
-                            Shadow(
-                              color: Colors.black.withOpacity(0.5),
-                              offset: const Offset(1, 1),
-                              blurRadius: 10,
-                            ),
-                          ],
+                child: AspectRatio(
+                  aspectRatio: _controller.value.aspectRatio,
+                  child: Stack(
+                    children: [
+                      InteractiveViewer(child: VideoPlayer(_controller)),
+                      if (!_isPlaying)
+                        Center(
+                          child: Icon(
+                            Icons.play_arrow,
+                            color: Colors.white,
+                            size: 50,
+                            shadows: [
+                              Shadow(
+                                color: Colors.black.withOpacity(0.5),
+                                offset: const Offset(1, 1),
+                                blurRadius: 10,
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(height: 10),

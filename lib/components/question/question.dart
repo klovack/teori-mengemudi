@@ -21,7 +21,8 @@ class Question extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.max,
       children: [
-        QuestionResource(questionsResource: question.resource),
+        QuestionResource(
+            key: Key(question.question), questionsResource: question.resource),
         Text(
           question.question,
           textAlign: TextAlign.center,

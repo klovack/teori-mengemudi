@@ -29,10 +29,12 @@ class QuestionResource extends StatelessWidget {
     return Center(
       child: Padding(
         padding: const EdgeInsets.only(bottom: 10.0),
-        child: Image.asset(
-          questionsResource!.url,
-          height: 200,
-          fit: BoxFit.cover,
+        child: InteractiveViewer(
+          child: Image.asset(
+            questionsResource!.url,
+            width: double.infinity,
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
