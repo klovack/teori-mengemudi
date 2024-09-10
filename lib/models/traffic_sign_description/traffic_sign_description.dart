@@ -6,10 +6,12 @@ part 'traffic_sign_description.g.dart';
 class TrafficSignDetail {
   final String signName;
   final String description;
+  final String category;
 
   TrafficSignDetail({
     required this.signName,
     required this.description,
+    required this.category,
   });
 
   factory TrafficSignDetail.fromJson(Map<String, dynamic> json) =>

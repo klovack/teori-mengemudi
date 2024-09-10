@@ -109,16 +109,33 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
                           return Card(
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    sign.signName,
-                                    style: Fonts.getPrimary(),
+                                  Container(
+                                    margin: const EdgeInsets.only(right: 8),
+                                    width: 40,
+                                    child: Image.asset(
+                                        'assets/images/roadcognizer/category/${sign.category}.png',
+                                        errorBuilder: (_, __, ___) => Image.asset(
+                                            'assets/images/roadcognizer/category/fallback.png'),
+                                        fit: BoxFit.cover),
                                   ),
-                                  Text(
-                                    sign.description,
-                                    style: Fonts.getSecondary(),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          sign.signName,
+                                          style: Fonts.getPrimary(),
+                                        ),
+                                        Text(
+                                          sign.description,
+                                          style: Fonts.getSecondary(),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),

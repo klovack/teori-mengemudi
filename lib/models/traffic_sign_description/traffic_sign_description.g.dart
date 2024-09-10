@@ -10,12 +10,14 @@ TrafficSignDetail _$TrafficSignDetailFromJson(Map<String, dynamic> json) =>
     TrafficSignDetail(
       signName: json['signName'] as String,
       description: json['description'] as String,
+      category: json['category'] as String,
     );
 
 Map<String, dynamic> _$TrafficSignDetailToJson(TrafficSignDetail instance) =>
     <String, dynamic>{
       'signName': instance.signName,
       'description': instance.description,
+      'category': instance.category,
     };
 
 TrafficSignDescription _$TrafficSignDescriptionFromJson(

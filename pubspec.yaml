@@ -83,6 +83,10 @@ flutter:
     - assets/videos/hazard_theory/autobahn/
 
     # Asset Images
+    ## Road Categories
+    - assets/images/roadcognizer/category/
+    
+    ## Quiz
     - assets/images/hazard_theory/autobahn/
     - assets/images/traffic_signs/regulatory/
 

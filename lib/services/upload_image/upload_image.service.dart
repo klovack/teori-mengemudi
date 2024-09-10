@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:path/path.dart';
 import 'package:roadcognizer/services/firebase/firebase.service.dart';
+import 'package:roadcognizer/services/log/log.dart';
 import 'package:roadcognizer/util/generate_random.dart';
 
 // full path in Firebase Storage /user_uploads/images/:uid/:image_id
@@ -27,6 +28,7 @@ String _getContentType(String imagePath) {
 ///
 /// Returns the download URL of the uploaded image.
 Future<String> uploadImage(String imagePath) async {
+  log.d('Uploading image: $imagePath');
   final storage = FirebaseService.storage;
   final userCred = FirebaseService.userCredential;
 
