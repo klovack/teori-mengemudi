@@ -1,7 +1,9 @@
+import 'dart:async';
 import 'dart:io' show File;
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
 import 'package:roadcognizer/components/app_scaffold/app_scaffold.dart';
 import 'package:roadcognizer/components/sign_explanation/sign_explanation.dart';
@@ -28,15 +30,27 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
   void initState() {
     super.initState();
 
-    uploadImage(widget.imagePath).then((imageUrl) async {
-      final trafficSign = await readTrafficSign(imageUrl);
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      final languageCode =
+          EasyLocalization.of(context)!.currentLocale!.languageCode;
+      uploadAndReadTrafficSign(languageCode);
+    });
+  }
+
+  Future uploadAndReadTrafficSign(String languageCode) async {
+    try {
+      final imageUrl = await uploadImage(widget.imagePath);
+      final trafficSign = await readTrafficSign(
+        imageUrl,
+        languageCode: languageCode,
+      );
       setState(() {
         _trafficSign = trafficSign;
       });
-    }).catchError((e) {
+    } catch (e) {
       log.e("Error reading traffic sign: $e");
       showErrorDialog();
-    });
+    }
   }
 
   void showErrorDialog() {

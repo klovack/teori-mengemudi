@@ -5,8 +5,15 @@ import 'package:roadcognizer/services/log/log.dart';
 
 const String _readTrafficSignFunction = 'readTrafficSign';
 
-Future<TrafficSignDescription> readTrafficSign(String imageUrl) async {
+Future<TrafficSignDescription> readTrafficSign(
+  String imageUrl, {
+  String languageCode = 'EN',
+}) async {
   log.d('Reading traffic sign from image: $imageUrl');
+
+  if (languageCode.length > 2) {
+    languageCode = languageCode.substring(0, 2);
+  }
 
   final response = await FirebaseService.functions
       .httpsCallable(_readTrafficSignFunction,
@@ -15,7 +22,9 @@ Future<TrafficSignDescription> readTrafficSign(String imageUrl) async {
           ))
       .call({
     "imageUrl": imageUrl,
-  });
+      "lang": languageCode.toUpperCase(),
+    },
+  );
 
   final data = response.data as Map<Object?, Object?>;
   log.d('Transforming traffic sign data');
