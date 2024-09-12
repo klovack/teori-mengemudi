@@ -22,12 +22,16 @@ class TrafficSignDetail {
 
 @JsonSerializable(explicitToJson: true)
 class TrafficSignDescription {
+  final String title;
   final String explanation;
   final String origin;
   final String? error;
+
+  @JsonKey(fromJson: _signsFromJson)
   final List<TrafficSignDetail> signs;
 
   TrafficSignDescription({
+    required this.title,
     required this.explanation,
     required this.origin,
     required this.signs,
@@ -38,4 +42,10 @@ class TrafficSignDescription {
       _$TrafficSignDescriptionFromJson(json);
 
   Map<String, dynamic> toJson() => _$TrafficSignDescriptionToJson(this);
+
+  static List<TrafficSignDetail> _signsFromJson(dynamic json) {
+    return (json as List<dynamic>)
+        .map((e) => TrafficSignDetail.fromJson(Map<String, dynamic>.from(e)))
+        .toList();
+  }
 }

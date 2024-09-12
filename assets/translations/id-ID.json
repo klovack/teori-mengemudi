@@ -1,0 +1,25 @@
+{
+  "ctaReadTrafficSign": "Baca Rambu Lalu Lintas!",
+  "ctaReadyToDrive": "Siapkah Anda Menyetir di Eropa?",
+  "practiceDrivingTheory": "Lihat apakah kamu mengetahui teori mengemudi di Eropa!",
+  "question": {
+    "submit": "Akhiri",
+    "submitConfirm": "Apakah kamu yakin ingin mengakhiri quiz ini?",
+    "cancel": "Batal",
+    "submitDialogTitle": "Akhiri Quiz"
+  },
+  "result": {
+    "score": "Nilai kamu: {score}/{total}",
+    "pass": "Selamat, hati-hati berkendara di Eropa ya!\n@:result.score",
+    "fail": "Kamu perlu lebih banyak berlatih sebelum mengemudi di Eropa.\n@:result.score",
+    "returnHome": "Kembali ke Awal"
+  },
+  "signRecognizer": {
+    "error": {
+      "title": "Gagal Membaca Rambu Lalu Lintas.",
+      "message": "Gambar yang kamu pilih tidak dapat diunggah atau dibaca oleh sistem kami.",
+      "retry": "Coba Lagi!"
+    },
+    "origin": "Asal: {}"
+  }
+}

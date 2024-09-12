@@ -1,0 +1,25 @@
+{
+  "ctaReadTrafficSign": "Read Traffic Signs!",
+  "ctaReadyToDrive": "Are you ready to drive in Europe?",
+  "practiceDrivingTheory": "See if you know the driving theory in Europe!",
+  "question": {
+    "submit": "Submit",
+    "submitConfirm": "Are you sure you want to submit the quiz?",
+    "cancel": "Cancel",
+    "submitDialogTitle": "Submit Quiz"
+  },
+  "result": {
+    "score": "Your score: {score}/{total}",
+    "pass": "Congratulations, be careful driving in Europe!\n@:result.score",
+    "fail": "You need to practice more before driving in Europe!\n@:result.score",
+    "returnHome": "Return Home"
+  },
+  "signRecognizer": {
+    "error": {
+      "title": "Error Reading Traffic Sign",
+      "message": "The image you provided could neither be uploaded nor read by our system.",
+      "retry": "Try Again!"
+    },
+    "origin": "Origin: {}"
+  }
+}

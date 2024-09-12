@@ -34,6 +34,7 @@ dependencies:
   collection: ^1.18.0
   country_flags: ^3.0.0
   cupertino_icons: ^1.0.8
+  easy_localization: ^3.0.7
   firebase_app_check: ^0.2.1+8
   firebase_auth: ^4.16.0
   firebase_core: ^2.24.2
@@ -41,8 +42,11 @@ dependencies:
   firebase_storage: ^11.6.0
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   google_fonts: ^6.2.1
   image_picker: ^1.1.2
+  intl: any
   json_annotation: ^4.9.0
   logger: ^2.4.0
   path: ^1.9.0
@@ -69,6 +73,7 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
 flutter:
+  generate: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -79,13 +84,16 @@ flutter:
   assets:
     - assets/images/logo.png
 
+    # Translations
+    - assets/translations/
+
     # Asset Videos
     - assets/videos/hazard_theory/autobahn/
 
     # Asset Images
     ## Road Categories
     - assets/images/roadcognizer/category/
-    
+
     ## Quiz
     - assets/images/hazard_theory/autobahn/
     - assets/images/traffic_signs/regulatory/

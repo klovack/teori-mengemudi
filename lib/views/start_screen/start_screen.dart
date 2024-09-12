@@ -1,6 +1,7 @@
 import 'package:camera/camera.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:country_flags/country_flags.dart';
+import 'package:roadcognizer/components/language_changer/language_changer.dart';
 import 'package:roadcognizer/theme/fonts.dart';
 import 'package:roadcognizer/views/take_picture_screen/take_picture_screen.dart';
 
@@ -27,10 +28,16 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Stack(
-        children: [
-          Column(
+    return Stack(
+      children: [
+        const SafeArea(
+          child: Align(
+            alignment: Alignment.topRight,
+            child: LanguageChanger(),
+          ),
+        ),
+        Center(
+          child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,14 +57,17 @@ class StartScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Text("Siapkah Anda Menyetir di Eropa?",
-                  style: Fonts.getSecondary()),
+              Text(tr('ctaReadyToDrive'), style: Fonts.getSecondary()),
               const SizedBox(height: 25),
+
+              // Start Camera
               ElevatedButton.icon(
                 iconAlignment: IconAlignment.start,
-                icon: const Icon(Icons.chevron_right_rounded),
-                onPressed: onStart,
-                label: const Text("Cari Tahu?"),
+                icon: const Icon(Icons.camera),
+                onPressed: () {
+                  navigateToSignRecognizer(context);
+                },
+                label: Text('ctaReadTrafficSign'.tr()),
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5),
@@ -69,62 +79,39 @@ class StartScreen extends StatelessWidget {
                   ),
                 ),
               ),
+
+              // Practice Driving Theory
               Container(
                 padding: const EdgeInsets.only(top: 10),
                 child: SizedBox(
-                  width: 220,
-                  child: TextButton.icon(
-                    onPressed: () {
-                      navigateToSignRecognizer(context);
-                    },
+                  width: 270,
+                  child: TextButton(
+                    onPressed: onStart,
                     style: TextButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
                       ),
                       foregroundColor: Colors.deepOrange.shade900,
                     ),
-                    icon: const Icon(
-                      Icons.camera,
-                      size: 20,
-                    ),
-                    label: Text(
-                      "Baca Rambu Lalu Lintas",
+                    child: Text(
+                      tr('practiceDrivingTheory'),
                       style:
-                          Fonts.getSecondary(ts: const TextStyle(fontSize: 14)),
-                      textAlign: TextAlign.start,
+                          Fonts.getSecondary(
+                        ts: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
               ),
             ],
           ),
-          Positioned(
-            right: 15,
-            top: 110,
-            child: Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: Colors.deepOrange.shade900,
-                  width: 1,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 2,
-                    offset: const Offset(-1, 2),
-                    color: Colors.orange.shade900.withOpacity(0.8),
-                  )
-                ],
-              ),
-              child: CountryFlag.fromLanguageCode(
-                'id',
-                width: 35,
-                shape: const Circle(),
-              ),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

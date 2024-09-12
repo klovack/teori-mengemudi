@@ -1,9 +1,12 @@
 import 'dart:io' show File;
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
 import 'package:roadcognizer/components/app_scaffold/app_scaffold.dart';
+import 'package:roadcognizer/components/sign_explanation/sign_explanation.dart';
 import 'package:roadcognizer/models/traffic_sign_description/traffic_sign_description.dart';
+import 'package:roadcognizer/services/log/log.dart';
 import 'package:roadcognizer/services/read_traffic_sign/read_traffic_sign.dart';
 import 'package:roadcognizer/services/upload_image/upload_image.service.dart';
 import 'package:roadcognizer/theme/fonts.dart';
@@ -31,12 +34,36 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
         _trafficSign = trafficSign;
       });
     }).catchError((e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Gagal mengenali tanda'),
-        ),
-      );
+      log.e("Error reading traffic sign: $e");
+      showErrorDialog();
     });
+  }
+
+  void showErrorDialog() {
+    showAdaptiveDialog(
+      context: context,
+      builder: (ctx) {
+        return AlertDialog(
+          title: Text(
+            'signRecognizer.error.title'.tr(),
+            style: Fonts.getPrimary(),
+          ),
+          content: Text(
+            'signRecognizer.error.message'.tr(),
+            style: Fonts.getSecondary(),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(ctx).pop();
+                Navigator.of(ctx).pop();
+              },
+              child: const Text('signRecognizer.error.retry').tr(),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   void navigateBack(BuildContext context) {
@@ -78,72 +105,7 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
                   height: MediaQuery.of(context).size.height - 300,
                   padding: const EdgeInsets.all(16.0),
                   child: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Penjelasan",
-                          textAlign: TextAlign.left,
-                          style: Fonts.getPrimary(
-                            ts: const TextStyle(
-                              fontSize: 24,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          "Asal: ${_trafficSign!.origin}",
-                          style: Fonts.getSecondary(
-                            ts: const TextStyle(
-                              fontStyle: FontStyle.italic,
-                              color: Colors.black54,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          _trafficSign!.explanation,
-                          style: Fonts.getSecondary(),
-                        ),
-                        const SizedBox(height: 20),
-                        ..._trafficSign!.signs.map((sign) {
-                          return Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    margin: const EdgeInsets.only(right: 8),
-                                    width: 40,
-                                    child: Image.asset(
-                                        'assets/images/roadcognizer/category/${sign.category}.png',
-                                        errorBuilder: (_, __, ___) => Image.asset(
-                                            'assets/images/roadcognizer/category/fallback.png'),
-                                        fit: BoxFit.cover),
-                                  ),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          sign.signName,
-                                          style: Fonts.getPrimary(),
-                                        ),
-                                        Text(
-                                          sign.description,
-                                          style: Fonts.getSecondary(),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          );
-                        }),
-                      ],
-                    ),
+                    child: SignExplanation(_trafficSign!),
                   ),
                 ),
             ],

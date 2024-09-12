@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:roadcognizer/components/question/question.dart';
 import 'package:roadcognizer/components/question_nav_button/question_nav_buttons.dart';
@@ -71,6 +72,33 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             });
   }
 
+  void submit() {
+    showDialog(
+      context: context,
+      builder: (ctx) {
+        return AlertDialog(
+          title: Text('question.submitDialogTitle'.tr()),
+          content: Text('question.submitConfirm'.tr()),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(ctx).pop();
+              },
+              child: Text('question.cancel'.tr()),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(ctx).pop();
+                widget.onSubmit(shuffledQuestions, selectedAnswers);
+              },
+              child: Text('question.submit'.tr()),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final curQuestion =
@@ -97,6 +125,28 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               ),
             ),
           ),
+          SafeArea(
+            child: Align(
+              alignment: Alignment.topRight,
+              child: TextButton.icon(
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.deepOrange.shade900,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+                onPressed: submit,
+                icon: const Icon(Icons.arrow_forward, size: 16),
+                iconAlignment: IconAlignment.end,
+                label: Text(
+                  'Submit',
+                  style: Fonts.getSecondary(),
+                ),
+              ),
+            ),
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -117,9 +167,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                   hasNext: activeQuestion < shuffledQuestions.length - 1,
                   onTapPrevious: onTapPrevious,
                   onTapNext: onTapNext,
-                  onTapSubmit: () {
-                    widget.onSubmit(shuffledQuestions, selectedAnswers);
-                  },
+                  onTapSubmit: submit,
                 ),
               ),
             ],

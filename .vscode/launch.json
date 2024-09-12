@@ -5,19 +5,24 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "teori_mengemudi",
+      "name": "Roadcognizer",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "Roadcognizer (physical)",
       "request": "launch",
       "type": "dart",
       "args": ["--dart-define", "DEV_MACHINE_IP=192.168.3.6"]
     },
     {
-      "name": "teori_mengemudi (profile mode)",
+      "name": "Roadcognizer (profile mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "profile"
     },
     {
-      "name": "teori_mengemudi (release mode)",
+      "name": "Roadcognizer (release mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "release"

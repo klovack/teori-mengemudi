@@ -23,17 +23,17 @@ Map<String, dynamic> _$TrafficSignDetailToJson(TrafficSignDetail instance) =>
 TrafficSignDescription _$TrafficSignDescriptionFromJson(
         Map<String, dynamic> json) =>
     TrafficSignDescription(
+      title: json['title'] as String,
       explanation: json['explanation'] as String,
       origin: json['origin'] as String,
-      signs: (json['signs'] as List<dynamic>)
-          .map((e) => TrafficSignDetail.fromJson(Map<String, dynamic>.from(e)))
-          .toList(),
+      signs: TrafficSignDescription._signsFromJson(json['signs']),
       error: json['error'] as String?,
     );
 
 Map<String, dynamic> _$TrafficSignDescriptionToJson(
         TrafficSignDescription instance) =>
     <String, dynamic>{
+      'title': instance.title,
       'explanation': instance.explanation,
       'origin': instance.origin,
       'error': instance.error,

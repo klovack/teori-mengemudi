@@ -64,11 +64,8 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Teori Mengemudi',
-      home: AppScaffold(
-        child: getActiveScreen(),
-      ),
+    return AppScaffold(
+      child: getActiveScreen(),
     );
   }
 }

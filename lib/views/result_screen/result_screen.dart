@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:roadcognizer/components/question_summary/question_summary.dart';
 import 'package:roadcognizer/models/quiz_questions.dart';
+import 'package:roadcognizer/theme/fonts.dart';
 import 'package:tuple/tuple.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -32,7 +34,14 @@ class ResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final score = getScores();
-    final scoreText = 'Skor Anda: ${score.item1} / ${score.item2}';
+    final isPassText =
+        (score.item1 - score.item2).abs() <= 10 ? 'result.pass' : 'result.fail';
+    final scoreText = isPassText.tr(
+      namedArgs: {
+        'score': score.item1.toString(),
+        'total': score.item2.toString(),
+      },
+    );
 
     return Container(
       padding: const EdgeInsets.all(50),
@@ -43,33 +52,34 @@ class ResultScreen extends StatelessWidget {
         children: [
           Text(
             scoreText,
-            style: const TextStyle(
+            textAlign: TextAlign.center,
+            style: Fonts.getPrimary(
+              ts: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           Container(
-            height: MediaQuery.sizeOf(context).height - 280,
+            height: MediaQuery.sizeOf(context).height - 290,
             width: double.infinity,
             margin: const EdgeInsets.only(top: 20),
-            child: SingleChildScrollView(
-              child: Column(
-                children: questions.asMap().entries.map((entry) {
-                  final question = entry.value;
-                  final index = entry.key;
-                  return QuestionSummary(
+            child: ListView.builder(
+              itemCount: questions.length,
+              itemBuilder: (_, index) {
+                final question = questions[index];
+                return QuestionSummary(
                     key: ValueKey(index),
                     question: question,
                     selectedAnswer: selectedAnswers[index],
                     index: index,
                   );
-                }).toList(),
-              ),
+              },
             ),
           ),
           const SizedBox(height: 20),
           ElevatedButton.icon(
-            label: const Text("Kembali ke Awal"),
+            label: Text('result.returnHome'.tr()),
             icon: const Icon(Icons.restart_alt_rounded),
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
