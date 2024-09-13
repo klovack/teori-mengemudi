@@ -1,1 +1,41 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"traffic-signs-recognizer-mrf","appId":"1:475412266411:android:80ae64c3c27f89d09c26ee","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"traffic-signs-recognizer-mrf","appId":"1:475412266411:ios:0b31c0c767b1ac839c26ee","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"macos":{"default":{"projectId":"traffic-signs-recognizer-mrf","appId":"1:475412266411:ios:0b31c0c767b1ac839c26ee","uploadDebugSymbols":false,"fileOutput":"macos/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"traffic-signs-recognizer-mrf","configurations":{"android":"1:475412266411:android:80ae64c3c27f89d09c26ee","ios":"1:475412266411:ios:0b31c0c767b1ac839c26ee","macos":"1:475412266411:ios:0b31c0c767b1ac839c26ee","web":"1:475412266411:web:390ac2cee290fa1d9c26ee","windows":"1:475412266411:web:390ac2cee290fa1d9c26ee"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "traffic-signs-recognizer-mrf",
+          "appId": "1:475412266411:android:80ae64c3c27f89d09c26ee",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "traffic-signs-recognizer-mrf",
+          "appId": "1:475412266411:ios:0b31c0c767b1ac839c26ee",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "traffic-signs-recognizer-mrf",
+          "appId": "1:475412266411:ios:0b31c0c767b1ac839c26ee",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "traffic-signs-recognizer-mrf",
+          "configurations": {
+            "android": "1:475412266411:android:80ae64c3c27f89d09c26ee",
+            "ios": "1:475412266411:ios:0b31c0c767b1ac839c26ee",
+            "macos": "1:475412266411:ios:0b31c0c767b1ac839c26ee",
+            "web": "1:475412266411:web:390ac2cee290fa1d9c26ee",
+            "windows": "1:475412266411:web:390ac2cee290fa1d9c26ee"
+          }
+        }
+      }
+    }
+  }
+}
