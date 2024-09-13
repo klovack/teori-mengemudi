@@ -89,6 +89,7 @@ flutter:
 
     # Asset Videos
     - assets/videos/hazard_theory/autobahn/
+    - assets/videos/road_traffic_behavior/road_usage/
 
     # Asset Images
     ## Road Categories
@@ -97,10 +98,12 @@ flutter:
     ## Quiz
     - assets/images/hazard_theory/autobahn/
     - assets/images/traffic_signs/regulatory/
+    - assets/images/road_traffic_behavior/road_usage/
 
     # Asset Questions
     - assets/questions/hazard_theory/
     - assets/questions/traffic_signs/
+    - assets/questions/road_traffic_behavior/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
   # For details regarding adding assets from package dependencies, see

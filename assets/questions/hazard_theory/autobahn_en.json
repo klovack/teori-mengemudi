@@ -1,0 +1,317 @@
+[
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What should you expect here?",
+    "options": [
+      "With a lane change of the vehicle in front",
+      "With a concentration of traffic behind the underpass",
+      "With the end of the right lane"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-005-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How do you have to behave here?",
+    "options": [
+      "Check speed again, slow down if necessary",
+      "Only brake in the bend so as not to obstruct the traffic behind"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-006-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "A traffic jam is forming here. How do you behave correctly?",
+    "options": [
+      "If possible, switch on hazard warning lights to warn following vehicles",
+      "Drive as far to the right as possible to make room for a lane on the left",
+      "Drive as far left as possible to make room for a lane on the right"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-008-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What should you expect when driving uphill on highways?",
+    "options": [
+      "With slow-moving trucks in the right-hand lane",
+      "With sudden overtaking maneuvers by other road users",
+      "With large differences in speed between vehicles"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 4,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How do you have to behave?",
+    "options": [
+      "Decelerating and maintaining lanes",
+      "Change to the left lane",
+      "Maintaining speed and lanes"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-011.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do you have to consider when entering the highway?",
+    "options": [
+      "I am allowed to drive faster on the merging lane than on the continuous lane",
+      "Traffic on the through lane has right of way",
+      "Traffic in the continuous right-hand lane must allow you to enter the lane"
+    ],
+    "correct_options": [0, 1],
+    "score": 5,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are driving at the recommended speed on the highway and want to leave it at the next exit. How should you behave?",
+    "options": [
+      "I stop overtaking in good time",
+      "I reduce the speed significantly on the merging lane",
+      "I already reduce my speed significantly on the right-hand lane of the highway"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "After a long drive at around 120 km/h, you want to leave the highway. What do you have to bear in mind?",
+    "options": [
+      "I signal in good time and then slow down on the merging lane so as not to obstruct the traffic behind me",
+      "I pay attention to the speedometer display so as not to underestimate the speed",
+      "I maintain my speed on the merging lane so as not to obstruct the traffic behind me"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What should you do now?",
+    "options": [
+      "I brake my vehicle",
+      "I switch on the hazard warning lights",
+      "I drive into the free lane"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-016.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What should you expect on this trip?",
+    "options": [
+      "With an obstacle in the area of the bend",
+      "That the curve narrows as it progresses",
+      "With oncoming traffic in my lane"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-017.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What is the right thing to do in this situation?",
+    "options": [
+      "I have to reduce my speed",
+      "The truck has right of way",
+      "The truck has to wait"
+    ],
+    "correct_options": [0, 1],
+    "score": 5,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-018.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Why do you have to delay now?",
+    "options": [
+      "Because of the truck",
+      "Because of the speed limit",
+      "Because of the white car"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Why do you have to reduce your speed now?",
+    "options": [
+      "Because of the blue car",
+      "Because of the speed limit",
+      "Because of the red van"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-020.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are driving at least 20 km/h faster than the green truck. How should you behave?",
+    "options": [
+      "I drive onto the highway in front of the green truck",
+      "I brake and drive onto the highway behind the green truck",
+      "I stop at the end of the merging lane and drive onto the highway after the blue truck"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-021.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are approaching these vehicles. How should you behave in this situation?",
+    "options": [
+      "I stay in the middle lane, but without overtaking the white car",
+      "I stay in the middle lane and carefully overtake the white car",
+      "I switch to the left lane and use the headlight flasher until the car in front gives way to the left lane"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-022.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are driving a truck. How do you behave correctly now?",
+    "options": [
+      "I increase the distance to the vehicle in front",
+      "I maintain my speed",
+      "I overtake the truck in front of me"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-023.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What should you do now?",
+    "options": [
+      "- do not change lanes because [the red car] is already changing lanes",
+      "- into the middle lane, as my overtaking maneuver is complete",
+      "- the lane so that I don't obstruct [the yellow car]"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-024-M.mp4",
+      "type": "video"
+    },
+    "sub_question": "I change"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What should you prepare for now?",
+    "options": [
+      "[The yellow car] leaves the highway",
+      "The motorcycle leaves the highway",
+      "The [blue bus] in front of me brakes because of a traffic jam"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-026-M.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You want to leave the highway. What makes this a dangerous situation?",
+    "options": [
+      "Through the motorcycle",
+      "Through [the yellow truck]",
+      "Through [the green vehicle]"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/hazard_theory/autobahn/2.1.08-027-M.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You want to enter the highway. Which lane do you have to follow?",
+    "options": [],
+    "correct_options": [],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/hazard_theory/autobahn/2.1.08-025.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  }
+]

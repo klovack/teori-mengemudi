@@ -3,21 +3,31 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:roadcognizer/models/quiz_questions.dart';
 
-enum QuestionsCategory { autobahn, regulatoryTrafficSigns }
+enum QuestionsCategory {
+  autobahn,
+  regulatoryTrafficSigns,
+  roadTrafficUsageBehavior
+}
 
 class QuestionsCategoryFiles {
-  static const Map<QuestionsCategory, String> jsonFiles = {
-    QuestionsCategory.autobahn: 'assets/questions/hazard_theory/autobahn.json',
-    QuestionsCategory.regulatoryTrafficSigns:
-        'assets/questions/traffic_signs/regulatory.json',
-  };
+  static Map<QuestionsCategory, String> getInLanguage(String language) {
+    return {
+      QuestionsCategory.autobahn:
+          'assets/questions/hazard_theory/autobahn_$language.json',
+      QuestionsCategory.regulatoryTrafficSigns:
+          'assets/questions/traffic_signs/regulatory_$language.json',
+      QuestionsCategory.roadTrafficUsageBehavior:
+          'assets/questions/road_traffic_behavior/road_usage_$language.json',
+    };
+  }
 }
 
 extension QuestionsCategoryExtension on QuestionsCategory {
-  String get jsonFileName {
-    final jsonFile = QuestionsCategoryFiles.jsonFiles[this];
+  String getJsonFileNameInLanguage(String language) {
+    final jsonFiles = QuestionsCategoryFiles.getInLanguage(language);
+    final jsonFile = jsonFiles[this];
     if (jsonFile == null) {
-      throw Exception('Json file not found for $this');
+      throw Exception('Json file not found for $this in $language');
     }
 
     return jsonFile;
@@ -26,8 +36,10 @@ extension QuestionsCategoryExtension on QuestionsCategory {
 
 class QuestionsService {
   static Future<List<QuizQuestions>> getByCategory(
-      QuestionsCategory category) async {
-    final String fileName = category.jsonFileName;
+    QuestionsCategory category, {
+    String language = 'en',
+  }) async {
+    final String fileName = category.getJsonFileNameInLanguage(language);
 
     final String response = await rootBundle.loadString(fileName);
     final data = await json.decode(response);
@@ -37,13 +49,14 @@ class QuestionsService {
 
   static Future<List<QuizQuestions>> getRandom({
     int numOfQuestions = 30,
+    String language = 'en',
   }) async {
     const List<QuestionsCategory> categories = QuestionsCategory.values;
     final List<QuizQuestions> questions = [];
 
     for (final category in categories) {
       final List<QuizQuestions> categoryQuestions =
-          await getByCategory(category);
+          await getByCategory(category, language: language.toLowerCase());
       questions.addAll(categoryQuestions);
     }
 

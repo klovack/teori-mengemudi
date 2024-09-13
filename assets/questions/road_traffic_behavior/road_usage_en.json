@@ -1,0 +1,277 @@
+[
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What may the right-hand hard shoulder be used for?",
+    "options": [
+      "For stopping and parking",
+      "For driving with slow vehicles",
+      "To overtake"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/road_traffic_behavior/road_usage/1.2.02-101-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You have mistakenly taken the left lane, but want to turn right. How do you behave correctly?",
+    "options": [
+      "I drive straight on or turn left",
+      "I carefully change into the right-hand lane",
+      "I drive straight on and turn right at the junction"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/road_traffic_behavior/road_usage/1.2.02-104-M.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles must use the hard shoulder on a country road if possible?",
+    "options": [
+      "Slow-moving agricultural tractors and work machines",
+      "Mopeds",
+      "Mopeds"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How should you behave in this situation?",
+    "options": [
+      "- into the gap to let the oncoming driver pass",
+      "- continue, because the oncoming driver has to drive back",
+      "- back, because the oncoming driver is allowed to drive"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/road_traffic_behavior/road_usage/1.2.02-107.mp4",
+      "type": "video"
+    },
+    "sub_question": "I drive"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "A horse-drawn carriage comes towards you. How should you behave?",
+    "options": [
+      "- Avoid noise",
+      "- Drive as far to the right as possible",
+      "- Switch on parking lights"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": null,
+    "sub_question": "I should"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What is the right thing to do in this situation?",
+    "options": [
+      "- the right-of-way rule \"right before left\" applies",
+      "- I have right of way",
+      "- ends a traffic-calmed area"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/road_traffic_behavior/road_usage/1.2.02-109.jpg",
+      "type": "image"
+    },
+    "sub_question": "At the next junction"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do you have to bear in mind when crossing a priority road?",
+    "options": [
+      "- the width of the priority road",
+      "- the speed and distance of cross traffic",
+      "- the weather conditions"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 2,
+    "resource": null,
+    "sub_question": "I pay attention to"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are riding in a built-up area on a cycle path that is open to mopeds. What should you expect?",
+    "options": [
+      "- Doors of parked vehicles are suddenly opened",
+      "- turning vehicles overlook me",
+      "- Pedestrians use the cycle path"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 4,
+    "resource": null,
+    "sub_question": "I should expect that"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You want to use a highway. What maximum design speed must be entered in the registration certificate part I or in the operating license?",
+    "options": [],
+    "correct_options": [],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You want to turn left on a road with one lane for each direction. Where do you have to get into the lane?",
+    "options": [
+      "- Towards the center of the road",
+      "- on the right-hand side of the road"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": "In your lane"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Are you allowed to use a sidewalk with your moped?",
+    "options": [
+      "Yes, if the moped is pushed carefully",
+      "Yes, if the moped is used like a bicycle",
+      "Yes, even with a motor if there is too much traffic on the road"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "There are several cars waiting in the right-hand lane at a red light. Can you carefully overtake the cars on the right?",
+    "options": [
+      "Yes, if there is enough space on the road",
+      "Yes, if you use the sidewalk to do so",
+      "No, you always have to wait behind the last car"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are driving out of town on a road with three marked lanes in each direction. Individual, slower vehicles drive in the right-hand lane at greater intervals. Which lane are you allowed to drive in continuously?",
+    "options": ["The middle", "The left"],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What dangers can arise if you drive to the right of a truck?",
+    "options": [
+      "- be overlooked by the driver of the truck",
+      "- being overlooked by other road users",
+      "- overlook other road users"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 4,
+    "resource": null,
+    "sub_question": "I could"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What applies to you at the next junction?",
+    "options": [
+      "- Turn left",
+      "- Turn right",
+      "- Continue driving straight ahead"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/road_traffic_behavior/road_usage/2.2.02-008.jpg",
+      "type": "image"
+    },
+    "sub_question": "I may"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You want to turn right. How do you behave correctly now?",
+    "options": [
+      "I stay behind the [blue car]",
+      "I drive up to the stop line",
+      "I drive up to the line of sight"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/road_traffic_behavior/road_usage/2.2.02-009-M.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which cycle paths are you allowed to ride your moped on?",
+    "options": [
+      "Cycle paths out of town",
+      "Cycle paths in urban areas, if an additional sign permits this",
+      "Cycle paths in urban areas when there is too much traffic on the road"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "For which motor vehicles or vehicle combinations that are intended or used for road haulage must a user fee be paid on federal trunk roads?",
+    "options": [
+      "For motor vehicles with a maximum permissible mass of at least 7.5 t",
+      "For vehicle combinations with a maximum permissible mass of at least 7.5 t",
+      "For vehicle combinations with a maximum permissible mass of less than 7.5 t"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are driving your agricultural tractor at 30 km/h on a country road with a paved right-hand hard shoulder. What is correct?",
+    "options": [
+      "I have to drive on the hard shoulder if possible",
+      "I am only allowed to use the hard shoulder to stop",
+      "I am only allowed to drive on the hard shoulder for a short time to make it easier for vehicles to overtake"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What dangers can arise if you drive to the right of a truck?",
+    "options": [
+      "- be overlooked",
+      "- overlook other road users",
+      "- burn myself with the hot exhaust fumes from the truck"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": null,
+    "sub_question": "I could"
+  }
+]

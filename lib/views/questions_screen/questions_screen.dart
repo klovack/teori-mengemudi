@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:roadcognizer/components/question/question.dart';
 import 'package:roadcognizer/components/question_nav_button/question_nav_buttons.dart';
 import 'package:roadcognizer/models/quiz_questions.dart';
@@ -29,8 +30,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     });
   }
 
-  Future<void> _loadQuestions() async {
-    final autobahnQuestions = await QuestionsService.getRandom();
+  Future<void> _loadQuestions(String language) async {
+    final autobahnQuestions =
+        await QuestionsService.getRandom(language: language);
     setState(() {
       shuffledQuestions = autobahnQuestions;
       selectedAnswers = List.generate(
@@ -43,7 +45,11 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   void initState() {
     super.initState();
-    _loadQuestions();
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      final language =
+          EasyLocalization.of(context)!.currentLocale!.languageCode;
+      _loadQuestions(language);
+    });
   }
 
   void onTapNext() {

@@ -1,0 +1,274 @@
+[
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Untuk apa bahu keras sebelah kanan digunakan?",
+    "options": [
+      "Untuk berhenti dan parkir",
+      "Untuk mengemudi dengan kendaraan lambat",
+      "Untuk menyalip"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/road_traffic_behavior/road_usage/1.2.02-101-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda salah mengantre di sebelah kiri tetapi ingin berbelok ke kanan. Apa perilaku yang benar?",
+    "options": [
+      "Saya mengemudi lurus atau berbelok ke kiri",
+      "Saya dengan hati-hati berpindah ke lajur kanan",
+      "Saya mengemudi lurus dan berbelok ke kanan di persimpangan"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/road_traffic_behavior/road_usage/1.2.02-104-M.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Kendaraan apa saja yang harus menggunakan bahu jalan di jalan pedesaan jika memungkinkan?",
+    "options": [
+      "Traktor pertanian dan mesin kerja yang bergerak lambat",
+      "Moped",
+      "Moped"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bagaimana Anda harus bersikap dalam situasi ini?",
+    "options": [
+      "- masuk ke dalam celah untuk membiarkan mobil yang melaju melewatinya",
+      "- terus, karena pengemudi yang datang harus mengemudi kembali",
+      "- kembali, karena orang yang bepergian dari arah berlawanan diperbolehkan untuk mengemudi"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/road_traffic_behavior/road_usage/1.2.02-107.mp4",
+      "type": "video"
+    },
+    "sub_question": "Saya mengemudi"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Sebuah kereta kuda datang ke arah Anda. Bagaimana Anda harus bersikap?",
+    "options": [
+      "- Hindari kebisingan",
+      "- Berkendara sejauh mungkin ke arah kanan",
+      "- Menyalakan lampu parkir"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": null,
+    "sub_question": "Aku harus"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang harus dilakukan dalam situasi ini?",
+    "options": [
+      "- aturan hak jalan \"kanan sebelum kiri\" berlaku",
+      "- Saya memiliki hak jalan",
+      "- Mengakhiri area yang ditenangkan oleh lalu lintas"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/road_traffic_behavior/road_usage/1.2.02-109.jpg",
+      "type": "image"
+    },
+    "sub_question": "Di persimpangan berikutnya"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang harus Anda ingat ketika melintasi jalan prioritas?",
+    "options": [
+      "- lebar jalan prioritas",
+      "- kecepatan dan jarak lalu lintas",
+      "- kondisi cuaca"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 2,
+    "resource": null,
+    "sub_question": "Saya memperhatikan"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda berkendara di area yang dibangun di jalur sepeda yang terbuka untuk moped. Apa yang harus Anda lakukan?",
+    "options": [
+      "- Pintu kendaraan yang diparkir tiba-tiba terbuka",
+      "- membelokkan kendaraan menghadap saya",
+      "- Pejalan kaki menggunakan jalur sepeda"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 4,
+    "resource": null,
+    "sub_question": "Saya harus berharap bahwa"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda ingin menggunakan jalan tol. Berapa kecepatan desain maksimum yang harus dimasukkan dalam sertifikat registrasi bagian I atau dalam surat izin mengemudi?",
+    "options": [],
+    "correct_options": [],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda ingin berbelok ke kiri di jalan dengan satu lajur untuk setiap arah. Di mana Anda harus masuk ke lajur tersebut?",
+    "options": ["- Menuju bagian tengah jalan", "- di sisi kanan jalan"],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": "Di jalur Anda"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apakah Anda diperbolehkan menggunakan trotoar dengan sepeda motor Anda?",
+    "options": [
+      "Ya, jika motor bebek didorong dengan hati-hati",
+      "Ya, jika motor bebek digunakan seperti sepeda",
+      "Ya, bahkan dengan motor jika ada terlalu banyak lalu lintas di jalan raya"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Ada beberapa mobil yang menunggu di lajur kanan di lampu merah. Dapatkah Anda menyalip mobil-mobil di sebelah kanan dengan hati-hati?",
+    "options": [
+      "Ya, jika ada cukup ruang di jalur lalu lintas",
+      "Ya, jika Anda menggunakan trotoar untuk melakukannya",
+      "Tidak, Anda harus selalu menunggu di belakang mobil terakhir"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda sedang berkendara ke luar kota di jalan dengan tiga lajur yang ditandai di setiap arah. Kendaraan individu yang lebih lambat melaju di lajur kanan dengan interval yang lebih besar. Lajur mana yang boleh Anda gunakan untuk mengemudi secara terus menerus?",
+    "options": ["Tingkat menengah", "Kiri"],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bahaya apa yang dapat timbul jika Anda mengemudi di sisi kanan truk?",
+    "options": [
+      "- diabaikan oleh pengemudi truk",
+      "- diabaikan oleh pengguna jalan lainnya",
+      "- Mengabaikan pengguna jalan lain"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 4,
+    "resource": null,
+    "sub_question": "Aku bisa."
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Apa yang berlaku untuk Anda di persimpangan berikutnya?",
+    "options": [
+      "- Belok kiri",
+      "- Belok kanan",
+      "- Lanjutkan mengemudi lurus ke depan"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/road_traffic_behavior/road_usage/2.2.02-008.jpg",
+      "type": "image"
+    },
+    "sub_question": "Aku bisa."
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda ingin berbelok ke kanan. Apa perilaku yang benar sekarang?",
+    "options": [
+      "Saya tetap berada di belakang [mobil biru]",
+      "Saya mengemudi sampai ke garis berhenti",
+      "Saya mengemudi hingga garis pandang"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/videos/road_traffic_behavior/road_usage/2.2.02-009-M.mp4",
+      "type": "video"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Jalur sepeda mana saja yang diperbolehkan untuk mengendarai sepeda motor Anda?",
+    "options": [
+      "Jalur bersepeda ke luar kota",
+      "Jalur sepeda di daerah perkotaan, jika ada rambu tambahan yang mengizinkannya",
+      "Jalur sepeda di daerah perkotaan ketika ada terlalu banyak lalu lintas di jalan"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Untuk kendaraan bermotor atau kombinasi kendaraan apa saja yang ditujukan atau digunakan untuk pengangkutan jalan raya yang harus membayar biaya pengguna di jalan utama federal?",
+    "options": [
+      "Untuk kendaraan bermotor dengan massa maksimum yang diizinkan minimal 7,5 ton",
+      "Untuk kombinasi kendaraan dengan massa maksimum yang diizinkan minimal 7,5 ton",
+      "Untuk kombinasi kendaraan dengan massa maksimum yang diizinkan kurang dari 7,5 ton"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Anda mengemudikan traktor pertanian dengan kecepatan 30 km/jam di jalan pedesaan dengan bahu jalan beraspal di sebelah kanan. Apa yang benar?",
+    "options": [
+      "Saya harus mengemudi di bahu jalan yang keras jika memungkinkan",
+      "Saya hanya diperbolehkan menggunakan bahu jalan untuk berhenti",
+      "Saya hanya diizinkan mengemudi di bahu jalan untuk waktu yang singkat agar lebih mudah bagi kendaraan lain untuk menyalip"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": null,
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Bahaya apa yang dapat timbul jika Anda mengemudi di sisi kanan truk?",
+    "options": [
+      "- diabaikan",
+      "- Mengabaikan pengguna jalan lain",
+      "- membakar diri saya sendiri dengan asap knalpot yang panas dari truk"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": null,
+    "sub_question": "Aku bisa."
+  }
+]

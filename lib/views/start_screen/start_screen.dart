@@ -32,8 +32,11 @@ class StartScreen extends StatelessWidget {
       children: [
         const SafeArea(
           child: Align(
-            alignment: Alignment.topRight,
-            child: LanguageChanger(),
+            alignment: Alignment.topLeft,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+              child: LanguageChanger(),
+            ),
           ),
         ),
         Center(

@@ -1,0 +1,1373 @@
+[
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "In which case do you have to wait in front of this traffic sign?",
+    "options": [
+      "When a railroad employee waves a white-red-white flag",
+      "If you cannot cross the crossing without having to stop on it",
+      "When a rail vehicle approaches"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-001.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How do you behave with this traffic sign?",
+    "options": [
+      "You must indicate the change of direction to the right",
+      "You may only drive on to the right",
+      "You are not allowed to turn right"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-004.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How do you behave with this traffic sign?",
+    "options": [
+      "You must indicate the change of direction to the left",
+      "You may only drive on to the left",
+      "You are not allowed to drive on to the left"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-005.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "In which directions are you allowed to drive?",
+    "options": ["Straight ahead", "To the right", "To the left"],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-006.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How should you behave at this traffic sign?",
+    "options": [
+      "You have to drive past traffic islands on the right",
+      "You are obliged to turn right",
+      "You are not allowed to turn left before this sign"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-007.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are approaching a stop marked as such. What should you do if you see children there?",
+    "options": [
+      "Reduce speed and stay ready to brake",
+      "A reduction in speed is only necessary if a school bus stops there",
+      "The speed does not have to be reduced when a bus stops in a lay-by"
+    ],
+    "correct_options": [0],
+    "score": 5,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-008.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do you need to know about this traffic sign?",
+    "options": [
+      "You are not allowed to drive a motor vehicle in this pedestrian zone",
+      "You are allowed to drive a motor vehicle at walking speed in this pedestrian zone",
+      "As a resident, you are allowed to drive motor vehicles in this pedestrian zone"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-010.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What are you not allowed to drive here?",
+    "options": ["With mopeds", "With mopeds", "With light motorcycles"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-012.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do you need to know about this traffic sign?",
+    "options": [
+      "Vehicles can come from this street",
+      "You are not allowed to drive on this road",
+      "You are allowed to drive on this road"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-013.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do you have to bear in mind with this traffic sign?",
+    "options": [
+      "You are not allowed to stop",
+      "You are allowed to stop for loading or unloading",
+      "You are allowed to stop to let passengers get off"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-014.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What is allowed with this traffic sign?",
+    "options": [
+      "Stopping to load or unload and to get on or off the vehicle",
+      "Holding up to 3 minutes",
+      "Parking when a parking disk is used"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-015.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What is allowed with these traffic signs?",
+    "options": [
+      "Severely disabled persons with a correspondingly numbered parking permit may park here",
+      "Stopping to get on or off for everyone",
+      "With a parking ticket from a parking ticket machine, anyone can park here indefinitely"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-016.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What applies to this combination of traffic signs?",
+    "options": [
+      "- Observe bicycle traffic on the left and right",
+      "- observe traffic with electric scooters from the left and right",
+      "- only observe the traffic on the priority road from the left and right"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-017.jpg",
+      "type": "image"
+    },
+    "sub_question": "I have to give way and at the same time"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are allowed to enter a designated cycle lane?",
+    "options": [
+      "All vehicles driven by local residents",
+      "All mopeds with a maximum design speed of less than 25 km/h",
+      "All cars, if they drive at walking speed"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-018.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What applies to yellow lane markings?",
+    "options": [
+      "- are only installed temporarily (for example at construction sites)",
+      "- replace the validity of white road markings",
+      "- only apply to construction site vehicles"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": null,
+    "sub_question": "Yellow lane markings"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How do you behave with this traffic sign?",
+    "options": [
+      "You must give way to oncoming traffic",
+      "You are not allowed to turn off",
+      "You have priority over oncoming traffic"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-102.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "In which directions are you allowed to drive?",
+    "options": ["To the left", "To the right", "Straight ahead"],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-106.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "A school bus stops on the road about 80 m in front of you. Could this be dangerous?",
+    "options": [
+      "Yes, because children often run across the road to catch the bus",
+      "Yes, because children don't always take the shortest route across the road",
+      "No, because crossing guards keep traffic safe at every school bus stop"
+    ],
+    "correct_options": [0, 1],
+    "score": 5,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-109.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Who is allowed to drive a motor vehicle on this road?",
+    "options": [
+      "Who has to deliver goods",
+      "Who wants to buy something",
+      "Who wants to visit someone"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-114.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are allowed to use the special lane marked in this way?",
+    "options": ["Buses", "Trucks", "Cars"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-115.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Who is allowed to drive on a road with these signs?",
+    "options": [
+      "Residents",
+      "Visitors to the residents",
+      "Vehicles in through traffic"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-116.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are not allowed to drive on a road with these signs?",
+    "options": ["Trucks", "Cars", "Motorcycles"],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-118.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are not allowed to drive on a road with these signs?",
+    "options": ["Bicycles", "Motorcycles", "Cars"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-119.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are not allowed to drive on a road with these signs?",
+    "options": ["Motorcycles", "Cars", "Trucks"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-120.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do these road signs indicate?",
+    "options": [
+      "On the ban on driving within 100 meters",
+      "On a one-way road 100 m long",
+      "At a customs office 100 m away"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-121.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "- Maximum permitted speed of 30 km/h",
+      "- prescribed minimum speed of 30 km/h",
+      "- Recommended speed of 30 km/h"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-124.jpg",
+      "type": "image"
+    },
+    "sub_question": "Here begins a zone with a"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "A restricted traffic area begins here. How should you behave?",
+    "options": [
+      "Pay particular attention to heavy pedestrian traffic",
+      "Observe maximum parking time",
+      "Maintain a minimum speed of 20 km/h"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-125.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "- Maximum permitted speed of 30 km/h",
+      "- prescribed minimum speed of 30 km/h",
+      "- Recommended speed of 30 km/h"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-126.jpg",
+      "type": "image"
+    },
+    "sub_question": "At the end of a zone with a"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Is it allowed to drive faster than 60 km/h here?",
+    "options": ["Yes, when the road is dry", "Yes, when the road is wet"],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-127.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How do you behave with this traffic sign?",
+    "options": [
+      "You must drive at least 60 km/h, unless you have to drive slower for road safety reasons",
+      "You may not use this road if you cannot or are not allowed to drive at least 60 km/h",
+      "You are not allowed to drive faster than 60 km/h"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-128.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are you allowed to overtake at this traffic sign?",
+    "options": ["Motorcycle without sidecar", "Motorcycle with sidecar", "Car"],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-129.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do these road signs indicate?",
+    "options": [
+      "On a no overtaking route of 3 km in length",
+      "To an overtaking ban that starts 3 km away",
+      "On a roadway with two lanes for one direction with a length of 3 km"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-130.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do these road signs indicate?",
+    "options": [
+      "To an overtaking ban that begins 200 m away",
+      "On a 200 m long no-overtaking section",
+      "To an overtaking ban that ends after 200 m"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-131.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "To the end of the speed limit",
+      "A ban on driving faster than 60 km/h",
+      "At the beginning of the speed limit"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-132.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which prohibitions are lifted with this traffic sign?",
+    "options": ["Overtaking bans", "Speed limits", "Parking bans"],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-133.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do these road signs indicate?",
+    "options": [
+      "- that applies on the road and also on the hard shoulder",
+      "- that only applies on the hard shoulder",
+      "- which only applies to trucks"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-134.jpg",
+      "type": "image"
+    },
+    "sub_question": "To a no stopping zone,"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What is allowed in the zone starting here?",
+    "options": [
+      "Holding up to 3 minutes",
+      "Stopping to load or unload and to get on or off the vehicle",
+      "Parking when a parking disk is used"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-135.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What ends here?",
+    "options": [
+      "A zone with a restricted no-stopping zone",
+      "A zone with an absolute stop ban",
+      "Previous route bans"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-136.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "When do you have to signal?",
+    "options": [
+      "Leaving the traffic circle",
+      "Driving into the traffic circle"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-140-B.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are approaching the following combination of traffic signs. What do you need to know here?",
+    "options": [
+      "Vehicles in the circle have right of way",
+      "Leaving the circle must be indicated by flashing lights",
+      "You must signal when entering the circle"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-141.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do I need to know about these traffic signs?",
+    "options": [
+      "Stopping on the circular lane is prohibited",
+      "Flash when entering the circle",
+      "You may only drive at walking pace"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-142.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do I need to know about these traffic signs?",
+    "options": [
+      "Give way to traffic on the circular lane",
+      "Flash when leaving the circle lane",
+      "Flash when entering the traffic circle"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-143.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How should you behave with this combination of traffic signs?",
+    "options": [
+      "Leaving the circle must be indicated by flashing to the right",
+      "Give way when entering the traffic circle",
+      "Driving to the left is mandatory"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-144.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "On a cycle path that must be used",
+      "On a ban for cyclists",
+      "On cyclists crossing the road"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-145.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What is indicated by this combination of traffic signs?",
+    "options": [
+      "- \"Stop. Give way.\"",
+      "- \"Give way.\"",
+      "- \"Priority of oncoming traffic\""
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-146.jpg",
+      "type": "image"
+    },
+    "sub_question": "The traffic sign follows after 100 m"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "On a sidewalk",
+      "To a ban on bicycle and moped traffic",
+      "At the start of a traffic-calmed area"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-147.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are allowed to use this road?",
+    "options": [
+      "Bicycles and motorcycles that are pushed",
+      "Motor vehicles",
+      "Electric vehicles"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-148.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How should you behave on this road when driving a motor vehicle in delivery traffic?",
+    "options": [
+      "I am only allowed to drive at walking pace",
+      "I have to be particularly considerate of pedestrians",
+      "If there are no people around, I am allowed to drive faster than walking speed"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-149.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How should you behave at this traffic sign?",
+    "options": [
+      "I am not allowed to turn here",
+      "I'm at a dead end and have to turn back",
+      "I'm not allowed to turn left here"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-150.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "I am not allowed to drive faster than 60 km/h",
+      "The speed of 60 km/h is safe in any case",
+      "The recommended minimum speed is 60 km/h"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-151.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "I am only allowed to drive straight ahead",
+      "I have priority over oncoming traffic",
+      "I find myself in a one-way street"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-152.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How do you behave with this traffic sign?",
+    "options": [
+      "I approach at a moderate speed, ready to brake",
+      "I give right of way to cross traffic",
+      "If I turn right, I am not obliged to wait"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-153.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "On a bridleway that riders must use",
+      "On a bridleway that is forbidden for other road users to use",
+      "On a path that is forbidden for riders to use"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-154.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How should you behave at this traffic sign?",
+    "options": [
+      "- Stop and give way",
+      "- Only stop when there is a stop line",
+      "- Only stop in cross traffic"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-155.jpg",
+      "type": "image"
+    },
+    "sub_question": "I have to"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How should you behave in this traffic situation?",
+    "options": [
+      "- Stop at the line of sight and give way",
+      "- Do not stop, as there is no stop line",
+      "- Only stop in cross traffic"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-156.jpg",
+      "type": "image"
+    },
+    "sub_question": "I have to"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "How should you behave in this traffic situation?",
+    "options": [
+      "- Stop at the stop line and give way",
+      "- only stop at the stop sign",
+      "- Only stop in cross traffic"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-157.jpg",
+      "type": "image"
+    },
+    "sub_question": "I have to"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are driving on a priority road. Which traffic sign ends your right of way?",
+    "options": ["1", "2", "3"],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-158.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do you need to know about this traffic sign?",
+    "options": [
+      "I have to turn left",
+      "I am only allowed to drive on to the left",
+      "I am not allowed to signal"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-159.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What applies to this traffic sign?",
+    "options": [
+      "I have to drive past obstacles on the left",
+      "I am obliged to turn left",
+      "I am not allowed to turn right before the sign"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-160.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What applies in the area 15 m in front of and behind this traffic sign?",
+    "options": [
+      "- hold",
+      "- Do not obstruct passengers getting on or off the bus",
+      "- park"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-161.jpg",
+      "type": "image"
+    },
+    "sub_question": "I may"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What applies to this traffic sign?",
+    "options": [
+      "I have to turn right",
+      "I am only allowed to drive on to the right",
+      "I can also drive on to the left"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-162.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What applies to this traffic sign?",
+    "options": [
+      "I have to reckon with cabs arriving and departing",
+      "I can hold",
+      "I am allowed to park"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-163.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign combination indicate?",
+    "options": [
+      "- be used by winter sports enthusiasts",
+      "- cannot be driven on in winter",
+      "- can only be used with snow chains"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-164.jpg",
+      "type": "image"
+    },
+    "sub_question": "The road signposted in this way may"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do you need to bear in mind in this traffic situation?",
+    "options": [
+      "- Do not drive over",
+      "- to overtake",
+      "- drive over if the oncoming traffic allows it"
+    ],
+    "correct_options": [0],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-165.jpg",
+      "type": "image"
+    },
+    "sub_question": "I am allowed to use the lane markings"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do I have to pay attention to on this priority road?",
+    "options": [
+      "Parking is prohibited",
+      "The lane markings must not be crossed",
+      "Parking is permitted if there is a lane of at least 3 m between a parked vehicle and the lane boundary"
+    ],
+    "correct_options": [0, 1],
+    "score": 4,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-166.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You want to overtake. What is the right thing to do?",
+    "options": [
+      "- Overtake",
+      "- Do not overtake",
+      "- only overtake if I stay in the right-hand lane"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-167.jpg",
+      "type": "image"
+    },
+    "sub_question": "I may"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You want to enter a designated cycle lane as a resident. What do you have to bear in mind?",
+    "options": [
+      "Vehicles may not drive faster than 30 km/h",
+      "Bicycles may ride side by side",
+      "Bicycle traffic must not be obstructed"
+    ],
+    "correct_options": [0, 1, 2],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-168.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Who is allowed to drive on a road marked in this way?",
+    "options": [
+      "All cyclists",
+      "All visitors from local residents",
+      "All moped drivers"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/1.4.41-169.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What is correct from this traffic sign onwards?",
+    "options": [
+      "I am allowed to push my moped",
+      "I am allowed to continue driving the moped slowly",
+      "I am allowed to continue riding the moped with the engine switched off"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-001.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "The load of your 10 m long truck protrudes 60 cm beyond the rear of the vehicle. What applies to you with this traffic sign?",
+    "options": [
+      "- Do not drive in because the vehicle and load are longer than 10 m",
+      "- drive in when the load is specially marked",
+      "- drive in because the load does not have to be taken into account"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-003.jpg",
+      "type": "image"
+    },
+    "sub_question": "I am allowed to drive on a road marked like this"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You are driving on this highway. How do you behave correctly?",
+    "options": [
+      "I change to the right lane",
+      "I only use the left lane in the event of a breakdown",
+      "I stay in my current lane"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-004-M.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What do you need to know about this traffic sign?",
+    "options": [
+      "Using snow chains",
+      "Permitted maximum speed 50 km/h",
+      "Tracked vehicles have right of way"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-101.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are prohibited from driving on a road with these signs?",
+    "options": [
+      "- actual axle load exceeds 2 t",
+      "- permissible axle load exceeds 2 t",
+      "- permissible total mass does not exceed 2 t"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-104.jpg",
+      "type": "image"
+    },
+    "sub_question": "For vehicles whose"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "A ban on vehicles whose width including load exceeds 2 m",
+      "On a lane 2 m wide",
+      "Maintain a prescribed side distance of at least 2 m from other vehicles"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-105.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles can cause serious accidents if this traffic sign is ignored?",
+    "options": [
+      "Length 8 m, width 2.5 m, height 4 m",
+      "Length 10 m, width 3.9 m, height 3 m",
+      "Length 4 m, width 2.5 m, height 2.5 m"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-106.jpg",
+      "type": "image"
+    },
+    "sub_question": "By vehicles with the following dimensions including load:"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are not allowed to drive on a road marked in this way?",
+    "options": [
+      "Car with caravan, total length of the train 11 m",
+      "Tractor with trailer, total length of the train 12 m",
+      "Trucks with a length of 9 m including load"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-107.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are not allowed to drive on a road marked in this way?",
+    "options": [
+      "Trucks with a maximum permissible mass over 3.5 t",
+      "Tractors",
+      "Cars with trailers"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-201.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles have to keep the minimum distance of 70 m?",
+    "options": [
+      "Trucks with a maximum permissible mass over 3.5 t",
+      "Tractors",
+      "Cars"
+    ],
+    "correct_options": [0, 1],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-202.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which vehicles are not allowed to overtake here?",
+    "options": [
+      "Trucks and road trains with a maximum permissible mass of over 3.5 t",
+      "Tractors",
+      "Cars"
+    ],
+    "correct_options": [0, 1],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-203.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does this traffic sign indicate?",
+    "options": [
+      "Ban on motor vehicles with dangerous goods that require a license plate",
+      "Ban on vehicles whose actual axle load exceeds 3.5 t",
+      "Ban on all trucks and trains"
+    ],
+    "correct_options": [0],
+    "score": 3,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-204.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "You want to drive onto the road marked in this way. What does the indication \"12 t\" refer to?",
+    "options": [
+      "- Actual mass of the vehicle",
+      "- Permissible total mass of the vehicle",
+      "- Unladen mass of the vehicle"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-205.jpg",
+      "type": "image"
+    },
+    "sub_question": "On the"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "What does the indication \"12 t\" on this traffic sign refer to?",
+    "options": [
+      "- Actual mass of the vehicle",
+      "- Permissible total mass of the vehicle",
+      "- Actual mass of the load"
+    ],
+    "correct_options": [0],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-206.jpg",
+      "type": "image"
+    },
+    "sub_question": "On the"
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which traffic sign refers to the maximum authorized mass?",
+    "options": [],
+    "correct_options": [],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-102.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  },
+  {
+    "py/object": "quiz_question.QuizQuestion",
+    "question": "Which traffic sign refers to the actual mass?",
+    "options": [],
+    "correct_options": [],
+    "score": 2,
+    "resource": {
+      "py/object": "quiz_question.QuizQuestionResource",
+      "url": "assets/images/traffic_signs/regulatory/2.4.41-103.jpg",
+      "type": "image"
+    },
+    "sub_question": null
+  }
+]

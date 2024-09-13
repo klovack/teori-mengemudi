@@ -19,7 +19,7 @@ class _LanguageChangerState extends State<LanguageChanger> {
         underline: const SizedBox(),
         elevation: 5,
         borderRadius: BorderRadius.circular(8),
-        dropdownColor: Colors.black.withOpacity(0.4),
+        dropdownColor: Colors.black.withOpacity(0.2),
         isExpanded: true,
         items: [
           ...context.supportedLocales.map(
