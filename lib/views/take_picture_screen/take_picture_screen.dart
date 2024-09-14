@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
 import 'package:roadcognizer/components/camera/camera_controls/camera_controls.dart';
@@ -12,6 +13,13 @@ class TakePictureScreen extends StatefulWidget {
   final List<CameraDescription> cameras;
 
   const TakePictureScreen({super.key, required this.cameras});
+
+  CameraDescription getCamera(CameraLensDirection direction) {
+    return cameras.firstWhere(
+      (camera) => camera.lensDirection == direction,
+      orElse: () => cameras.first,
+    );
+  }
 
   @override
   State<TakePictureScreen> createState() => _TakePictureScreenState();
@@ -25,6 +33,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
 
   double _maxZoom = 1.0;
   double _minZoom = 1.0;
+  final List<double> _zoomLevels = [1.0];
 
   bool isTakingPicture = false;
 
@@ -32,18 +41,8 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
   void initState() {
     super.initState();
 
-    _currentCamera = widget.cameras.first;
-    // To display the current output from the Camera,
-    // create a CameraController.
-    _controller = CameraController(
-      // Get a specific camera from the list of available cameras.
-      _currentCamera,
-      // Define the resolution to use.
-      ResolutionPreset.high,
-    );
-
-    // Next, initialize the controller. This returns a Future.
-    _initializeControllerFuture = _controller.initialize();
+    _currentCamera = widget.getCamera(CameraLensDirection.back);
+    _setCamera();
   }
 
   @override
@@ -67,7 +66,6 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
       // Attempt to take a picture and get the file `image`
       // where it was saved.
       final image = await _controller.takePicture();
-
       if (!context.mounted) return;
 
       showTakenImage(image);
@@ -118,7 +116,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     });
   }
 
-  void toggleFlash() {
+  void _toggleFlash() {
     setState(() {
       _controller.setFlashMode(
         _flashMode == FlashMode.off ? FlashMode.torch : FlashMode.off,
@@ -128,16 +126,35 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     });
   }
 
-  void toggleCamera() {
+  void _toggleCamera() {
     setState(() {
-      _currentCamera = _currentCamera == widget.cameras.first
-          ? widget.cameras.last
-          : widget.cameras.first;
-      _controller = CameraController(
-        _currentCamera,
-        ResolutionPreset.high,
-      );
-      _initializeControllerFuture = _controller.initialize();
+      _currentCamera = _currentCamera.lensDirection == CameraLensDirection.back
+          ? widget.cameras.firstWhere(
+              (camera) => camera.lensDirection == CameraLensDirection.front,
+              orElse: () => _currentCamera,
+            )
+          : widget.cameras.firstWhere(
+              (camera) => camera.lensDirection == CameraLensDirection.back,
+              orElse: () => _currentCamera,
+            );
+      _setCamera();
+    });
+  }
+
+  void _setCamera() {
+    // To display the current output from the Camera,
+    // create a CameraController.
+    _controller = CameraController(
+      // Get a specific camera from the list of available cameras.
+      _currentCamera,
+      // Define the resolution to use.
+      ResolutionPreset.high,
+    );
+
+    // Next, initialize the controller. This returns a Future.
+    _initializeControllerFuture = _controller.initialize().then((val) {
+      _setZoomLimit();
+      return val;
     });
   }
 
@@ -147,10 +164,12 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     setState(() {
       _maxZoom = maxZoom;
       _minZoom = minZoom;
+      _zoomLevels.clear();
+      _zoomLevels.addAll(getCalculatedZoomLevels());
     });
   }
 
-  List<double> get zoomLevels {
+  List<double> getCalculatedZoomLevels() {
     final zoomDistance = (_maxZoom - _minZoom).abs();
 
     // If the zoom levels are too close, return a single zoom level.
@@ -178,16 +197,14 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     return [1.0, 2.5, min(5.0, _maxZoom)];
   }
 
-  int get initialZoomLevel {
-    final index = zoomLevels.indexOf(1.0);
+  int get _initialZoomLevel {
+    final index = _zoomLevels.indexOf(1.0);
 
     return index == -1 ? 0 : index;
   }
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
     // Fill this out in the next steps.
     return Scaffold(
       floatingActionButton: FloatingActionButton(
@@ -211,16 +228,28 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
             future: _initializeControllerFuture,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                _setZoomLimit();
+                final camera = _controller.value;
+                final isWidthLongerThanHeight =
+                    camera.previewSize!.width > camera.previewSize!.height;
+
+                final aspectRatio = isWidthLongerThanHeight &&
+                        (camera.deviceOrientation ==
+                                DeviceOrientation.portraitUp ||
+                            camera.deviceOrientation ==
+                                DeviceOrientation.portraitDown)
+                    ? camera.previewSize!.flipped.aspectRatio
+                    : camera.previewSize!.aspectRatio;
 
                 // If the Future is complete, display the preview.
-                return SizedBox(
-                  height: size.height,
-                  width: size.width,
-                  child: FittedBox(
-                    fit: BoxFit.cover,
-                    child: SizedBox(
-                      width: 100,
+                return Center(
+                  child: AspectRatio(
+                    aspectRatio: aspectRatio,
+                    child: Transform(
+                      alignment: Alignment.center,
+                      transform: _controller.description.lensDirection ==
+                              CameraLensDirection.front
+                          ? Matrix4.rotationY(pi)
+                          : Matrix4.rotationY(0),
                       child: CameraPreview(
                         _controller,
                       ),
@@ -246,8 +275,8 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20, right: 25),
                 child: CameraControls(
-                  toggleCamera: toggleCamera,
-                  toggleFlash: toggleFlash,
+                  toggleCamera: _toggleCamera,
+                  toggleFlash: _toggleFlash,
                   isFlashOn: _flashMode == FlashMode.torch,
                   isFrontCamera:
                       _currentCamera.lensDirection == CameraLensDirection.front,
@@ -262,13 +291,13 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
               alignment: Alignment.bottomCenter,
               child: Container(
                 padding: const EdgeInsets.only(bottom: 100),
-                width: zoomLevels.length * 40.0,
+                width: _zoomLevels.length * 40.0,
                 child: ZoomButtons(
                   key: _currentCamera.lensDirection == CameraLensDirection.front
                       ? const Key('front_zoom_buttons')
                       : const Key('back_zoom_buttons'),
-                  zoomLevels: zoomLevels,
-                  initialSelectedIndex: initialZoomLevel,
+                  zoomLevels: _zoomLevels,
+                  initialSelectedIndex: _initialZoomLevel,
                   onZoomLevelChange: (zoomLevel) {
                     if (_controller.value.isInitialized) {
                       _controller.setZoomLevel(zoomLevel);
