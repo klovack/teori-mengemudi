@@ -14,6 +14,11 @@
     "fail": "Kamu perlu lebih banyak berlatih sebelum mengemudi di Eropa.\n@:result.score",
     "returnHome": "Kembali ke Awal"
   },
+  "takePicture": {
+    "error": {
+      "failToTakePicture": "Gagal mengambil gambar. Tutup aplikasi dan coba lagi."
+    }
+  },
   "signRecognizer": {
     "error": {
       "title": "Gagal Membaca Rambu Lalu Lintas.",

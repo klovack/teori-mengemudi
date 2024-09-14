@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:camera/camera.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -8,6 +9,7 @@ import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
 import 'package:roadcognizer/components/camera/camera_controls/camera_controls.dart';
 import 'package:roadcognizer/components/camera/zoom_button/zoom_button.dart';
 import 'package:roadcognizer/views/image_display_screen/image_display_screen.dart';
+import 'package:roadcognizer/services/log/log.dart' as logger;
 
 class TakePictureScreen extends StatefulWidget {
   final List<CameraDescription> cameras;
@@ -70,13 +72,14 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
 
       showTakenImage(image);
     } catch (e) {
+      logger.log.e("Failed to take picture: $e");
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
+          SnackBar(
             behavior: SnackBarBehavior.floating,
-            backgroundColor: Color.fromRGBO(0, 0, 0, .5),
+            backgroundColor: const Color.fromRGBO(0, 0, 0, .5),
             elevation: 0,
-            content: Text("Gagal mengambil gambar"),
+            content: Text('takePicture.error.failToTakePicture'.tr()),
           ),
         );
       }
