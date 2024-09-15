@@ -1,16 +1,20 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:roadcognizer/config.constants.dart';
 import 'package:roadcognizer/models/traffic_sign_image/traffic_sign_image.dart';
 import 'package:roadcognizer/models/roadcognizer_user/roadcognizer_user.dart';
 import 'package:roadcognizer/services/firebase/firebase.service.dart';
 
 class UserService {
-  static const collectionName = 'users';
+  static const userCollectionName = CollectionName.users;
+  static const imageCollectionName = CollectionName.images;
   final db = FirebaseService.firestore;
 
   late final CollectionReference<RoadcognizerUser> _users;
 
   UserService() {
-    _users = db.collection(collectionName).withConverter<RoadcognizerUser>(
+    _users = db
+        .collection(userCollectionName.value)
+        .withConverter<RoadcognizerUser>(
           fromFirestore: (json, _) => RoadcognizerUser.fromJson(json.data()!),
           toFirestore: (user, _) => user.toJson(),
         );
@@ -61,7 +65,7 @@ class UserService {
   }
 
   CollectionReference<Map<String, dynamic>> getUserImagesRef(String uid) {
-    return getUserRef(uid).collection("images");
+    return getUserRef(uid).collection(imageCollectionName.value);
   }
 
   CollectionReference<TrafficSignImage> getCurrentUserImagesRef() {
@@ -82,13 +86,36 @@ class UserService {
         );
   }
 
-  Future<bool> isCurrentUserImageLimitReached() async {
-    final images = await getCurrentUserImagesRef()
+  Future<UserImageLimit> getCurrentUserImageLimit() async {
+    final userCredential = FirebaseService.auth.currentUser;
+
+    if (userCredential == null) {
+      throw Exception("User is not logged in");
+    }
+
+    final isUserVerified =
+        userCredential.emailVerified || userCredential.providerData.length > 1;
+    final currentUser = await getCurrentUser();
+    final isUserPremium = currentUser.premiumUntil != null &&
+        currentUser.premiumUntil!.isAfter(DateTime.now());
+
+    final limit = isUserPremium
+        ? UserImageLimit.premium
+        : isUserVerified
+            ? UserImageLimit.verified
+            : UserImageLimit.notVerified;
+
+    return limit;
+  }
+
+  Future<List<TrafficSignImage>> getCurrentUserImagesForLast(
+      [int numOfDay = 1]) async {
+    return await getCurrentUserImagesRef()
         .where(
           "createdAt",
           isGreaterThan: Timestamp.fromDate(
             DateTime.now().subtract(
-              const Duration(days: 1),
+              Duration(days: numOfDay),
             ),
           ),
         )
@@ -100,8 +127,14 @@ class UserService {
               )
               .toList(),
         );
+  }
 
-    return images.length > 2;
+  Future<bool> isCurrentUserImageLimitReached() async {
+    final limit = await getCurrentUserImageLimit();
+
+    final images = await getCurrentUserImagesForLast(1);
+
+    return images.length >= limit.value;
   }
 
   Future<void> addImageToCurrentUser(TrafficSignImage image) async {

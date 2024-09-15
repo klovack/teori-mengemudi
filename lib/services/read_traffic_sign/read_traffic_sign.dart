@@ -34,6 +34,6 @@ Future<TrafficSignDescription> readTrafficSign(
     return TrafficSignDescription.fromJson(data.cast<String, dynamic>());
   } catch (e) {
     log.e('Error reading traffic sign: $e');
-    throw ReadTrafficException('Error reading traffic sign. ${e.toString()}');
+    throw ReadTrafficException('Error reading traffic sign. $e');
   }
 }

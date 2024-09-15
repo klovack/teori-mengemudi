@@ -8,6 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
 import 'package:roadcognizer/components/camera/camera_controls/camera_controls.dart';
 import 'package:roadcognizer/components/camera/zoom_button/zoom_button.dart';
+import 'package:roadcognizer/components/daily_limit/daily_limit.dart';
 import 'package:roadcognizer/views/image_display_screen/image_display_screen.dart';
 import 'package:roadcognizer/services/log/log.dart' as logger;
 
@@ -327,6 +328,8 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
               ),
             ),
           ),
+
+          const DailyLimit(),
         ],
       ),
     );

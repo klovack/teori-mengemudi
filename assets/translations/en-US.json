@@ -27,7 +27,7 @@
         "retry": "Try Again!"
       },
       "imageLimit": {
-        "title": "Image Limit Reached",
+        "title": "Daily Image Limit Reached",
         "message": "You have reached the maximum daily number of images you can upload. Please try again later.",
         "retry": "Back!"
       },

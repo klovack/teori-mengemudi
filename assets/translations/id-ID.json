@@ -27,7 +27,7 @@
         "retry": "Coba Lagi!"
       },
       "imageLimit": {
-        "title": "Batas Gambar Tercapai",
+        "title": "Limit Harian Sudah Habis",
         "message": "Kamu sudah mencapai jumlah maksimum gambar harian yang dapat kamu unggah. Silakan coba lagi nanti.",
         "retry": "Kembali!"
       },

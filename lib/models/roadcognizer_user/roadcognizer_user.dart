@@ -38,13 +38,18 @@ class RoadcognizerUser {
     );
   }
 
-  Map<String, dynamic> toJson() {
-    return {
+  Map<String, dynamic> toJson([bool includeImages = false]) {
+    final json = {
       'uid': uid,
       'createdAt': createdAt ?? FieldValue.serverTimestamp(),
       'premiumUntil': premiumUntil,
-      'images': images.map((model) => model.toJson()).toList(),
     };
+
+    if (includeImages) {
+      json['images'] = images.map((model) => model.toJson()).toList();
+    }
+
+    return json;
   }
 
   @override

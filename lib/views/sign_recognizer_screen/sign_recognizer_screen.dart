@@ -10,6 +10,7 @@ import 'package:roadcognizer/components/error_dialog/error_dialog.dart';
 import 'package:roadcognizer/components/sign_explanation/sign_explanation.dart';
 import 'package:roadcognizer/exception/exception.dart';
 import 'package:roadcognizer/models/traffic_sign_description/traffic_sign_description.dart';
+import 'package:roadcognizer/models/traffic_sign_image/traffic_sign_image.dart';
 import 'package:roadcognizer/services/log/log.dart';
 import 'package:roadcognizer/services/read_traffic_sign/read_traffic_sign.dart';
 import 'package:roadcognizer/services/upload_image/upload_image.service.dart';
@@ -35,11 +36,11 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
     SchedulerBinding.instance.addPostFrameCallback((_) {
       final languageCode =
           EasyLocalization.of(context)!.currentLocale!.languageCode;
-      uploadAndReadTrafficSign(languageCode);
+      _uploadAndReadTrafficSign(languageCode);
     });
   }
 
-  Future uploadAndReadTrafficSign(String languageCode) async {
+  Future _uploadAndReadTrafficSign(String languageCode) async {
     try {
       final isLimitReached =
           await UserService().isCurrentUserImageLimitReached();
@@ -60,19 +61,36 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
         imageUrl,
         languageCode: languageCode,
       );
-      if (_trafficSign == null || _trafficSign?.error != null) {
-        log.e("Traffic sign is null or has error: ${trafficSign.error}");
+      if (trafficSign.error != null && trafficSign.error!.isNotEmpty) {
+        log.e("Problem reading the traffic sign: ${trafficSign.error}");
         throw ReadTrafficException(
             "Error reading traffic sign: ${trafficSign.error}");
       }
       setState(() {
         _trafficSign = trafficSign;
       });
+      _storeTrafficSign(imageUrl, languageCode);
     } catch (e) {
       log.e("Error reading traffic sign: $e");
       _showErrorDialog(e is RoadcognizerException ? e : null);
     }
   }
+
+  void _storeTrafficSign(String imageUrl, String languageCode) async {
+    try {
+      await UserService().addImageToCurrentUser(
+        TrafficSignImage(
+          url: imageUrl,
+          explanations: {
+            languageCode: _trafficSign!,
+          },
+        ),
+      );
+    } catch (e) {
+      log.e("Error storing traffic sign: $e");
+      _showErrorDialog(e is RoadcognizerException ? e : null);
+    }
+  } 
 
   void _showErrorDialog([RoadcognizerException? e]) {
     showAdaptiveDialog(
@@ -85,11 +103,11 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
     );
   }
 
-  void navigateBack(BuildContext context) {
+  void _navigateBack(BuildContext context) {
     Navigator.of(context).pop();
   }
 
-  void navigateToImageDisplayScreen(BuildContext context) {
+  void _navigateToImageDisplayScreen() {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => ImageDisplayScreen(widget.imagePath),
@@ -105,9 +123,7 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
           Column(
             children: [
               GestureDetector(
-                onTap: () {
-                  navigateToImageDisplayScreen(context);
-                },
+                onTap: _navigateToImageDisplayScreen,
                 child: Hero(
                   tag: widget.imagePath,
                   child: Image.file(
@@ -132,7 +148,7 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
 
           // Back Button
           AppBackButton(
-            navigateBack: navigateBack,
+            navigateBack: _navigateBack,
             backgroundColor: Colors.black.withOpacity(0.2),
           ),
         ],
