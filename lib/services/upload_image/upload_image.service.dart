@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:path/path.dart';
+import 'package:roadcognizer/exception/exception.dart';
+import 'package:roadcognizer/exception/user_not_authenticated_exception.dart';
 import 'package:roadcognizer/services/firebase/firebase.service.dart';
 import 'package:roadcognizer/services/log/log.dart';
 import 'package:roadcognizer/util/generate_random.dart';
@@ -35,7 +37,8 @@ Future<String> uploadImage(String imagePath) async {
   final uid = userCred.user?.uid;
 
   if (uid == null) {
-    return Future.error(Exception('User not authenticated'));
+    return Future.error(
+        UserNotAuthenticatedException('User not authenticated'));
   }
 
   final ref = storage.ref(_userUploadPrefix).child(_imagePrefix);
@@ -52,6 +55,6 @@ Future<String> uploadImage(String imagePath) async {
     await uploadTask;
     return await imageRef.getDownloadURL();
   } on FirebaseException catch (e) {
-    return Future.error(e);
+    return Future.error(UploadImageException('Error uploading image: $e'));
   }
 }

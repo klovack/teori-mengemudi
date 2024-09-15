@@ -6,12 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
 import 'package:roadcognizer/components/app_scaffold/app_scaffold.dart';
+import 'package:roadcognizer/components/error_dialog/error_dialog.dart';
 import 'package:roadcognizer/components/sign_explanation/sign_explanation.dart';
+import 'package:roadcognizer/exception/exception.dart';
+import 'package:roadcognizer/exception/roadcognizer_exception.dart';
 import 'package:roadcognizer/models/traffic_sign_description/traffic_sign_description.dart';
 import 'package:roadcognizer/services/log/log.dart';
 import 'package:roadcognizer/services/read_traffic_sign/read_traffic_sign.dart';
 import 'package:roadcognizer/services/upload_image/upload_image.service.dart';
-import 'package:roadcognizer/theme/fonts.dart';
+import 'package:roadcognizer/services/user/user.service.dart';
 import 'package:roadcognizer/views/image_display_screen/image_display_screen.dart';
 
 class SignRecognizerScreen extends StatefulWidget {
@@ -39,42 +42,45 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
 
   Future uploadAndReadTrafficSign(String languageCode) async {
     try {
+      final isLimitReached =
+          await UserService().isCurrentUserImageLimitReached();
+      if (isLimitReached) {
+        throw UserImageLimitReachedException(
+          "User has reached today's image limit.",
+        );
+      }
+    } catch (e) {
+      log.e("User has reached limit: $e");
+      _showErrorDialog(e is RoadcognizerException ? e : null);
+      return;
+    }
+
+    try {
       final imageUrl = await uploadImage(widget.imagePath);
       final trafficSign = await readTrafficSign(
         imageUrl,
         languageCode: languageCode,
       );
+      if (_trafficSign == null || _trafficSign?.error != null) {
+        log.e("Traffic sign is null or has error: ${trafficSign.error}");
+        throw ReadTrafficException(
+            "Error reading traffic sign: ${trafficSign.error}");
+      }
       setState(() {
         _trafficSign = trafficSign;
       });
     } catch (e) {
       log.e("Error reading traffic sign: $e");
-      showErrorDialog();
+      _showErrorDialog(e is RoadcognizerException ? e : null);
     }
   }
 
-  void showErrorDialog() {
+  void _showErrorDialog([RoadcognizerException? e]) {
     showAdaptiveDialog(
       context: context,
       builder: (ctx) {
-        return AlertDialog(
-          title: Text(
-            'signRecognizer.error.title'.tr(),
-            style: Fonts.getPrimary(),
-          ),
-          content: Text(
-            'signRecognizer.error.message'.tr(),
-            style: Fonts.getSecondary(),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(ctx).pop();
-                Navigator.of(ctx).pop();
-              },
-              child: const Text('signRecognizer.error.retry').tr(),
-            ),
-          ],
+        return ErrorDialog(
+          exception: e,
         );
       },
     );
