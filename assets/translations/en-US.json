@@ -21,9 +21,26 @@
   },
   "signRecognizer": {
     "error": {
-      "title": "Error Reading Traffic Sign",
-      "message": "The image you provided could neither be uploaded nor read by our system.",
-      "retry": "Try Again!"
+      "generic": {
+        "title": "Error Reading Traffic Sign",
+        "message": "The image you provided could neither be uploaded nor read by our system.",
+        "retry": "Try Again!"
+      },
+      "imageLimit": {
+        "title": "Image Limit Reached",
+        "message": "You have reached the maximum daily number of images you can upload. Please try again later.",
+        "retry": "Back!"
+      },
+      "noTrafficSign": {
+        "title": "No Traffic Sign Detected",
+        "message": "The image you provided does not contain a traffic sign. Please try again. Make sure traffic signs are clearly visible.",
+        "retry": "Try Again!"
+      },
+      "uploadImage": {
+        "title": "Error Uploading Image",
+        "message": "The image you provided could not be uploaded. Please try again.",
+        "retry": "Try Again!"
+      }
     },
     "origin": "Origin: {}"
   }

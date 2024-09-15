@@ -9,7 +9,6 @@ import 'package:roadcognizer/components/app_scaffold/app_scaffold.dart';
 import 'package:roadcognizer/components/error_dialog/error_dialog.dart';
 import 'package:roadcognizer/components/sign_explanation/sign_explanation.dart';
 import 'package:roadcognizer/exception/exception.dart';
-import 'package:roadcognizer/exception/roadcognizer_exception.dart';
 import 'package:roadcognizer/models/traffic_sign_description/traffic_sign_description.dart';
 import 'package:roadcognizer/services/log/log.dart';
 import 'package:roadcognizer/services/read_traffic_sign/read_traffic_sign.dart';

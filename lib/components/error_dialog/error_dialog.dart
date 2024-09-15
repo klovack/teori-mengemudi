@@ -20,11 +20,17 @@ class ErrorDialog extends StatelessWidget {
 
     if (exception != null) {
       if (exception is UploadImageException) {
-        message = exception!.message;
+        title = 'signRecognizer.error.uploadImage.title';
+        message = 'signRecognizer.error.uploadImage.message';
+        retry = 'signRecognizer.error.uploadImage.retry';
       } else if (exception is ReadTrafficException) {
-        message = exception!.message;
+        title = 'signRecognizer.error.noTrafficSign.title';
+        message = 'signRecognizer.error.noTrafficSign.message';
+        retry = 'signRecognizer.error.noTrafficSign.retry';
       } else if (exception is UserImageLimitReachedException) {
-        message = exception!.message;
+        title = 'signRecognizer.error.imageLimit.title';
+        message = 'signRecognizer.error.imageLimit.message';
+        retry = 'signRecognizer.error.imageLimit.retry';
       }
     }
 

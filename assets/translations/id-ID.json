@@ -21,9 +21,26 @@
   },
   "signRecognizer": {
     "error": {
-      "title": "Gagal Membaca Rambu Lalu Lintas.",
-      "message": "Gambar yang kamu pilih tidak dapat diunggah atau dibaca oleh sistem kami.",
-      "retry": "Coba Lagi!"
+      "generic": {
+        "title": "Gagal Membaca Rambu Lalu Lintas.",
+        "message": "Gambar yang kamu pilih tidak dapat diunggah atau dibaca oleh sistem kami.",
+        "retry": "Coba Lagi!"
+      },
+      "imageLimit": {
+        "title": "Batas Gambar Tercapai",
+        "message": "Kamu sudah mencapai jumlah maksimum gambar harian yang dapat kamu unggah. Silakan coba lagi nanti.",
+        "retry": "Kembali!"
+      },
+      "noTrafficSign": {
+        "title": "Tidak Ada Rambu Lalu Lintas yang Terdeteksi",
+        "message": "Gambar yang kamu berikan tidak mengandung rambu lalu lintas. Silakan coba lagi. Pastikan rambu lalu lintas terlihat jelas.",
+        "retry": "Coba Lagi!"
+      },
+      "uploadImage": {
+        "title": "Kesalahan saat mengunggah gambar",
+        "message": "Gambar yang kamu pilih tidak dapat diunggah. Silakan coba lagi.",
+        "retry": "Coba Lagi!"
+      }
     },
     "origin": "Asal: {}"
   }
