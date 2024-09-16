@@ -1,5 +1,5 @@
 name: roadcognizer
-description: "A new Flutter project."
+description: "App that  helps you become a better and more informed driver by using AI to scan, translate, and explain road signs. Test your knowledge with quizzes and review previously scanned signs to ensure you're ready to drive in Europe."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

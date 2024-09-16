@@ -1,5 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:roadcognizer/config.constants.dart';
+import 'package:roadcognizer/theme/dark.dart';
+import 'package:roadcognizer/theme/light.dart';
 import 'package:roadcognizer/views/quiz/quiz.dart';
 
 class App extends StatelessWidget {
@@ -7,11 +11,15 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final title =
+        appFlavor == AppFlavor.dev.value ? 'Roadcognizer Dev' : 'Roadcognizer';
     return MaterialApp(
-      title: 'Roadcognizer',
+      title: title,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
+      theme: lightTheme,
+      darkTheme: darkTheme,
       home: Quiz(),
     );
   }

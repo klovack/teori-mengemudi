@@ -1,4 +1,4 @@
-package com.mrizki.teori_mengemudi
+package com.mrizki.roadcognizer
 
 import io.flutter.embedding.android.FlutterActivity
 

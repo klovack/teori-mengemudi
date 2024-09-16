@@ -16,19 +16,28 @@ class _DailyLimitState extends State<DailyLimit> {
   void initState() {
     super.initState();
 
+    _updateImageCount();
+  }
+
+  void _updateImageCount() async {
     final UserService userService = UserService();
 
-    userService.getCurrentUserImageLimit().then((value) {
-      setState(() {
-        _limit = value.value;
-      });
+    final int count =
+        await userService.getCurrentUserImagesForLast(1).then((value) {
+      return value.length;
     });
 
-    userService.getCurrentUserImagesForLast(1).then((value) {
-      setState(() {
-        _currentCount = value.length;
-      });
+    final int limit =
+        await userService.getCurrentUserImageLimit().then((value) {
+      return value.value;
     });
+
+    if (mounted) {
+      setState(() {
+        _currentCount = count;
+        _limit = limit;
+      });
+    }
   }
 
   @override

@@ -16,6 +16,12 @@
       "args": ["--dart-define", "DEV_MACHINE_IP=192.168.3.6"]
     },
     {
+      "name": "Roadcognizer DEV (physical)",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--dart-define", "DEV_MACHINE_IP=192.168.3.6", "--flavor", "dev"]
+    },
+    {
       "name": "Roadcognizer (profile mode)",
       "request": "launch",
       "type": "dart",

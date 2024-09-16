@@ -65,7 +65,6 @@ class FirebaseService {
     if (kDebugMode) {
       log.d("Use Emulators");
 
-
       const host =
           String.fromEnvironment("DEV_MACHINE_IP", defaultValue: "127.0.0.1");
 

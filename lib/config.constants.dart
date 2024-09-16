@@ -14,3 +14,11 @@ enum UserImageLimit {
   const UserImageLimit(this.value);
   final int value;
 }
+
+enum AppFlavor {
+  dev("dev"),
+  production("production");
+
+  const AppFlavor(this.value);
+  final String value;
+}
