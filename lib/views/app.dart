@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:roadcognizer/config.constants.dart';
 import 'package:roadcognizer/theme/dark.dart';
 import 'package:roadcognizer/theme/light.dart';
-import 'package:roadcognizer/views/quiz/quiz.dart';
+import 'package:roadcognizer/views/menu_screen/menu_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -20,7 +20,7 @@ class App extends StatelessWidget {
       locale: context.locale,
       theme: lightTheme,
       darkTheme: darkTheme,
-      home: Quiz(),
+      home: const MenuScreen(),
     );
   }
 }

@@ -117,8 +117,8 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return AppScaffold(
-      child: Stack(
+    return Scaffold(
+      body: Stack(
         children: [
           Column(
             children: [

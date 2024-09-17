@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:roadcognizer/Views/start_screen/start_screen.dart';
-import 'package:roadcognizer/components/app_scaffold/app_scaffold.dart';
 import 'package:roadcognizer/models/quiz_questions.dart';
 import 'package:roadcognizer/services/video_play_counter/video_play_counter.service.dart';
 import 'package:roadcognizer/views/questions_screen/questions_screen.dart';
@@ -12,24 +11,47 @@ enum QuizScreenType {
   result,
 }
 
-class Quiz extends StatefulWidget {
+class QuizScreen extends StatefulWidget {
   final VideoPlayCounterService videoPlayCounterService =
       VideoPlayCounterService();
 
-  Quiz({super.key});
+  final Function()? onQuizStart;
+  final Function()? onQuizEnd;
+
+  QuizScreen({super.key, this.onQuizStart, this.onQuizEnd});
 
   @override
-  State<Quiz> createState() => _QuizState();
+  State<QuizScreen> createState() => _QuizScreenState();
 }
 
-class _QuizState extends State<Quiz> {
+class _QuizScreenState extends State<QuizScreen> {
   var activeScreen = QuizScreenType.start;
-  List<QuizQuestions> questions = [];
-  List<List<int>> selectedAnswers = [];
+  List<QuizQuestions> _questions = [];
+  List<List<int>> _selectedAnswers = [];
 
-  void switchScreen() {
+  void _startQuiz() {
+    widget.onQuizStart?.call();
     setState(() {
       activeScreen = QuizScreenType.questions;
+    });
+  }
+
+  void _submitQuiz(
+    List<QuizQuestions> questions,
+    List<List<int>> selectedAnswers,
+  ) {
+    setState(() {
+      _questions = questions;
+      _selectedAnswers = selectedAnswers;
+      activeScreen = QuizScreenType.result;
+    });
+  }
+
+  void _endQuiz() {
+    widget.videoPlayCounterService.reset();
+    widget.onQuizEnd?.call();
+    setState(() {
+      activeScreen = QuizScreenType.start;
     });
   }
 
@@ -37,35 +59,24 @@ class _QuizState extends State<Quiz> {
     switch (activeScreen) {
       case QuizScreenType.questions:
         return QuestionsScreen(
-          onSubmit: (q, s) {
-            setState(() {
-              questions = q;
-              selectedAnswers = s;
-              activeScreen = QuizScreenType.result;
-            });
-          },
+          onSubmit: _submitQuiz,
         );
       case QuizScreenType.result:
         return ResultScreen(
-          onReset: () {
-            widget.videoPlayCounterService.reset();
-            setState(() {
-              activeScreen = QuizScreenType.start;
-            });
-          },
-          questions: questions,
-          selectedAnswers: selectedAnswers,
+          onReset: _endQuiz,
+          questions: _questions,
+          selectedAnswers: _selectedAnswers,
         );
       case QuizScreenType.start:
       default:
-        return StartScreen(onStart: switchScreen);
+        return StartScreen(
+          onStart: _startQuiz,
+        );
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return AppScaffold(
-      child: getActiveScreen(),
-    );
+    return getActiveScreen();
   }
 }
