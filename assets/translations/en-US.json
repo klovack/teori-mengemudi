@@ -1,7 +1,7 @@
 {
   "ctaReadTrafficSign": "Read Traffic Signs!",
   "ctaReadyToDrive": "Are you ready to drive in Europe?",
-  "practiceDrivingTheory": "See if you know the driving theory in Europe!",
+  "practiceDrivingTheory": "Take Test!",
   "question": {
     "submit": "Submit",
     "submitConfirm": "Are you sure you want to submit the quiz?",
@@ -43,5 +43,12 @@
       }
     },
     "origin": "Origin: {}"
+  },
+  "profileScreen": {
+    "title": "Profile",
+    "settings": {
+      "title": "Settings",
+      "language": "Language"
+    }
   }
 }

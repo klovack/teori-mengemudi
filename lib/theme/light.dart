@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:roadcognizer/theme/brand_colors.dart';
 import 'package:roadcognizer/theme/fonts.dart';
 
 final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   colorScheme: ColorScheme.light(
-    primary: Colors.blue,
+    primary: BrandColors.red,
     onPrimary: Colors.white,
-    secondary: const Color(0xFFFFCA35),
+    secondary: BrandColors.blue,
     onSecondary: Colors.white,
     background: Colors.grey[100]!,
     onBackground: Colors.black,
     surface: Colors.white,
-    onSurface: Colors.black,
-    inverseSurface: const Color(0xFF003997),
+    onSurface: BrandColors.red,
   ),
   appBarTheme: const AppBarTheme(
-    backgroundColor: Colors.blue,
-    foregroundColor: Colors.white,
+    backgroundColor: Colors.transparent,
+    foregroundColor: BrandColors.darkBlue,
+    systemOverlayStyle: SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ),
   ),
   textTheme: TextTheme(
     bodyLarge: Fonts.getSecondary(
@@ -91,5 +95,30 @@ final ThemeData lightTheme = ThemeData(
   bottomAppBarTheme: const BottomAppBarTheme(
     color: BrandColors.red,
     surfaceTintColor: BrandColors.red,
+  ),
+  dropdownMenuTheme: const DropdownMenuThemeData(
+    menuStyle: MenuStyle(
+      alignment: Alignment(-1.25, 1),
+      padding:
+          WidgetStatePropertyAll(EdgeInsets.only(right: 10, top: 8, bottom: 8)),
+      shape: WidgetStatePropertyAll(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(16)),
+          side: BorderSide(
+            color: Colors.red,
+            width: 2,
+            strokeAlign: -4,
+          ),
+        ),
+      ),
+      elevation: WidgetStatePropertyAll(4),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: false,
+      outlineBorder: BorderSide.none,
+      border: OutlineInputBorder(
+        borderSide: BorderSide.none,
+      ),
+    ),
   ),
 );

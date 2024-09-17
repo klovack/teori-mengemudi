@@ -1,7 +1,7 @@
 {
   "ctaReadTrafficSign": "Baca Rambu Lalu Lintas!",
   "ctaReadyToDrive": "Siapkah Anda Menyetir di Eropa?",
-  "practiceDrivingTheory": "Lihat apakah kamu mengetahui teori mengemudi di Eropa!",
+  "practiceDrivingTheory": "Coba Buktikan!",
   "question": {
     "submit": "Akhiri",
     "submitConfirm": "Apakah kamu yakin ingin mengakhiri quiz ini?",
@@ -11,7 +11,7 @@
   "result": {
     "score": "Nilai kamu: {score}/{total}",
     "pass": "Selamat, hati-hati berkendara di Eropa ya!\n@:result.score",
-    "fail": "Kamu perlu lebih banyak berlatih sebelum mengemudi di Eropa.\n@:result.score",
+    "fail": "Coba lagi sebelum mengemudi di Eropa.\n@:result.score",
     "returnHome": "Kembali ke Awal"
   },
   "takePicture": {
@@ -43,5 +43,12 @@
       }
     },
     "origin": "Asal: {}"
+  },
+  "profileScreen": {
+    "title": "Profil",
+    "settings": {
+      "title": "Pengaturan",
+      "language": "Bahasa"
+    }
   }
 }

@@ -5,7 +5,7 @@ import 'package:roadcognizer/theme/fonts.dart';
 final ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   colorScheme: ColorScheme.dark(
-    primary: Colors.blueGrey[900]!,
+    primary: BrandColors.red,
     onPrimary: BrandColors.white,
     secondary: BrandColors.yellow,
     onSecondary: Colors.black,
@@ -13,10 +13,9 @@ final ThemeData darkTheme = ThemeData(
     onBackground: Colors.white,
     surface: BrandColors.blue,
     onSurface: Colors.white,
-    inverseSurface: Colors.white,
   ),
   appBarTheme: const AppBarTheme(
-    backgroundColor: BrandColors.blue,
+    backgroundColor: Colors.transparent,
     foregroundColor: BrandColors.yellow,
   ),
   textTheme: TextTheme(
@@ -59,7 +58,7 @@ final ThemeData darkTheme = ThemeData(
     foregroundColor: BrandColors.white,
   ),
   iconTheme: const IconThemeData(
-    color: Colors.orangeAccent,
+    color: BrandColors.white,
   ),
   scaffoldBackgroundColor: BrandColors.darkBlue,
   navigationBarTheme: NavigationBarThemeData(
@@ -89,5 +88,30 @@ final ThemeData darkTheme = ThemeData(
   ),
   bottomAppBarTheme: const BottomAppBarTheme(
     color: BrandColors.blue,
+  ),
+  dropdownMenuTheme: const DropdownMenuThemeData(
+    menuStyle: MenuStyle(
+      alignment: Alignment(-1.25, 1),
+      padding:
+          WidgetStatePropertyAll(EdgeInsets.only(right: 10, top: 8, bottom: 8)),
+      shape: WidgetStatePropertyAll(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(16)),
+          side: BorderSide(
+            color: BrandColors.red,
+            width: 2,
+            strokeAlign: -4,
+          ),
+        ),
+      ),
+      elevation: WidgetStatePropertyAll(4),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: false,
+      outlineBorder: BorderSide.none,
+      border: OutlineInputBorder(
+        borderSide: BorderSide.none,
+      ),
+    ),
   ),
 );

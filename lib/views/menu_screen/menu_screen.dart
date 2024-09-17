@@ -15,6 +15,7 @@ class MenuScreen extends StatefulWidget {
 class _MenuScreenState extends State<MenuScreen> {
   var _activeScreen = NavbarDestinations.signs;
   var _isNavbarVisible = true;
+  var _isAppBarVisible = true;
 
   Future<void> _navigateToSignRecognizer() async {
     final cameras = await availableCameras();
@@ -29,9 +30,10 @@ class _MenuScreenState extends State<MenuScreen> {
     );
   }
 
-  void _setBottomNavigationBarVisibility(bool isVisible) {
+  void _setNavAndAppBarVisibility(bool isVisible) {
     setState(() {
       _isNavbarVisible = isVisible;
+      _isAppBarVisible = isVisible;
     });
   }
 
@@ -39,8 +41,8 @@ class _MenuScreenState extends State<MenuScreen> {
     switch (_activeScreen) {
       case NavbarDestinations.quiz:
         return QuizScreen(
-          onQuizStart: () => _setBottomNavigationBarVisibility(false),
-          onQuizEnd: () => _setBottomNavigationBarVisibility(true),
+          onQuizStart: () => _setNavAndAppBarVisibility(false),
+          onQuizEnd: () => _setNavAndAppBarVisibility(true),
         );
       case NavbarDestinations.signs:
         return const UsersSignsScreen();
@@ -51,6 +53,7 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return AppScaffold(
       isNavbarVisible: _isNavbarVisible,
+      isAppBarVisible: _isAppBarVisible,
       selectedDestination: _activeScreen,
       onReadTrafficSignsTap: _navigateToSignRecognizer,
       onNavbarSelected: (destination) {

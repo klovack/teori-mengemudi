@@ -43,57 +43,60 @@ class ResultScreen extends StatelessWidget {
       },
     );
 
-    return Container(
-      padding: const EdgeInsets.all(50),
-      width: double.infinity,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text(
-            scoreText,
-            textAlign: TextAlign.center,
-            style: Fonts.getPrimary(
-              ts: const TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
+    return SafeArea(
+      child: Container(
+        padding: const EdgeInsets.all(50),
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              scoreText,
+              textAlign: TextAlign.center,
+              style: Fonts.getPrimary(
+                ts: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
-          Container(
-            height: MediaQuery.sizeOf(context).height - 290,
-            width: double.infinity,
-            margin: const EdgeInsets.only(top: 20),
-            child: ListView.builder(
-              itemCount: questions.length,
-              itemBuilder: (_, index) {
-                final question = questions[index];
-                return QuestionSummary(
+            Container(
+              height: MediaQuery.sizeOf(context).height - 300,
+              width: double.infinity,
+              padding: const EdgeInsets.only(top: 8),
+              child: ListView.builder(
+                padding: const EdgeInsets.only(top: 0),
+                itemCount: questions.length,
+                itemBuilder: (_, index) {
+                  final question = questions[index];
+                  return QuestionSummary(
                     key: ValueKey(index),
                     question: question,
                     selectedAnswer: selectedAnswers[index],
                     index: index,
                   );
-              },
-            ),
-          ),
-          const SizedBox(height: 20),
-          ElevatedButton.icon(
-            label: Text('result.returnHome'.tr()),
-            icon: const Icon(Icons.restart_alt_rounded),
-            style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5),
-              ),
-              backgroundColor: Colors.deepOrange,
-              foregroundColor: Colors.white,
-              side: const BorderSide(
-                color: Colors.deepOrange,
+                },
               ),
             ),
-            onPressed: onReset,
-          )
-        ],
+            const SizedBox(height: 10),
+            ElevatedButton.icon(
+              label: Text('result.returnHome'.tr()),
+              icon: const Icon(Icons.restart_alt_rounded),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                backgroundColor: Colors.deepOrange,
+                foregroundColor: Colors.white,
+                side: const BorderSide(
+                  color: Colors.deepOrange,
+                ),
+              ),
+              onPressed: onReset,
+            )
+          ],
+        ),
       ),
     );
   }
