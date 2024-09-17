@@ -9,6 +9,7 @@ import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
 import 'package:roadcognizer/components/camera/camera_controls/camera_controls.dart';
 import 'package:roadcognizer/components/camera/zoom_button/zoom_button.dart';
 import 'package:roadcognizer/components/daily_limit/daily_limit.dart';
+import 'package:roadcognizer/util/generate_random.dart';
 import 'package:roadcognizer/views/image_display_screen/image_display_screen.dart';
 import 'package:roadcognizer/services/log/log.dart' as logger;
 
@@ -38,7 +39,8 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
   double _minZoom = 1.0;
   final List<double> _zoomLevels = [1.0];
 
-  bool isTakingPicture = false;
+  bool _isTakingPicture = false;
+  Key _dailyLimitKey = UniqueKey();
 
   @override
   void initState() {
@@ -63,7 +65,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
       await _controller.pausePreview();
 
       setState(() {
-        isTakingPicture = true;
+        _isTakingPicture = true;
       });
 
       // Attempt to take a picture and get the file `image`
@@ -89,7 +91,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
 
   void takeFromGallery() async {
     setState(() {
-      isTakingPicture = true;
+      _isTakingPicture = true;
     });
 
     final image = await ImagePicker().pickImage(source: ImageSource.gallery);
@@ -99,7 +101,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     }
 
     setState(() {
-      isTakingPicture = false;
+      _isTakingPicture = false;
     });
   }
 
@@ -116,7 +118,8 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
 
     setState(() {
       _initializeControllerFuture = _controller.initialize();
-      isTakingPicture = false;
+      _isTakingPicture = false;
+      _dailyLimitKey = UniqueKey();
     });
   }
 
@@ -212,7 +215,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     // Fill this out in the next steps.
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: isTakingPicture
+        onPressed: _isTakingPicture
             ? null
             : () {
                 takePicture(context);
@@ -319,7 +322,7 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20, left: 25),
                 child: IconButton(
-                  onPressed: isTakingPicture ? null : takeFromGallery,
+                  onPressed: _isTakingPicture ? null : takeFromGallery,
                   icon: const Icon(
                     Icons.image,
                     color: Colors.white,
@@ -329,7 +332,9 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
             ),
           ),
 
-          const DailyLimit(),
+          DailyLimit(
+            key: _dailyLimitKey,
+          ),
         ],
       ),
     );

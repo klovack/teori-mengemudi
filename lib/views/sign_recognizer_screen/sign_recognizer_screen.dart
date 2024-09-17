@@ -5,7 +5,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
-import 'package:roadcognizer/components/app_scaffold/app_scaffold.dart';
 import 'package:roadcognizer/components/error_dialog/error_dialog.dart';
 import 'package:roadcognizer/components/sign_explanation/sign_explanation.dart';
 import 'package:roadcognizer/exception/exception.dart';

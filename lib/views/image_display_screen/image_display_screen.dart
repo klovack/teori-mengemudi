@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io' show File;
 
 import 'package:flutter/material.dart';
@@ -36,19 +37,25 @@ class ImageDisplayScreen extends StatelessWidget {
             icon: icon,
             alignment: Alignment.topRight,
             navigateBack: isPreview
-                ? (context) {
-                    Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(
-                        builder: (context) => SignRecognizerScreen(
-                          imagePath,
-                        ),
-                      ),
-                    );
-                  }
-                : null,
+                ? _navigateToSignRecognizerScreen : null,
           )
         ],
       ),
     );
+  }
+
+  _navigateToSignRecognizerScreen(context) async {
+    // wait for the sign recognizer screen to finish
+    final completer = Completer();
+    await Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => SignRecognizerScreen(
+          imagePath,
+        ),
+      ),
+      result: completer.future,
+    );
+  
+    completer.complete();
   }
 }
