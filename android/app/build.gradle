@@ -67,6 +67,10 @@ android {
             dimension = "mode"
             applicationIdSuffix = ".dev"
         }
+
+        create("prod") {
+            dimension = "mode"
+        }
     }
 }
 
