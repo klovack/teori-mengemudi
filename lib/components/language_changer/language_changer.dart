@@ -1,7 +1,6 @@
 import 'package:country_flags/country_flags.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:roadcognizer/theme/brand_colors.dart';
 
 class LanguageChanger extends StatefulWidget {
   const LanguageChanger({super.key});

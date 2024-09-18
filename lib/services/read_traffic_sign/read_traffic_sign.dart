@@ -21,6 +21,7 @@ Future<TrafficSignDescription> readTrafficSign(
         .httpsCallable(_readTrafficSignFunction,
             options: HttpsCallableOptions(
               timeout: const Duration(seconds: 90),
+              limitedUseAppCheckToken: true,
             ))
         .call(
       {
