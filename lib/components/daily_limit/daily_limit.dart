@@ -42,20 +42,15 @@ class _DailyLimitState extends State<DailyLimit> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Align(
-      alignment: Alignment.topRight,
-      child: Container(
-        padding: const EdgeInsets.all(4.0),
-        margin: const EdgeInsets.all(16.0),
-        child: Text(
-          '${_limit - _currentCount} / $_limit',
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-          ),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(
+        '${_limit - _currentCount} / $_limit',
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 20,
         ),
       ),
-    ));
+    );
   }
 }

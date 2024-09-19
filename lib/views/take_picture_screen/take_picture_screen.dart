@@ -5,7 +5,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
 import 'package:roadcognizer/components/camera/camera_controls/camera_controls.dart';
 import 'package:roadcognizer/components/camera/zoom_button/zoom_button.dart';
 import 'package:roadcognizer/components/daily_limit/daily_limit.dart';
@@ -213,6 +212,22 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
   Widget build(BuildContext context) {
     // Fill this out in the next steps.
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      extendBody: true,
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Theme.of(context).colorScheme.onPrimary,
+          ),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        actions: [
+          DailyLimit(
+            key: _dailyLimitKey,
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _isTakingPicture
             ? null
@@ -269,11 +284,6 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
             },
           ),
 
-          // Back Button
-          AppBackButton(navigateBack: (context) {
-            Navigator.of(context).pop();
-          }),
-
           // Camera Controls
           SafeArea(
             child: Align(
@@ -329,10 +339,6 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
                 ),
               ),
             ),
-          ),
-
-          DailyLimit(
-            key: _dailyLimitKey,
           ),
         ],
       ),

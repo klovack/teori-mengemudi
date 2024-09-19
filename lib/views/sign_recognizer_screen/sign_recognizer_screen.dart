@@ -4,7 +4,6 @@ import 'dart:io' show File;
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:roadcognizer/components/app_back_button/app_back_button.dart';
 import 'package:roadcognizer/components/error_dialog/error_dialog.dart';
 import 'package:roadcognizer/components/sign_explanation/sign_explanation.dart';
 import 'package:roadcognizer/exception/exception.dart';
@@ -117,39 +116,43 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      extendBodyBehindAppBar: true,
+      extendBody: true,
+      appBar: AppBar(
+        leading: IconButton(
+          style: IconButton.styleFrom(
+            elevation: 10,
+          ),
+          icon: Icon(
+            Icons.arrow_back,
+            color: Theme.of(context).colorScheme.onPrimary,
+          ),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ),
+      body: Column(
         children: [
-          Column(
-            children: [
-              GestureDetector(
-                onTap: _navigateToImageDisplayScreen,
-                child: Hero(
-                  tag: widget.imagePath,
-                  child: Image.file(
-                    File(widget.imagePath),
-                    height: 300,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+          GestureDetector(
+            onTap: _navigateToImageDisplayScreen,
+            child: Hero(
+              tag: widget.imagePath,
+              child: Image.file(
+                File(widget.imagePath),
+                height: 300,
+                width: double.infinity,
+                fit: BoxFit.cover,
               ),
-              if (_trafficSign == null) const LinearProgressIndicator(),
-              if (_trafficSign != null)
-                Container(
-                  height: MediaQuery.of(context).size.height - 300,
-                  padding: const EdgeInsets.all(16.0),
-                  child: SingleChildScrollView(
-                    child: SignExplanation(_trafficSign!),
-                  ),
-                ),
-            ],
+            ),
           ),
-
-          // Back Button
-          AppBackButton(
-            navigateBack: _navigateBack,
-            backgroundColor: Colors.black.withOpacity(0.2),
-          ),
+          if (_trafficSign == null) const LinearProgressIndicator(),
+          if (_trafficSign != null)
+            Container(
+              height: MediaQuery.of(context).size.height - 300,
+              padding: const EdgeInsets.all(16.0),
+              child: SingleChildScrollView(
+                child: SignExplanation(_trafficSign!),
+              ),
+            ),
         ],
       ),
     );
