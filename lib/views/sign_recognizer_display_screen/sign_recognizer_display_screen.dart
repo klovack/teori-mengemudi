@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:roadcognizer/components/sign_explanation/sign_explanation.dart';
@@ -29,8 +30,8 @@ class SignRecognizerDisplayScreen extends StatelessWidget {
             // onTap: () ,
             child: Hero(
               tag: trafficSignImage.url,
-              child: Image.network(
-                trafficSignImage.url,
+              child: CachedNetworkImage(
+                imageUrl: trafficSignImage.url,
                 height: 300,
                 width: double.infinity,
                 fit: BoxFit.cover,

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:roadcognizer/models/traffic_sign_image/traffic_sign_image.dart';
 import 'package:roadcognizer/views/sign_recognizer_display_screen/sign_recognizer_display_screen.dart';
@@ -39,11 +40,18 @@ class SignCard extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               if (image != null)
-                Image.network(
-                  image!.url,
-                  fit: BoxFit.cover,
-                  colorBlendMode: BlendMode.darken,
-                  color: Colors.black.withOpacity(0.2),
+                Hero(
+                  tag: image!.url,
+                  child: CachedNetworkImage(
+                    imageUrl: image!.url,
+                    fit: BoxFit.cover,
+                    colorBlendMode: BlendMode.darken,
+                    color: Colors.black.withOpacity(0.2),
+                    placeholder: (context, url) =>
+                        const CircularProgressIndicator(),
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
+                  ),
                 ),
               Align(
                 alignment: Alignment.topRight,

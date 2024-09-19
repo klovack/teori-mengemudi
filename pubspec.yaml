@@ -28,17 +28,18 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cached_network_image: ^3.4.1
   camera: ^0.11.0+2
-  cloud_firestore: ^4.14.0
-  cloud_functions: ^4.6.0
+  cloud_firestore: ^5.4.2
+  cloud_functions: ^5.1.2
   collection: ^1.18.0
   country_flags: ^3.0.0
   cupertino_icons: ^1.0.8
   easy_localization: ^3.0.7
-  firebase_app_check: ^0.2.1+8
-  firebase_auth: ^4.16.0
-  firebase_core: ^2.24.2
-  firebase_storage: ^11.6.0
+  firebase_app_check: ^0.3.1+2
+  firebase_auth: ^5.3.0
+  firebase_core: ^3.5.0
+  firebase_storage: ^12.3.1
   flutter:
     sdk: flutter
   flutter_localizations:
