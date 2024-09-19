@@ -37,4 +37,9 @@ class TrafficSignImage {
       ),
     };
   }
+
+  @override
+  String toString() {
+    return 'TrafficSignImage{id: $id, url: $url, createdAt: $createdAt, explanations: $explanations}';
+  }
 }

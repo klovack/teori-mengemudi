@@ -99,6 +99,7 @@ class AppScaffold extends StatelessWidget {
         padding: const EdgeInsets.only(left: 16),
         child: Image.asset('assets/images/logo.png', width: 30),
       ),
+      scrolledUnderElevation: 0,
       leadingWidth: 50,
       actions: [
         IconButton(

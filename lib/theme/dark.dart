@@ -17,6 +17,7 @@ final ThemeData darkTheme = ThemeData(
   appBarTheme: const AppBarTheme(
     backgroundColor: Colors.transparent,
     foregroundColor: BrandColors.yellow,
+    scrolledUnderElevation: 0,
   ),
   textTheme: TextTheme(
     bodyLarge: Fonts.getSecondary(

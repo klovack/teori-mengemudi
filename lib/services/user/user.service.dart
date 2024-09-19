@@ -80,10 +80,22 @@ class UserService {
     );
   }
 
-  Future<List<TrafficSignImage>> getCurrentUserImages() async {
-    return await getCurrentUserImagesRef().get().then(
-          (images) => images.docs.map((doc) => doc.data()).toList(),
-        );
+  Future<List<TrafficSignImage>> getCurrentUserImages({
+    int? limit,
+    ImageOrderBy orderBy = ImageOrderBy.createdAtDescending,
+    TrafficSignImage? startAfter,
+  }) async {
+    var query = getCurrentUserImagesRef()
+        .orderBy(orderBy.value, descending: orderBy.isDescending);
+
+    if (startAfter != null) {
+      query = query.startAfter([startAfter.createdAt]);
+    }
+
+    final images =
+        limit != null ? await query.limit(limit).get() : await query.get();
+
+    return images.docs.map((doc) => doc.data()).toList();
   }
 
   Future<UserImageLimit> getCurrentUserImageLimit() async {
@@ -140,4 +152,14 @@ class UserService {
   Future<void> addImageToCurrentUser(TrafficSignImage image) async {
     await getCurrentUserImagesRef().add(image);
   }
+}
+
+enum ImageOrderBy {
+  createdAtAscending('createdAt', false),
+  createdAtDescending('createdAt', true);
+
+  const ImageOrderBy(this.value, this.isDescending);
+
+  final String value;
+  final bool isDescending;
 }

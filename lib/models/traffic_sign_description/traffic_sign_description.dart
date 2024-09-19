@@ -48,4 +48,9 @@ class TrafficSignDescription {
         .map((e) => TrafficSignDetail.fromJson(Map<String, dynamic>.from(e)))
         .toList();
   }
+
+  @override
+  String toString() {
+    return 'TrafficSignDescription{title: $title, explanation: $explanation, origin: $origin, error: $error, signs: $signs}';
+  }
 }
