@@ -54,7 +54,12 @@
         "retry": "Coba Lagi!"
       }
     },
-    "origin": "Asal: {}"
+    "origin": "Asal: {}",
+    "noExplanationLanguage": {
+      "title": "Tidak Ada Penjelasan untuk Bahasa Ini",
+      "message": "Sepertinya kamu memilih {} saat mengunggah gambar ini untuk membuat penjelasan.\nApakah kamu ingin ganti ke bahasa tersebut?",
+      "switchLanguage": "Ganti Bahasa ke {}"
+    }
   },
   "profileScreen": {
     "title": "Profil",
@@ -62,5 +67,9 @@
       "title": "Pengaturan",
       "language": "Bahasa"
     }
+  },
+  "supportedLanguages": {
+    "en": "English",
+    "id": "Bahasa Indonesia"
   }
 }
