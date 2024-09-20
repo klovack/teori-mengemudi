@@ -2,6 +2,10 @@
   "ctaReadTrafficSign": "Baca Rambu Lalu Lintas!",
   "ctaReadyToDrive": "Siapkah Anda Menyetir di Eropa?",
   "practiceDrivingTheory": "Coba Buktikan!",
+  "userSigns": {
+    "title": "Rambu lalu lintas yang sudah kamu ambil",
+    "empty": "Kamu belum mengunggah rambu lalu lintas apapun."
+  },
   "question": {
     "submit": "Akhiri",
     "submitConfirm": "Apakah kamu yakin ingin mengakhiri quiz ini?",

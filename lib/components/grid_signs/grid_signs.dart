@@ -9,26 +9,21 @@ class GridSigns extends StatefulWidget {
 
   final Function()? onScrollUp;
   final Function()? onScrollDown;
+  final List<TrafficSignImage>? images;
 
-  GridSigns({super.key, this.onScrollUp, this.onScrollDown});
+  GridSigns(
+      {super.key, this.onScrollUp, this.onScrollDown, required this.images});
 
   @override
   State<GridSigns> createState() => _GridSignsState();
 }
 
 class _GridSignsState extends State<GridSigns> {
-  List<TrafficSignImage>? _images;
   final _scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
-
-    widget.userService.getCurrentUserImages(limit: 8).then((images) {
-      setState(() {
-        _images = images;
-      });
-    });
 
     _scrollController.addListener(_fetchMoreImages);
     _scrollController.addListener(_notifyScrollDirection);
@@ -56,10 +51,10 @@ class _GridSignsState extends State<GridSigns> {
     if (_scrollController.position.maxScrollExtent ==
         _scrollController.offset) {
       widget.userService
-          .getCurrentUserImages(limit: 8, startAfter: _images!.last)
+          .getCurrentUserImages(limit: 8, startAfter: widget.images!.last)
           .then((images) {
         setState(() {
-          _images!.addAll(images);
+          widget.images!.addAll(images);
         });
       });
     }
@@ -75,9 +70,10 @@ class _GridSignsState extends State<GridSigns> {
           mainAxisSpacing: 10,
         ),
         controller: _scrollController,
-        itemCount: _images?.length ?? 8,
+        itemCount: widget.images?.length ?? 8,
         itemBuilder: (context, index) {
-          return SignCard(image: _images?[index], isLoading: _images == null);
+          return SignCard(
+              image: widget.images?[index], isLoading: widget.images == null);
         },
       ),
     );

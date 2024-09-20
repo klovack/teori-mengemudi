@@ -2,6 +2,10 @@
   "ctaReadTrafficSign": "Read Traffic Signs!",
   "ctaReadyToDrive": "Are you ready to drive in Europe?",
   "practiceDrivingTheory": "Take Test!",
+  "userSigns": {
+    "title": "Road signs you've taken so far",
+    "empty": "You have not uploaded any traffic signs yet."
+  },
   "question": {
     "submit": "Submit",
     "submitConfirm": "Are you sure you want to submit the quiz?",
