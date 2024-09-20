@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:camera/camera.dart';
@@ -108,7 +109,10 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
     await Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => ImageDisplayScreen(
-          image.path,
+          imagePathOrUrl: image.path,
+          image: FileImage(
+            File(image.path),
+          ),
           isPreview: true,
         ),
       ),

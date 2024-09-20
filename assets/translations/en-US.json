@@ -17,6 +17,14 @@
   "takePicture": {
     "error": {
       "failToTakePicture": "Failed to take picture. Close the app and try again."
+    },
+    "dailyLimit": {
+      "title": "Your Daily Image Limit",
+      "message": {
+        "zero": "You can upload {limit} images today. Every 24 hours, this number will reset.",
+        "one": "You can upload {limit} more image today. You will get one additional image to upload in {hoursLeft} hours.",
+        "other": "You have reached your daily limit. Please wait {hoursLeft} hours before you can upload new image again."
+      }
     }
   },
   "signRecognizer": {

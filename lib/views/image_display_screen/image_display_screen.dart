@@ -1,14 +1,19 @@
 import 'dart:async';
-import 'dart:io' show File;
 
 import 'package:flutter/material.dart';
 import 'package:roadcognizer/views/sign_recognizer_screen/sign_recognizer_screen.dart';
 
 class ImageDisplayScreen extends StatelessWidget {
-  final String imagePath;
+  final String imagePathOrUrl;
+  final ImageProvider image;
   final bool isPreview;
 
-  const ImageDisplayScreen(this.imagePath, {super.key, this.isPreview = false});
+  const ImageDisplayScreen({
+    super.key,
+    this.isPreview = false,
+    required this.image,
+    required this.imagePathOrUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -41,12 +46,8 @@ class ImageDisplayScreen extends StatelessWidget {
           InteractiveViewer(
             child: Center(
               child: Hero(
-                tag: imagePath,
-                child: Image.file(
-                  File(
-                    imagePath,
-                  ),
-                ),
+                tag: imagePathOrUrl,
+                child: Image(image: image),
               ),
             ),
           ),
@@ -61,7 +62,7 @@ class ImageDisplayScreen extends StatelessWidget {
     await Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => SignRecognizerScreen(
-          imagePath,
+          imagePathOrUrl,
         ),
       ),
       result: completer.future,

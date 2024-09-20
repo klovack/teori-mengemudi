@@ -17,6 +17,14 @@
   "takePicture": {
     "error": {
       "failToTakePicture": "Gagal mengambil gambar. Tutup aplikasi dan coba lagi."
+    },
+    "dailyLimit": {
+      "title": "Limit Harian Kamu",
+      "message": {
+        "zero": "Hari ini kamu bisa mengunggah {limit} gambar.",
+        "one": "Hari ini kamu masih bisa mengunggah {limit} gambar lagi. Kamu akan mendapatkan satu gambar tambahan dalam waktu {hoursLeft} jam.",
+        "other": "Limit harian kamu sudah habis. Silakan tunggu {hoursLeft} jam sebelum kamu bisa mengunggah gambar lagi."
+      }
     }
   },
   "signRecognizer": {

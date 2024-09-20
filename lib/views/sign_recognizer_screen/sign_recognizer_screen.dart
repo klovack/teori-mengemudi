@@ -108,7 +108,10 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
   void _navigateToImageDisplayScreen() {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => ImageDisplayScreen(widget.imagePath),
+        builder: (context) => ImageDisplayScreen(
+          imagePathOrUrl: widget.imagePath,
+          image: FileImage(File(widget.imagePath)),
+        ),
       ),
     );
   }

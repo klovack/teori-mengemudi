@@ -125,12 +125,16 @@ class UserService {
     return await getCurrentUserImagesRef()
         .where(
           "createdAt",
+          // TODO: user can cheat by changing the time of the device
+          // but this is problem for later
           isGreaterThan: Timestamp.fromDate(
             DateTime.now().subtract(
               Duration(days: numOfDay),
             ),
           ),
         )
+        .orderBy(ImageOrderBy.createdAtAscending.value,
+            descending: ImageOrderBy.createdAtAscending.isDescending)
         .get()
         .then(
           (images) => images.docs

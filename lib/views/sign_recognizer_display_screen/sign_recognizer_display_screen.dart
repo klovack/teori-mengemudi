@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:roadcognizer/components/sign_explanation/sign_explanation.dart';
 import 'package:roadcognizer/models/traffic_sign_image/traffic_sign_image.dart';
+import 'package:roadcognizer/views/image_display_screen/image_display_screen.dart';
 
 class SignRecognizerDisplayScreen extends StatelessWidget {
   final TrafficSignImage trafficSignImage;
@@ -27,7 +28,16 @@ class SignRecognizerDisplayScreen extends StatelessWidget {
       body: Column(
         children: [
           GestureDetector(
-            // onTap: () ,
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => ImageDisplayScreen(
+                    imagePathOrUrl: trafficSignImage.url,
+                    image: CachedNetworkImageProvider(trafficSignImage.url),
+                  ),
+                ),
+              );
+            },
             child: Hero(
               tag: trafficSignImage.url,
               child: CachedNetworkImage(
