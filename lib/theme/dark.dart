@@ -4,13 +4,11 @@ import 'package:roadcognizer/theme/fonts.dart';
 
 final ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
-  colorScheme: ColorScheme.dark(
+  colorScheme: const ColorScheme.dark(
     primary: BrandColors.red,
     onPrimary: BrandColors.white,
     secondary: BrandColors.yellow,
     onSecondary: Colors.black,
-    background: Colors.grey[900]!,
-    onBackground: Colors.white,
     surface: BrandColors.blue,
     onSurface: Colors.white,
   ),
