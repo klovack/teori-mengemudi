@@ -7,6 +7,7 @@ class RoadcognizerUser {
   final DateTime? createdAt;
   final DateTime? premiumUntil;
   final bool isVerified;
+  final int extraImageQuota;
   List<TrafficSignImage> images;
 
   RoadcognizerUser({
@@ -14,6 +15,7 @@ class RoadcognizerUser {
     this.createdAt,
     this.premiumUntil,
     this.isVerified = false,
+    this.extraImageQuota = 0,
     this.images = const [],
   });
 
@@ -35,6 +37,7 @@ class RoadcognizerUser {
           ? (json['premiumUntil'] as Timestamp).toDate()
           : null,
       images: listOfImages,
+      extraImageQuota: json['extraImageQuota'] ?? 0,
     );
   }
 
@@ -43,6 +46,7 @@ class RoadcognizerUser {
       'uid': uid,
       'createdAt': createdAt ?? FieldValue.serverTimestamp(),
       'premiumUntil': premiumUntil,
+      'extraImageQuota': extraImageQuota,
     };
 
     if (includeImages) {
@@ -57,7 +61,26 @@ class RoadcognizerUser {
     return 'RoadcognizerUser{uid: $uid,'
         'createdAt: $createdAt,'
         'premiumUntil: $premiumUntil,'
-        'images: $images}';
+        'images: $images,'
+        'extraImageQuota: $extraImageQuota}';
+  }
+
+  RoadcognizerUser copyWith({
+    String? uid,
+    DateTime? createdAt,
+    DateTime? premiumUntil,
+    bool? isVerified,
+    int? extraImageQuota,
+    List<TrafficSignImage>? images,
+  }) {
+    return RoadcognizerUser(
+      uid: uid ?? this.uid,
+      createdAt: createdAt ?? this.createdAt,
+      premiumUntil: premiumUntil ?? this.premiumUntil,
+      isVerified: isVerified ?? this.isVerified,
+      extraImageQuota: extraImageQuota ?? this.extraImageQuota,
+      images: images ?? this.images,
+    );
   }
 
   factory RoadcognizerUser.fromFirebaseUser(User user) {

@@ -45,6 +45,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   google_fonts: ^6.2.1
+  google_mobile_ads: ^5.1.0
   image_picker: ^1.1.2
   intl: any
   json_annotation: ^4.9.0

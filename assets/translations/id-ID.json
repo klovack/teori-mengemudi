@@ -71,5 +71,9 @@
   "supportedLanguages": {
     "en": "English",
     "id": "Bahasa Indonesia"
+  },
+  "ads": {
+    "cta": "Tonton Iklan",
+    "caption": "Tonton iklan biar kamu bisa unggah gambar lebih banyak."
   }
 }

@@ -71,5 +71,9 @@
   "supportedLanguages": {
     "en": "English",
     "id": "Bahasa Indonesia"
+  },
+  "ads": {
+    "cta": "Watch Ads",
+    "caption": "Watch ads to be able to upload more images!"
   }
 }

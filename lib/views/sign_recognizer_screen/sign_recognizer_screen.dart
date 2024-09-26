@@ -32,62 +32,60 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
     super.initState();
 
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      final languageCode =
-          EasyLocalization.of(context)!.currentLocale!.languageCode;
-      _uploadAndReadTrafficSign(languageCode);
+      _readTrafficSign(true);
     });
   }
 
-  Future _uploadAndReadTrafficSign(String languageCode) async {
-    try {
-      final isLimitReached =
-          await UserService().isCurrentUserImageLimitReached();
-      if (isLimitReached) {
-        throw UserImageLimitReachedException(
-          "User has reached today's image limit.",
-        );
-      }
-    } catch (e) {
-      log.e("User has reached limit: $e");
-      _showErrorDialog(e is RoadcognizerException ? e : null);
-      return;
-    }
+  void _readTrafficSign(bool checkImageLimit) async {
+    final languageCode =
+        EasyLocalization.of(context)!.currentLocale!.languageCode;
 
     try {
-      final imageUrl = await uploadImage(widget.imagePath);
-      final trafficSign = await readTrafficSign(
-        imageUrl,
-        languageCode: languageCode,
-      );
-      if (trafficSign.error != null && trafficSign.error!.isNotEmpty) {
-        log.e("Problem reading the traffic sign: ${trafficSign.error}");
-        throw ReadTrafficException(
-            "Error reading traffic sign: ${trafficSign.error}");
+      if (checkImageLimit) {
+        await _checkImageLimit();
       }
-      setState(() {
-        _trafficSign = trafficSign;
-      });
-      _storeTrafficSign(imageUrl, languageCode);
+      await _uploadAndReadTrafficSign(languageCode);
     } catch (e) {
-      log.e("Error reading traffic sign: $e");
+      log.e("Error has occurred when reading the traffic sign: $e");
       _showErrorDialog(e is RoadcognizerException ? e : null);
     }
   }
 
-  void _storeTrafficSign(String imageUrl, String languageCode) async {
-    try {
-      await UserService().addImageToCurrentUser(
-        TrafficSignImage(
-          url: imageUrl,
-          explanations: {
-            languageCode: _trafficSign!,
-          },
-        ),
+  Future _checkImageLimit() async {
+    final isLimitReached = await UserService().isCurrentUserImageLimitReached();
+    if (isLimitReached) {
+      throw UserImageLimitReachedException(
+        "User has reached today's image limit.",
       );
-    } catch (e) {
-      log.e("Error storing traffic sign: $e");
-      _showErrorDialog(e is RoadcognizerException ? e : null);
     }
+  }
+
+  Future _uploadAndReadTrafficSign(String languageCode) async {
+    final imageUrl = await uploadImage(widget.imagePath);
+    final trafficSign = await readTrafficSign(
+      imageUrl,
+      languageCode: languageCode,
+    );
+    if (trafficSign.error != null && trafficSign.error!.isNotEmpty) {
+      log.e("Problem reading the traffic sign: ${trafficSign.error}");
+      throw ReadTrafficException(
+          "Error reading traffic sign: ${trafficSign.error}");
+    }
+    setState(() {
+      _trafficSign = trafficSign;
+    });
+    _storeTrafficSign(imageUrl, languageCode);
+  }
+
+  void _storeTrafficSign(String imageUrl, String languageCode) async {
+    await UserService().addImageToCurrentUser(
+      TrafficSignImage(
+        url: imageUrl,
+        explanations: {
+          languageCode: _trafficSign!,
+        },
+      ),
+    );
   } 
 
   void _showErrorDialog([RoadcognizerException? e]) {
@@ -96,13 +94,10 @@ class _SignRecognizerScreenState extends State<SignRecognizerScreen> {
       builder: (ctx) {
         return ErrorDialog(
           exception: e,
+          onUserEarnedImageQuota: () => _readTrafficSign(false),
         );
       },
     );
-  }
-
-  void _navigateBack(BuildContext context) {
-    Navigator.of(context).pop();
   }
 
   void _navigateToImageDisplayScreen() {

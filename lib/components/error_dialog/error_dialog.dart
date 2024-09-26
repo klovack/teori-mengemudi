@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:roadcognizer/components/reward_ad/reward_ad.dart';
 import 'package:roadcognizer/exception/exception.dart';
 import 'package:roadcognizer/services/log/log.dart';
 import 'package:roadcognizer/theme/fonts.dart';
@@ -9,10 +10,12 @@ class ErrorDialog extends StatelessWidget {
   late final String message;
   late final String retry;
   final RoadcognizerException? exception;
+  final Function()? onUserEarnedImageQuota;
 
   ErrorDialog({
     super.key,
     this.exception,
+    this.onUserEarnedImageQuota,
   }) {
     var message = 'signRecognizer.error.message';
     var title = 'signRecognizer.error.title';
@@ -59,6 +62,13 @@ class ErrorDialog extends StatelessWidget {
           },
           child: Text(retry).tr(),
         ),
+        if (exception is UserImageLimitReachedException)
+          RewardAd(
+            onUserEarnedReward: () {
+              Navigator.of(context).pop();
+              onUserEarnedImageQuota?.call();
+            },
+          ),
       ],
     );
   }

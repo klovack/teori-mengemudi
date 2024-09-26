@@ -98,7 +98,7 @@ class UserService {
     return images.docs.map((doc) => doc.data()).toList();
   }
 
-  Future<UserImageLimit> getCurrentUserImageLimit() async {
+  Future<int> getCurrentUserImageLimit() async {
     final userCredential = FirebaseService.auth.currentUser;
 
     if (userCredential == null) {
@@ -110,6 +110,7 @@ class UserService {
     final currentUser = await getCurrentUser();
     final isUserPremium = currentUser.premiumUntil != null &&
         currentUser.premiumUntil!.isAfter(DateTime.now());
+    final extraImageQuota = currentUser.extraImageQuota;
 
     final limit = isUserPremium
         ? UserImageLimit.premium
@@ -117,7 +118,7 @@ class UserService {
             ? UserImageLimit.verified
             : UserImageLimit.notVerified;
 
-    return limit;
+    return limit.value + extraImageQuota;
   }
 
   Future<List<TrafficSignImage>> getCurrentUserImagesForLast(
@@ -150,11 +151,24 @@ class UserService {
 
     final images = await getCurrentUserImagesForLast(1);
 
-    return images.length >= limit.value;
+    return images.length >= limit;
   }
 
   Future<void> addImageToCurrentUser(TrafficSignImage image) async {
     await getCurrentUserImagesRef().add(image);
+  }
+
+  Future<void> updateUser(RoadcognizerUser user) async {
+    await getUserRef(user.uid).set(user);
+  }
+
+  Future<void> incrementExtraImageQuotaToCurrentUser([
+    int extraImageQuota = 1,
+  ]) async {
+    final user = await getCurrentUser();
+    final newUser =
+        user.copyWith(extraImageQuota: user.extraImageQuota + extraImageQuota);
+    await updateUser(newUser);
   }
 }
 
