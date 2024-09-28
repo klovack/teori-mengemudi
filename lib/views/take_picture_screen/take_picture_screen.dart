@@ -17,10 +17,16 @@ class TakePictureScreen extends StatefulWidget {
 
   const TakePictureScreen({super.key, required this.cameras});
 
-  CameraDescription getCamera(CameraLensDirection direction) {
+  CameraDescription getCamera(CameraLensDirection direction) {   
     return cameras.firstWhere(
       (camera) => camera.lensDirection == direction,
-      orElse: () => cameras.first,
+      orElse: () => cameras.length > 0
+          ? cameras.first
+          : const CameraDescription(
+              name: 'default',
+              lensDirection: CameraLensDirection.back,
+              sensorOrientation: 0,
+            ),
     );
   }
 
@@ -249,44 +255,9 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-          FutureBuilder<void>(
-            future: _initializeControllerFuture,
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.done) {
-                final camera = _controller.value;
-                final isWidthLongerThanHeight =
-                    camera.previewSize!.width > camera.previewSize!.height;
-
-                final aspectRatio = isWidthLongerThanHeight &&
-                        (camera.deviceOrientation ==
-                                DeviceOrientation.portraitUp ||
-                            camera.deviceOrientation ==
-                                DeviceOrientation.portraitDown)
-                    ? camera.previewSize!.flipped.aspectRatio
-                    : camera.previewSize!.aspectRatio;
-
-                // If the Future is complete, display the preview.
-                return Center(
-                  child: AspectRatio(
-                    aspectRatio: aspectRatio,
-                    child: Transform(
-                      alignment: Alignment.center,
-                      transform: _controller.description.lensDirection ==
-                              CameraLensDirection.front
-                          ? Matrix4.rotationY(pi)
-                          : Matrix4.rotationY(0),
-                      child: CameraPreview(
-                        _controller,
-                      ),
-                    ),
-                  ),
-                );
-              } else {
-                // Otherwise, display a loading indicator.
-                return const SizedBox();
-              }
-            },
-          ),
+          CameraFutureBuilder(
+              initializeControllerFuture: _initializeControllerFuture,
+              controller: _controller),
 
           // Camera Controls
           SafeArea(
@@ -346,6 +317,60 @@ class _TakePictureScreenState extends State<TakePictureScreen> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class CameraFutureBuilder extends StatelessWidget {
+  const CameraFutureBuilder({
+    super.key,
+    required Future<void> initializeControllerFuture,
+    required CameraController controller,
+  })  : _initializeControllerFuture = initializeControllerFuture,
+        _controller = controller;
+
+  final Future<void> _initializeControllerFuture;
+  final CameraController _controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<void>(
+      future: _initializeControllerFuture,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          final camera = _controller.value;
+          final previewSize = camera.previewSize ?? const Size(1, 1);
+          final isWidthLongerThanHeight =
+              previewSize.width > previewSize.height;
+
+          final aspectRatio = isWidthLongerThanHeight &&
+                  (camera.deviceOrientation == DeviceOrientation.portraitUp ||
+                      camera.deviceOrientation ==
+                          DeviceOrientation.portraitDown)
+              ? previewSize.flipped.aspectRatio
+              : previewSize.aspectRatio;
+
+          // If the Future is complete, display the preview.
+          return Center(
+            child: AspectRatio(
+              aspectRatio: aspectRatio,
+              child: Transform(
+                alignment: Alignment.center,
+                transform: _controller.description.lensDirection ==
+                        CameraLensDirection.front
+                    ? Matrix4.rotationY(pi)
+                    : Matrix4.rotationY(0),
+                child: CameraPreview(
+                  _controller,
+                ),
+              ),
+            ),
+          );
+        } else {
+          // Otherwise, display a loading indicator.
+          return const SizedBox();
+        }
+      },
     );
   }
 }

@@ -48,6 +48,7 @@ class _DailyLimitState extends State<DailyLimit> {
 
   void _showLimitDialog() {
     showAdaptiveDialog(
+      barrierDismissible: true,
       context: context,
       builder: (context) {
         return DailyLimitDialog(
@@ -156,6 +157,9 @@ class _DailyLimitDialogState extends State<DailyLimitDialog> {
         if (_isAdLoaded)
           SimpleDialogOption(
             child: Text(context.tr('ads.caption')),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           ),
 
         if (hasReachedLimit)
