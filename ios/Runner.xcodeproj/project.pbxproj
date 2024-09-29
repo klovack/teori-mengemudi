@@ -107,7 +107,6 @@
 				792ED394B814A9BF07B91488 /* Pods-RunnerTests.release.xcconfig */,
 				F5F09202A608D4A47C505D15 /* Pods-RunnerTests.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -196,12 +195,15 @@
 			buildPhases = (
 				2766417C864222640F2A0186 /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
+				E4E2E4CB2CA8D65B002ED8ED /* Add Keys */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				7360F02D9E86AC7C0C55636B /* [CP] Embed Pods Frameworks */,
+				6A17B25DA4056455326213C1 /* [CP] Copy Pods Resources */,
+				E4E2E4CC2CA8DA99002ED8ED /* Cleanup for Add Keys */,
 			);
 			buildRules = (
 			);
@@ -334,6 +336,23 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
 		};
+		6A17B25DA4056455326213C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7360F02D9E86AC7C0C55636B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,7 +383,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
+		};
+		E4E2E4CB2CA8D65B002ED8ED /* Add Keys */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Add Keys";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Path to the .env file\nENV_FILE=\"${PROJECT_DIR}/Flutter/.env\"\n\n# Path to the original Info.plist and backup\nINFO_PLIST=\"${PROJECT_DIR}/Runner/Info.plist\"\nBACKUP_PLIST=\"${PROJECT_DIR}/Runner/Info.plist.backup\"\n\n# Create a backup of the original Info.plist if it doesn't already exist\nif [ ! -f \"$BACKUP_PLIST\" ]; then\n    cp \"$INFO_PLIST\" \"$BACKUP_PLIST\"\nfi\n\n# Check if the .env file exists\nif [ -f \"$ENV_FILE\" ]; then\n    # Load the .env file and export the variables\n    export $(grep -v '^#' \"$ENV_FILE\" | xargs)\nelse\n    echo \".env file not found!\"\n    exit 1\nfi\n\n# Check if API_KEY exists in Info.plist and update/add it\n/usr/libexec/PlistBuddy -c \"Print :GADApplicationIdentifier\" \"$INFO_PLIST\"\nif [ $? != 0 ]; then\n    # If the API_KEY doesn't exist, add it\n    /usr/libexec/PlistBuddy -c \"Add :GADApplicationIdentifier string ${GOOGLE_ADMOB_APP_ID}\" \"$INFO_PLIST\"\nelse\n    # If it exists, update it\n    /usr/libexec/PlistBuddy -c \"Set :GADApplicationIdentifier ${GOOGLE_ADMOB_APP_ID}\" \"$INFO_PLIST\"\nfi\n";
+		};
+		E4E2E4CC2CA8DA99002ED8ED /* Cleanup for Add Keys */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Cleanup for Add Keys";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Path to the original Info.plist and backup\nINFO_PLIST=\"${PROJECT_DIR}/Runner/Info.plist\"\nBACKUP_PLIST=\"${PROJECT_DIR}/Runner/Info.plist.backup\"\n\n# Check if the backup exists and restore it\nif [ -f \"$BACKUP_PLIST\" ]; then\n    mv \"$BACKUP_PLIST\" \"$INFO_PLIST\"\n    echo \"Info.plist has been restored to its original state.\"\nelse\n    echo \"Backup not found! No changes to revert.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
