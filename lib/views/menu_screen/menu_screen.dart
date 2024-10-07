@@ -16,18 +16,23 @@ class _MenuScreenState extends State<MenuScreen> {
   var _activeScreen = NavbarDestinations.signs;
   var _isNavbarVisible = true;
   var _isAppBarVisible = true;
+  var _userSignsKey = UniqueKey();
 
   Future<void> _navigateToSignRecognizer() async {
     final cameras = await availableCameras();
 
     if (!mounted) return;
-    Navigator.of(context).push(
+    await Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => TakePictureScreen(
           cameras: cameras,
         ),
       ),
     );
+
+    setState(() {
+      _userSignsKey = UniqueKey();
+    });
   }
 
   void _setNavAndAppBarVisibility(bool isVisible) {
@@ -45,7 +50,9 @@ class _MenuScreenState extends State<MenuScreen> {
           onQuizEnd: () => _setNavAndAppBarVisibility(true),
         );
       case NavbarDestinations.signs:
-        return const UsersSignsScreen();
+        return UsersSignsScreen(
+          key: _userSignsKey,
+        );
     }
   }
 
