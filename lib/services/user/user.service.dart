@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:roadcognizer/config.constants.dart';
 import 'package:roadcognizer/models/traffic_sign_image/traffic_sign_image.dart';
@@ -8,6 +10,7 @@ class UserService {
   static const userCollectionName = CollectionName.users;
   static const imageCollectionName = CollectionName.images;
   final db = FirebaseService.firestore;
+  RoadcognizerUser? _currentUser;
 
   late final CollectionReference<RoadcognizerUser> _users;
 
@@ -39,10 +42,16 @@ class UserService {
       throw Exception("User is not logged in");
     }
 
+    if (_currentUser != null && _currentUser!.uid == user.uid) {
+      return _currentUser!;
+    }
+
     return getUser(user.uid).then((value) {
       if (value == null) {
         throw Exception("User not found");
       }
+
+      _currentUser = value;
 
       return value;
     });
@@ -98,7 +107,7 @@ class UserService {
     return images.docs.map((doc) => doc.data()).toList();
   }
 
-  Future<int> getCurrentUserImageLimit() async {
+  Future<int> getCurrentUserImageLimit([bool ignoreImageQuota = false]) async {
     final userCredential = FirebaseService.auth.currentUser;
 
     if (userCredential == null) {
@@ -110,7 +119,7 @@ class UserService {
     final currentUser = await getCurrentUser();
     final isUserPremium = currentUser.premiumUntil != null &&
         currentUser.premiumUntil!.isAfter(DateTime.now());
-    final extraImageQuota = currentUser.extraImageQuota;
+    final extraImageQuota = ignoreImageQuota ? 0 : currentUser.extraImageQuota;
 
     final limit = isUserPremium
         ? UserImageLimit.premium
@@ -156,10 +165,13 @@ class UserService {
 
   Future<void> addImageToCurrentUser(TrafficSignImage image) async {
     await getCurrentUserImagesRef().add(image);
+    await _checkAndDecrementExtraImageQuotaToCurrentUser();
   }
 
   Future<void> updateUser(RoadcognizerUser user) async {
-    await getUserRef(user.uid).set(user);
+    await getUserRef(user.uid).set(user).then((currentUser) {
+      _currentUser = user;
+    });
   }
 
   Future<void> incrementExtraImageQuotaToCurrentUser([
@@ -169,6 +181,17 @@ class UserService {
     final newUser =
         user.copyWith(extraImageQuota: user.extraImageQuota + extraImageQuota);
     await updateUser(newUser);
+  }
+
+  Future<void> _checkAndDecrementExtraImageQuotaToCurrentUser() async {
+    final user = await getCurrentUser();
+    final userTodaysImages = await getCurrentUserImagesForLast(1);
+    final limit = await getCurrentUserImageLimit(true);
+    if (user.extraImageQuota > 0 && userTodaysImages.length > limit) {
+      final newUser =
+          user.copyWith(extraImageQuota: max(user.extraImageQuota - 1, 0));
+      await updateUser(newUser);
+    }
   }
 }
 
