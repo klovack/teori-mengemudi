@@ -20,7 +20,7 @@ class TakePictureScreen extends StatefulWidget {
   CameraDescription getCamera(CameraLensDirection direction) {   
     return cameras.firstWhere(
       (camera) => camera.lensDirection == direction,
-      orElse: () => cameras.length > 0
+      orElse: () => cameras.isNotEmpty
           ? cameras.first
           : const CameraDescription(
               name: 'default',

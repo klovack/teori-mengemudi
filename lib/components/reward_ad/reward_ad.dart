@@ -48,6 +48,7 @@ class _RewardAdState extends State<RewardAd> {
           // Called when an ad request failed.
           onAdFailedToLoad: (LoadAdError error) {
             log.e('RewardedAd failed to load: $error');
+            _rewardedAd?.dispose();
             setState(() {
               _rewardedAd = null;
             });
