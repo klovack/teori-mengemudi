@@ -20,7 +20,9 @@ String _getContentType(String imagePath) {
     case 'jpeg':
       return 'image/jpeg';
     case 'png':
-      return 'image/png';
+    case 'webp':
+      // add other web image formats here
+      return "image/$ext";
     default:
       return 'application/octet-stream';
   }

@@ -5,15 +5,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Roadcognizer",
+      "name": "Roadcognizer (no flavor)",
       "request": "launch",
       "type": "dart"
     },
     {
-      "name": "Roadcognizer (physical)",
+      "name": "Roadcognizer DEV",
       "request": "launch",
       "type": "dart",
-      "args": ["--dart-define", "DEV_MACHINE_IP=192.168.3.6"]
+      "args": ["--flavor", "dev"]
     },
     {
       "name": "Roadcognizer DEV (physical)",

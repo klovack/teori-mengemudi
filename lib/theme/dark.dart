@@ -62,7 +62,7 @@ final ThemeData darkTheme = ThemeData(
   scaffoldBackgroundColor: BrandColors.darkBlue,
   navigationBarTheme: NavigationBarThemeData(
     backgroundColor: Colors.transparent,
-    labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+    labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
     indicatorColor: BrandColors.darkBlue,
     indicatorShape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(8)),

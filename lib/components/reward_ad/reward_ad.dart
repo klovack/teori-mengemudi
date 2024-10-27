@@ -16,6 +16,7 @@ class RewardAd extends StatefulWidget {
 
 class _RewardAdState extends State<RewardAd> {
   RewardedAd? _rewardedAd;
+  bool _isDisposed = false;
 
   @override
   void initState() {
@@ -26,6 +27,9 @@ class _RewardAdState extends State<RewardAd> {
 
   @override
   void dispose() {
+    setState(() {
+      _isDisposed = true;
+    });
     _rewardedAd?.dispose();
     super.dispose();
   }
@@ -38,6 +42,11 @@ class _RewardAdState extends State<RewardAd> {
           // Called when an ad is successfully received.
           onAdLoaded: (ad) {
             log.d('$ad loaded.');
+            if (_isDisposed) {
+              ad.dispose();
+              return;
+            }
+            
             // Keep a reference to the ad so you can show it later.
             setState(() {
               _rewardedAd = ad;
