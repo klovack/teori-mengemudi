@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:roadcognizer/config.constants.dart';
+import 'package:roadcognizer/exception/exception.dart';
 import 'package:roadcognizer/models/traffic_sign_image/traffic_sign_image.dart';
 import 'package:roadcognizer/models/roadcognizer_user/roadcognizer_user.dart';
 import 'package:roadcognizer/services/firebase/firebase.service.dart';
@@ -93,6 +94,7 @@ class UserService {
     int? limit,
     ImageOrderBy orderBy = ImageOrderBy.createdAtDescending,
     TrafficSignImage? startAfter,
+    includeDeleted = false,
   }) async {
     var query = getCurrentUserImagesRef()
         .orderBy(orderBy.value, descending: orderBy.isDescending);
@@ -100,6 +102,8 @@ class UserService {
     if (startAfter != null) {
       query = query.startAfter([startAfter.createdAt]);
     }
+
+    query = query.where("deletedAt", isNull: !includeDeleted);
 
     final images =
         limit != null ? await query.limit(limit).get() : await query.get();
@@ -164,8 +168,34 @@ class UserService {
   }
 
   Future<void> addImageToCurrentUser(TrafficSignImage image) async {
-    await getCurrentUserImagesRef().add(image);
+    final doc = getCurrentUserImagesRef().doc();
+    image.id = doc.id;
+    await doc.set(image);
     await _checkAndDecrementExtraImageQuotaToCurrentUser();
+  }
+
+  Future<void> deleteImageFromCurrentUser(
+    TrafficSignImage image, {
+    bool force = false,
+  }) async {
+    // set deleteAt to now(). This is a soft delete
+    image.delete();
+
+    if (image.id == null) {
+      final imageRef =
+          getCurrentUserImagesRef().where("url", isEqualTo: image.url);
+      final imageQuery = await imageRef.get();
+      if (imageQuery.docs.isNotEmpty && imageQuery.docs.length > 1 && !force) {
+        throw FindMultipleOnDeleteException(
+            "Multiple images refer to the same url ${image.url}. Fix this or use force to delete all images with this url.");
+      }
+
+      for (final doc in imageQuery.docs) {
+        await doc.reference.set(image);
+      }
+    } else {
+      await getCurrentUserImagesRef().doc(image.id).set(image);
+    }
   }
 
   Future<void> updateUser(RoadcognizerUser user) async {

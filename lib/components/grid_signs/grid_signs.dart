@@ -60,6 +60,16 @@ class _GridSignsState extends State<GridSigns> {
     }
   }
 
+  void _onDeleteImage(TrafficSignImage image) async {
+    await widget.userService.deleteImageFromCurrentUser(image);
+
+    if (!mounted) return;
+
+    setState(() {
+      widget.images!.remove(image);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -73,7 +83,10 @@ class _GridSignsState extends State<GridSigns> {
         itemCount: widget.images?.length ?? 8,
         itemBuilder: (context, index) {
           return SignCard(
-              image: widget.images?[index], isLoading: widget.images == null);
+            image: widget.images?[index],
+            isLoading: widget.images == null,
+            onDelete: _onDeleteImage,
+          );
         },
       ),
     );

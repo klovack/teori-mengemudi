@@ -4,7 +4,15 @@
   "practiceDrivingTheory": "Coba Buktikan!",
   "userSigns": {
     "title": "Rambu lalu lintas yang sudah kamu ambil",
-    "empty": "Kamu belum mengunggah rambu lalu lintas apapun."
+    "empty": "Kamu belum mengunggah rambu lalu lintas apapun.",
+    "card": {
+      "delete": {
+        "title": "Hapus Gambar",
+        "message": "Apakah kamu yakin ingin menghapus gambar ini?",
+        "cancel": "Batal",
+        "confirm": "Hapus"
+      }
+    }
   },
   "question": {
     "submit": "Akhiri",
