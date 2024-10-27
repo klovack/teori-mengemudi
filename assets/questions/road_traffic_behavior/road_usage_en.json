@@ -122,8 +122,8 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "You want to use a highway. What maximum design speed must be entered in the registration certificate part I or in the operating license?",
-    "options": [],
-    "correct_options": [],
+    "options": ["40 km/h", "60 km/h", "80 km/h", "100 km/h"],
+    "correct_options": [1],
     "score": 3,
     "resource": null,
     "sub_question": null

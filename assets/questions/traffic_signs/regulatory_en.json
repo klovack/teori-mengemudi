@@ -117,7 +117,11 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "What are you not allowed to drive here?",
-    "options": ["With mopeds", "With mopeds", "With light motorcycles"],
+    "options": [
+      "mopeds with max speed of 25 km/h",
+      "mopeds with max speed of 45 km/h",
+      "With light motorcycles"
+    ],
     "correct_options": [0],
     "score": 2,
     "resource": {
@@ -1347,8 +1351,8 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "Which traffic sign refers to the maximum authorized mass?",
-    "options": [],
-    "correct_options": [],
+    "options": ["1", "2"],
+    "correct_options": [0, 1],
     "score": 2,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
@@ -1360,8 +1364,8 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "Which traffic sign refers to the actual mass?",
-    "options": [],
-    "correct_options": [],
+    "options": ["1", "2"],
+    "correct_options": [0],
     "score": 2,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",

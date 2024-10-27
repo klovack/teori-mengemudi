@@ -122,8 +122,8 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "Anda ingin menggunakan jalan tol. Berapa kecepatan desain maksimum yang harus dimasukkan dalam sertifikat registrasi bagian I atau dalam surat izin mengemudi?",
-    "options": [],
-    "correct_options": [],
+    "options": ["40 km/h", "60 km/h", "80 km/h", "100 km/h"],
+    "correct_options": [1],
     "score": 3,
     "resource": null,
     "sub_question": null

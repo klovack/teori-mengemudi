@@ -117,7 +117,11 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "Apa saja yang tidak boleh dikendarai di sini?",
-    "options": ["Dengan moped", "Dengan moped", "Dengan sepeda motor ringan"],
+    "options": [
+      "Dengan sepeda motor kecil max kecepatan 25 km/h",
+      "Dengan sepeda motor kecil max kecepatan 45 km/h",
+      "Dengan sepeda motor ringan max kecepatan melebihi 50 km/h"
+    ],
     "correct_options": [0],
     "score": 2,
     "resource": {
@@ -1348,8 +1352,8 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "Rambu jalan mana yang mengacu pada massa maksimum yang diizinkan?",
-    "options": [],
-    "correct_options": [],
+    "options": ["1", "2"],
+    "correct_options": [0, 1],
     "score": 2,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
@@ -1361,8 +1365,8 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "Rambu lalu lintas mana yang mengacu pada massa yang sebenarnya?",
-    "options": [],
-    "correct_options": [],
+    "options": ["1", "2"],
+    "correct_options": [0],
     "score": 2,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",

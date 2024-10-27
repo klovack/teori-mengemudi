@@ -304,8 +304,8 @@
   {
     "py/object": "quiz_question.QuizQuestion",
     "question": "You want to enter the highway. Which lane do you have to follow?",
-    "options": [],
-    "correct_options": [],
+    "options": ["1", "2", "3"],
+    "correct_options": [2],
     "score": 4,
     "resource": {
       "py/object": "quiz_question.QuizQuestionResource",
