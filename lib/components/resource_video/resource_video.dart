@@ -16,7 +16,6 @@ class ResourceVideo extends StatefulWidget {
 
 class _ResourceVideoState extends State<ResourceVideo> {
   late VideoPlayerController _controller;
-  var _isPlaying = false;
   late int _playCount = 5;
 
   @override
@@ -35,9 +34,7 @@ class _ResourceVideoState extends State<ResourceVideo> {
         setState(() {});
         _controller.addListener(() {
           if (_controller.value.isCompleted) {
-            setState(() {
-              _isPlaying = false;
-            });
+            setState(() {});
           }
         });
       });
@@ -63,10 +60,9 @@ class _ResourceVideoState extends State<ResourceVideo> {
                       (_playCount > 0 || !widget.limitVideoPlay)) {
                     setState(() {
                       _controller.play();
-                      _isPlaying = true;
-                      _playCount = _playCount - 1;
+                      if (widget.limitVideoPlay) _playCount = _playCount - 1;
                     });
-                    persistPlayCount();
+                    if (widget.limitVideoPlay) persistPlayCount();
                   }
                 },
                 child: AspectRatio(
@@ -74,7 +70,7 @@ class _ResourceVideoState extends State<ResourceVideo> {
                   child: Stack(
                     children: [
                       InteractiveViewer(child: VideoPlayer(_controller)),
-                      if (!_isPlaying)
+                      if (!_controller.value.isPlaying)
                         Center(
                           child: Icon(
                             Icons.play_arrow,
