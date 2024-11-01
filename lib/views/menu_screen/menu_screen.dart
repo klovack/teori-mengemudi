@@ -58,17 +58,28 @@ class _MenuScreenState extends State<MenuScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return AppScaffold(
-      isNavbarVisible: _isNavbarVisible,
-      isAppBarVisible: _isAppBarVisible,
-      selectedDestination: _activeScreen,
-      onReadTrafficSignsTap: _navigateToSignRecognizer,
-      onNavbarSelected: (destination) {
-        setState(() {
-          _activeScreen = destination;
-        });
+    return PopScope(
+      canPop: _activeScreen == NavbarDestinations.signs,
+      onPopInvokedWithResult: (_, __) {
+        if (_activeScreen == NavbarDestinations.quiz) {
+          setState(() {
+            _activeScreen = NavbarDestinations.signs;
+          });
+          _setNavAndAppBarVisibility(true);
+        }
       },
-      body: _getActiveScreen,
+      child: AppScaffold(
+        isNavbarVisible: _isNavbarVisible,
+        isAppBarVisible: _isAppBarVisible,
+        selectedDestination: _activeScreen,
+        onReadTrafficSignsTap: _navigateToSignRecognizer,
+        onNavbarSelected: (destination) {
+          setState(() {
+            _activeScreen = destination;
+          });
+        },
+        body: _getActiveScreen,
+      ),
     );
   }
 }
