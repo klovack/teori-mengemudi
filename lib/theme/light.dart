@@ -43,7 +43,7 @@ final ThemeData lightTheme = ThemeData(
     ),
     titleMedium: Fonts.getPrimary(
       ts: const TextStyle(
-        color: Colors.black54,
+        color: Colors.black87,
         fontSize: 18,
         fontWeight: FontWeight.bold,
       ),

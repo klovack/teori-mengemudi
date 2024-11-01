@@ -11,19 +11,19 @@ class SignExplanation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final hasOrigin = trafficSign.origin.isNotEmpty &&
+        trafficSign.origin.toLowerCase() != 'unknown';
+    
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           trafficSign.title,
           textAlign: TextAlign.left,
-          style: Fonts.getPrimary(
-            ts: const TextStyle(
-              fontSize: 24,
-            ),
-          ),
+          style: Theme.of(context).textTheme.titleLarge,
         ),
-        Text(
+        if (hasOrigin)
+          Text(
           'signRecognizer.origin'.tr(args: [trafficSign.origin]),
           style: Fonts.getSecondary(
             ts: const TextStyle(
