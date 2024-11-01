@@ -31,8 +31,14 @@ String _getContentType(String imagePath) {
 /// Uploads an image to Firebase Storage.
 ///
 /// Returns the download URL of the uploaded image.
-Future<String> uploadImage(String imagePath) async {
+Future<String> uploadImage(String imagePath, [bool isSleep = false]) async {
   log.d('Uploading image: $imagePath');
+
+  if (isSleep) {
+    await Future.delayed(const Duration(seconds: 10));
+    return Future.error(UploadImageException('Error uploading image'));
+  }
+
   final storage = FirebaseService.storage;
   final userCred = FirebaseService.userCredential;
 
