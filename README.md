@@ -35,3 +35,13 @@ Copy the list of API Keys above and create the files for each target build as fo
 
 - **Android**: `android/apikey.properties`
 - **ios**: `ios/Flutter/.env`
+
+## Build
+
+### Android
+
+To build production app bundle for android, execute:
+
+```
+flutter build appbundle --flavor=prod
+```

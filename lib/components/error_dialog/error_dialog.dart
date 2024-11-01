@@ -17,9 +17,9 @@ class ErrorDialog extends StatelessWidget {
     this.exception,
     this.onUserEarnedImageQuota,
   }) {
-    var message = 'signRecognizer.error.message';
-    var title = 'signRecognizer.error.title';
-    var retry = 'signRecognizer.error.retry';
+    var message = 'signRecognizer.error.generic.message';
+    var title = 'signRecognizer.error.generic.title';
+    var retry = 'signRecognizer.error.generic.retry';
 
     if (exception != null) {
       if (exception is UploadImageException) {
